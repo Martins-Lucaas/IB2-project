@@ -1,7 +1,5 @@
 #include <WiFi.h>
 #include <WebServer.h>
-#include <Arduino.h>
-
 // Definição das credenciais de WiFi
 const char *ssid = "Martins WiFi6";
 const char *password = "17031998";
@@ -17,67 +15,93 @@ float timeElapsed = 0;
 int emgBuffer[bufferSize];
 int bufferIndex = 0;
 bool updatingData = false;
-bool tableEnabled = false;
-bool fftEnabled = false; // Flag para indicar se a plotagem do FFT está habilitada
 unsigned long lastUpdateTime = 0;
+unsigned long acquisitionRate = 500; // Taxa de aquisição padrão em milissegundos
 const int pinEMG = 33;
-const int pinPot = 35;
 
 // Função para ler o valor do sinal EMG
 float readEMGValue() {
   int valorADC = analogRead(pinEMG);
-  float tensao = ((valorADC * 3.3) / 4095) / 660; // Convertendo para volts
-  return tensao * 1000; // Convertendo para milivolts
+  float tensao = ((valorADC * 3.3) / 4095); // Convertendo para volts
+  return tensao; // Retorna em volts
 }
 
 // Função para lidar com requisições na rota principal ("/")
 void handleRoot() {
- String html =
+  String html =
       "<!DOCTYPE HTML>"
       "<html>"
       "<head>"
       "<title>Projeto IB1</title>"
       "<script src='https://cdn.jsdelivr.net/npm/chart.js'></script>"
-      "<script src='https://cdnjs.cloudflare.com/ajax/libs/fft-js/1.0.0/fft.min.js'></script>"
       "<style>"
       "body {"
       "font-family: Arial, sans-serif;"
       "margin: 0;"
       "padding: 0;"
-      "background-color: #f0f0f0;"
-      "color: #333;"
+      "background-color: #0d0d0d;"
+      "color: #e0e0e0;"
       "}"
       ".container {"
-      "margin: 50px auto;"
+      "margin: 20px;"
       "padding: 20px;"
-      "background-color: #fff;"
+      "background-color: #1a1a1a;"
       "border-radius: 10px;"
-      "box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);"
+      "box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);"
       "text-align: center;"
-      "max-width: 90%;"
+      "max-width: 100%;"
+      "box-sizing: border-box;"
       "}"
       ".container h2 {"
       "font-size: 32px;"
-      "color: #333;"
+      "color: #00e676;"
       "}"
       ".container p {"
       "font-size: 18px;"
-      "color: #666;"
+      "color: #81c784;"
       "}"
       ".container canvas {"
       "width: 100%;"
       "height: 300px;"
       "margin: 20px auto;"
-      "border: 1px solid #000;"
+      "border: 1px solid #00e676;"
       "}"
-      "#resistanceBox {"
-      "position: absolute;"
-      "top: 10px;"
-      "left: 10px;"
-      "padding: 5px;"
-      "border: 1px solid #000;"
+      "#rateBox {"
+      "margin: 20px auto;"
+      "padding: 10px;"
+      "border: 1px solid #00e676;"
       "border-radius: 5px;"
-      "background-color: #fff;"
+      "background-color: #1a1a1a;"
+      "width: 100%;"
+      "max-width: 300px;"
+      "color: #e0e0e0;"
+      "display: flex;"
+      "justify-content: center;"
+      "align-items: center;"
+      "}"
+      "#rateBox input {"
+      "width: 60%;"
+      "padding: 10px;"
+      "margin: 5px;"
+      "border: none;"
+      "border-radius: 5px;"
+      "background-color: #333;"
+      "color: #fff;"
+      "font-size: 16px;"
+      "text-align: center;"
+      "}"
+      "#rateBox button {"
+      "padding: 10px 20px;"
+      "margin: 5px;"
+      "border: none;"
+      "border-radius: 5px;"
+      "background-color: #00e676;"
+      "color: #fff;"
+      "font-size: 16px;"
+      "cursor: pointer;"
+      "}"
+      "#rateBox button:hover {"
+      "background-color: #00c853;"
       "}"
       ".button {"
       "border-radius: 20px;"
@@ -88,12 +112,13 @@ void handleRoot() {
       "color: #fff;"
       "font-size: 16px;"
       "transition: background-color 0.1s ease, transform 0.1s ease;"
+      "display: inline-block;"
       "}"
       ".button.start {"
-      "background-color: #4CAF50;"
+      "background-color: #00e676;"
       "}"
       ".button.start:hover {"
-      "background-color: #45a049;"
+      "background-color: #00c853;"
       "}"
       ".button.start:active {"
       "transform: scale(0.95);"
@@ -108,130 +133,70 @@ void handleRoot() {
       "transform: scale(0.95);"
       "}"
       ".button.save {"
-      "background-color: #008CBA;"
+      "background-color: #2196f3;"
       "}"
       ".button.save:hover {"
-      "background-color: #0077a3;"
+      "background-color: #1976d2;"
       "}"
       ".button.save:active {"
       "transform: scale(0.95);"
-      "}"
-      ".button.table {"
-      "background-color: #ff9800;"
-      "}"
-      ".button.table:hover {"
-      "background-color: #f57c00;"
-      "}"
-      ".button.table:active {"
-      "transform: scale(0.95);"
-      "}"
-      ".button.fft {"
-      "background-color: #c49200;" // Cor dourada um pouco mais escura para o botão de plotagem do FFT
-      "}"
-      ".button.fft:hover {"
-      "background-color: #ab7d00;"
-      "}"
-      ".button.fft:active {"
-      "transform: scale(0.95);"
-      "}"
-      ".hidden {"
-      "display: none;"
       "}"
       "</style>"
       "</head>"
       "<body>"
       "<div class='container'>"
       "<h2>Projeto IB1</h2>"
-      "<p>Valor do EMG: <span id='emg_value'>0</span> mV</p>" // Exibe o valor do EMG em milivolts
+      "<p>Valor do EMG: <span id='emg_value'>0</span> V</p>" // Exibe o valor do EMG em volts
       "<canvas id='potChart' class='potChart' width='2000' height='300'></canvas>"
-      "<canvas id='fftChart' class='potChart hidden' width='2000' height='300'></canvas>"
-      "<div id='resistanceBox'>Ganho Total no circuito</div>" // Exibe o valor do ganho
-      "<button id='startButton' class='button start' onclick='start()' disabled>Iniciar</button>"
+      "<div id='rateBox'>"
+      "Taxa de Aquisição (ms): <input type='number' id='rateInput' value='500'>"
+      "<button onclick='updateRate()'>OK</button>"
+      "</div>" // Text box para definir a taxa de aquisição
+      "<button id='startButton' class='button start' onclick='start()'>Iniciar</button>"
       "<button class='button stop' onclick='stop()'>Parar</button>"
       "<button class='button save' onclick='save()'>Salvar</button>"
-      "<button id='showTableButton' class='button table' onclick='showTable()' disabled>Ver Tabela</button>"
-      "<button id='fftButton' class='button fft' onclick='startFFT()'>Espectro de Frequencia</button>" // Botão para plotar o espectro de frequência
-      "<div id='tableContainer' class='hidden'>"
-      "<table>"
-      "<thead>"
-      "<tr>"
-      "<th>Indice</th>"
-      "<th>Valor</th>"
-      "</tr>"
-      "</thead>"
-      "<tbody id='tableBody'></tbody>"
-      "</table>"
-      "</div>"
       "</div>"
       "<script>"
       "var ctx = document.getElementById('potChart').getContext('2d');"
       "var potChart;"
-      "var fftChart;"
       "var timeElapsed = 0;"
       "var intervalId;"
       "var dataArray = [];"
-      "function calculateMagnitude(spectrum) {"
-      "  return spectrum.map(value => Math.sqrt(value.real * value.real + value.imag * value.imag));"
-      "}"
-      "function startFFTChart() {"
-      "  var fftCtx = document.getElementById('fftChart').getContext('2d');"
-      "  fftChart = new Chart(fftCtx, {"
-      "    type: 'line',"
-      "    data: {"
-      "      labels: [],"
-      "      datasets: [{"
-      "        label: 'FFT Magnitude',"
-      "        data: [],"
-      "        fill: false,"
-      "        borderColor: '#c49200',"
-      "        tension: 0.1"
-      "      }]"
-      "    },"
-      "    options: {"
-      "      animation: {"
-      "        duration: 0"
-      "      },"
-      "      scales: {"
-      "        x: {"
-      "          display: false,"
-      "        },"
-      "        y: {"
-      "          suggestedMin: 0,"
-      "          suggestedMax: 20"
-      "        }"
-      "      }"
+      "var acquisitionRate = 500;" // Taxa de aquisição padrão em milissegundos
+      "function updateRate() {"
+      "  var rateInput = document.getElementById('rateInput').value;"
+      "  if (rateInput > 0) {"
+      "    acquisitionRate = rateInput;"
+      "    if (updatingData) {"
+      "      clearInterval(intervalId);"
+      "      intervalId = setInterval(fetchData, acquisitionRate);"
       "    }"
-      "  });"
-      "}"
-      "function startFFT() {"
-      "  if (!updatingData) {"
-      "    fftEnabled = true;"
-      "    document.getElementById('fftButton').disabled = true;"
-      "    startFFTChart();"
+      "  } else {"
+      "    alert('Taxa de aquisição deve ser maior que 0');"
       "  }"
       "}"
-      "function updateFFTChart(spectrum) {"
-      "  const magnitudes = calculateMagnitude(spectrum);"
-      "  fftChart.data.labels = magnitudes.map((_, index) => index + 1);"
-      "  fftChart.data.datasets[0].data = magnitudes;"
-      "  fftChart.update();"
+      "function fetchData() {"
+      "  fetch('/emgvalue')"
+      "  .then(response => response.text())"
+      "  .then(data => {"
+      "    document.getElementById('emg_value').innerText = data;"
+      "    updatePotChart(parseFloat(data));"
+      "  });"
       "}"
       "function updatePotChart(emgvalue) {"
-      "  var emgMicrovolts = emgvalue.toFixed(6);"
-      "  dataArray.push({x: (timeElapsed * 1000).toFixed(1), y: emgMicrovolts});"
-      "  timeElapsed += 0.5;" // Alteração para tempo em milissegundos
+      "  var emgVolts = emgvalue.toFixed(4);"
+      "  dataArray.push({x: (timeElapsed * 1000).toFixed(1), y: emgVolts});"
+      "  timeElapsed += acquisitionRate / 1000;" // Alteração para tempo em milissegundos"
       "  if (dataArray.length > " + String(bufferSize) + ") {"
       "    dataArray.shift();"
+      "  }"
+      "  potChart.data.labels.push(dataArray[dataArray.length - 1].x);"
+      "  potChart.data.datasets[0].data.push(emgVolts);"
+      "  if (potChart.data.labels.length > " + String(bufferSize) + ") {"
       "    potChart.data.labels.shift();"
       "    potChart.data.datasets[0].data.shift();"
       "  }"
-      "  potChart.data.labels.push(dataArray[dataArray.length - 1].x);"
-      "  potChart.data.datasets[0].data.push(emgMicrovolts);"
       "  potChart.update();"
-      "  if (fftEnabled) {" // Verifica se a plotagem do FFT está habilitada
-      "    const spectrum = calculateFFT(dataArray);"
-      "    updateFFTChart(spectrum);"
-      "  }"
       "}"
       "function start() {"
       "  if (!updatingData) {"
@@ -244,8 +209,8 @@ void handleRoot() {
       "          label: 'Amplitude EMG',"
       "          data: [],"
       "          fill: false,"
-      "          borderColor: '#4CAF50',"
-      "          backgroundColor: 'rgba(75, 192, 192, 0.2)',"
+      "          borderColor: '#00e676',"
+      "          backgroundColor: 'rgba(0, 230, 118, 0.2)',"
       "          tension: 0.1"
       "        }]"
       "      },"
@@ -259,27 +224,13 @@ void handleRoot() {
       "          },"
       "          y: {"
       "            suggestedMin: 0,"
-      "            suggestedMax: 5" // Máximo de 5mV
+      "            suggestedMax: 3.3" // Máximo de 3.3V
       "          }"
       "        }"
       "      }"
       "    });"
-      "    document.getElementById('resistanceBox').innerText = 'Valor do Ganho: 0 x';" // Atualizando o valor da resistência para 0 Ohms
-      "    intervalId = setInterval(function() {"
-      "      fetch('/emgvalue')"
-      "      .then(response => response.text())"
-      "      .then(data => {"
-      "        document.getElementById('emg_value').innerText = data;"
-      "        updatePotChart(parseFloat(data));"
-      "      });"
-      "      fetch('/resistancevalue')"
-      "      .then(response => response.text())"
-      "      .then(data => {"
-      "        document.getElementById('resistanceBox').innerText = 'Valor do ganho: ' + data + ' x';" // Atualizando o valor da resistência
-      "      });"
-      "    }, 0.5);"
+      "    intervalId = setInterval(fetchData, acquisitionRate);"
       "    document.getElementById('startButton').disabled = true;"
-      "    document.getElementById('showTableButton').disabled = false;"
       "    updatingData = true;"
       "  }"
       "}"
@@ -287,31 +238,16 @@ void handleRoot() {
       "  clearInterval(intervalId);"
       "  document.getElementById('startButton').disabled = false;"
       "  updatingData = false;"
+      "  dataArray = [];" // Limpar o array de dados"
+      "  timeElapsed = 0;" // Resetar o tempo decorrido"
+      "  if (potChart) {"
+      "    potChart.data.labels = [];" // Limpar os labels do gráfico"
+      "    potChart.data.datasets[0].data = [];" // Limpar os dados do gráfico"
+      "    potChart.update();"
+      "  }"
       "}"
       "function save() {"
       "  alert('Dados salvos!');"
-      "}"
-      "function showTable() {"
-      "  var tableContainer = document.getElementById('tableContainer');"
-      "  if (tableContainer.classList.contains('hidden')) {"
-      "    tableContainer.classList.remove('hidden');"
-      "    document.getElementById('showTableButton').innerText = 'Ocultar Tabela';"
-      "    fillTable();"
-      "  } else {"
-      "    tableContainer.classList.add('hidden');"
-      "    document.getElementById('showTableButton').innerText = 'Ver Tabela';"
-      "  }"
-      "}"
-      "function fillTable() {"
-      "  var tableBody = document.getElementById('tableBody');"
-      "  tableBody.innerHTML = '';"
-      "  dataArray.forEach(function(data, index) {"
-      "    var row = tableBody.insertRow();"
-      "    var indexCell = row.insertCell(0);"
-      "    var valueCell = row.insertCell(1);"
-      "    indexCell.innerText = index + 1;"
-      "    valueCell.innerText = data.y;"
-      "  });"
       "}"
       "</script>"
       "</body>"
@@ -319,10 +255,8 @@ void handleRoot() {
   server.send(200, "text/html", html);
 }
 
-// Função de configuração inicial do dispositivo
 void setup() {
   pinMode(pinEMG, INPUT);
-  pinMode(pinPot, INPUT);
   Serial.begin(115200);
 
   // Conecta-se à rede WiFi
@@ -336,36 +270,23 @@ void setup() {
   Serial.print("Endereço IP: ");
   Serial.println(WiFi.localIP());
 
-  // Define as rotas para o servidor web
   server.on("/", HTTP_GET, handleRoot);
   server.on("/emgvalue", HTTP_GET, []() {
-    server.send(200, "text/plain", String(readEMGValue(), 6)); // Precisão de 6 casas decimais
-  });
-  server.on("/resistancevalue", HTTP_GET, []() {
-    int valorADC = analogRead(pinPot);
-    Serial.println(valorADC);
-    int resistencia = map(valorADC, 0, 4095, 0, 100000);
-    float ganho = (resistencia/470)*6.6;
-    server.send(200, "text/plain", String(ganho)); 
+    server.send(200, "text/plain", String(readEMGValue(), 4)); // Precisão de 4 casas decimais
   });
 
-  // Inicia o servidor web
   server.begin();
-
   Serial.println("Servidor iniciado");
 }
 
 // Função principal que é executada repetidamente
 void loop() {
-  // Manipula as requisições do cliente
-  server.handleClient();
-  
-  // Verifica se é hora de atualizar os dados do EMG
-  if (millis() - lastUpdateTime >= 0.5) {
+    server.handleClient();
+    if (millis() - lastUpdateTime >= acquisitionRate) { // Tempo em milissegundos
     lastUpdateTime = millis();
     if (updatingData) {
       float emgvalue = readEMGValue();
-      server.send(200, "text/plain", String(emgvalue, 6)); // Precisão de 6 casas decimais
+      server.send(200, "text/plain", String(emgvalue, 4)); // Precisão de 4 casas decimais
     }
   }
 }
