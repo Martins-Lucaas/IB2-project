@@ -6,7 +6,7 @@ const char *ssid = "Martins WiFi6";
 const char *password = "17031998";
 
 WebServer server(80);
-const int bufferSize = 250;
+const int bufferSize = 100;  // Número máximo de pontos no gráfico
 float timeElapsed = 0;
 int vADCBuffer[bufferSize];
 int bufferIndex = 0;
@@ -75,6 +75,7 @@ void handleRoot() {
       "margin: 20px auto;"
       "box-shadow: 0 0 20px #00e676, 0 0 0 #00e676, 0 0 0 #00e676;"
       "transition: box-shadow 0.2s ease;"
+      "user-select: none;"
       "}"
       ".button-large:hover {"
       "box-shadow: 0 0 30px #00e676, 0 0 0 #00e676, 0 0 0 #00e676;"
@@ -106,6 +107,7 @@ void handleRoot() {
       "opacity: 0.7;"
       "transition: opacity 0.2s;"
       "border-radius: 5px;"
+      "user-select: none;"
       "}"
       ".slider:hover {"
       "opacity: 1;"
@@ -118,6 +120,7 @@ void handleRoot() {
       "background: #00e676;"
       "cursor: pointer;"
       "border-radius: 50%;"
+      "user-select: none;"
       "}"
       ".slider::-moz-range-thumb {"
       "width: 20px;"
@@ -125,6 +128,7 @@ void handleRoot() {
       "background: #00e676;"
       "cursor: pointer;"
       "border-radius: 50%;"
+      "user-select: none;"
       "}"
       ".slider-value {"
       "margin-left: 10px;"
@@ -150,6 +154,7 @@ void handleRoot() {
       "cursor: pointer;"
       "transition: transform 0.1s ease, box-shadow 0.2s ease;"
       "box-shadow: 0 0 20px #00e676, 0 0 0 #00e676, 0 0 0 #00e676;"
+      "user-select: none;"
       "}"
       ".button-start:hover {"
       "transform: scale(1.05);"
@@ -172,6 +177,7 @@ void handleRoot() {
       "cursor: pointer;"
       "transition: transform 0.1s ease, box-shadow 0.2s ease;"
       "box-shadow: 0 0 20px #f44336, 0 0 0 #f44336, 0 0 0 #f44336;"
+      "user-select: none;"
       "}"
       ".button-stop:hover {"
       "transform: scale(1.05);"
@@ -192,6 +198,7 @@ void handleRoot() {
       "display: inline-block;"
       "background-color: #2196f3;"
       "box-shadow: 0 0 20px #2196f3, 0 0 0 #2196f3, 0 0 0 #2196f3;"
+      "user-select: none;"
       "}"
       ".button:hover {"
       "background-color: #1976d2;"
@@ -207,7 +214,9 @@ void handleRoot() {
       "<div class='header'>"
       "<h2>Construção de um sistema de aquisição de dados</h2>"
       "</div>"
-      "<div class='button-large'>Trabalho 1</div>"
+      "<div class='button-large'>"
+      "<span id='currentValue'>Trabalho 1</span>"
+      "</div>"
       "<div class='chart-container'>"
       "<canvas id='vADCChart'></canvas>"
       "</div>"
@@ -257,6 +266,7 @@ void handleRoot() {
       "var acquisitionRate = 500;" // Valor inicial do slider
       "var timeElapsed = 0;"
       "var bufferSize = " + String(bufferSize) + ";"
+      "var currentValueElement = document.getElementById('currentValue');"
 
       "function updateSliderValue(value) {"
       "document.getElementById('sliderValue').innerText = value;"
@@ -277,6 +287,7 @@ void handleRoot() {
       "function stopAcquisition() {"
       "clearInterval(intervalId);"
       "updatingData = false;"
+      "clearChart();"
       "}"
 
       "function save() {"
@@ -287,7 +298,9 @@ void handleRoot() {
       "fetch('/vADCvalue')"
       ".then(response => response.text())"
       ".then(data => {"
-      "updateChart(parseFloat(data));"
+      "var vADCvalue = parseFloat(data);"
+      "updateChart(vADCvalue);"
+      "updateCurrentValue(vADCvalue);"
       "});"
       "}"
 
@@ -299,6 +312,17 @@ void handleRoot() {
       "vADCChart.data.labels.shift();"
       "vADCChart.data.datasets[0].data.shift();"
       "}"
+      "vADCChart.update();"
+      "}"
+
+      "function updateCurrentValue(vADCvalue) {"
+      "currentValueElement.innerText = vADCvalue.toFixed(4) + ' V';"
+      "}"
+
+      "function clearChart() {"
+      "vADCChart.data.labels = [];"
+      "vADCChart.data.datasets[0].data = [];"
+      "timeElapsed = 0;"
       "vADCChart.update();"
       "}"
       "</script>"
