@@ -14,13 +14,22 @@ bool updatingData = false;
 unsigned long lastUpdateTime = 0;
 unsigned long acquisitionRate = 500;
 const int pinvADC = 33;
-
+/* hw_timer_t * timer = NULL;
+portMUX_TYPE timerMux = portMUX_INITIALIZER_UNLOCKED;
+volatile bool flag = false; 
 // Função para ler o valor do sinal vADC
 float readvADCValue() {
   int valorADC = analogRead(pinvADC);
   float tensao = ((valorADC * 3.3) / 4095); // Convertendo para volts
   return tensao;
 }
+
+//Função para ser chamada pelo hardware do temporizador quando o temporizador estoura
+void IRAM_ATTR onTimer() {
+  portENTER_CRITICAL_ISR(&timerMux); //Entra na seção critica
+  flag = true; //Sinaliza que a interrupção ocorreu
+  portEXIT_CRITICAL_ISR(&timerMux); //Sai da seção crítica
+}*/
 
 void handleRoot() {
   String html =
@@ -352,6 +361,11 @@ void setup() {
 
   server.begin();
   Serial.println("Servidor iniciado");
+  //Configurando o temporizador do hardware
+  timer = timerBegin(0, 80, true); //Timer 0, prescaler 80
+  timerAttachInterrupt(timer, &onTimer, true);
+  timerAlarmWrite(timer, acquisitionRate, true); 
+  timerAlarmEnable(timer).
 }
 
 void loop() {
@@ -361,4 +375,11 @@ void loop() {
     float vADCvalue = readvADCValue();
     server.send(200, "text/plain", String(vADCvalue, 4));
   }
+  // Verifica a flag da interrupção do temporizador
+  /*if(flag){
+    portENTER_CRITICAL(&timerMux);
+    flag=false;
+    portEXIT_CRITICAL(&timerMux);
+    float vADCvalue = readvADCValue(); 
+  }*/
 }
