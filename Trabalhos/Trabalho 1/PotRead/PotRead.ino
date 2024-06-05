@@ -337,6 +337,7 @@ void handleRoot() {
 }
 
 void vADCTask(void *pvParameters) {
+  while(1){
     if (updatingData) {
       float vADCvalue = readvADCValue();
       vADCBuffer[bufferIndex] = vADCvalue;
@@ -344,7 +345,7 @@ void vADCTask(void *pvParameters) {
       vTaskDelay(acquisitionRate / portTICK_PERIOD_MS);
     } else {
       vTaskDelay(100 / portTICK_PERIOD_MS);  // Aguarda 100ms antes de verificar novamente
-    }
+    }}
 }
 
 void startAcquisition() {
