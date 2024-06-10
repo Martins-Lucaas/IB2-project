@@ -4,8 +4,8 @@
 #include "freertos/task.h"
 
 // Definição das credenciais de WiFi
-const char *ssid = "Net";
-const char *password = "12345678";
+const char *ssid = "Martins WiFi6";
+const char *password = "17031998";
 
 WebServer server(80);
 const int bufferSize = 100;  // Número máximo de pontos no gráfico
@@ -13,7 +13,6 @@ float timeElapsed = 0;
 int vADCBuffer[bufferSize];
 int bufferIndex = 0;
 bool updatingData = false;
-unsigned long lastUpdateTime = 0;
 unsigned long acquisitionRate = 500;
 const int pinvADC = 33;
 
@@ -266,7 +265,7 @@ void handleRoot() {
 
       "var intervalId;"
       "var updatingData = false;"
-      "var acquisitionRate = 2;" // Valor inicial do slider
+      "var acquisitionRate = 500;" // Valor inicial do slider
       "var timeElapsed = 0;"
       "var bufferSize = " + String(bufferSize) + ";"
       "var currentValueElement = document.getElementById('currentValue');"
@@ -340,7 +339,7 @@ void handleRoot() {
 }
 
 void vADCTask(void *pvParameters) {
-  while(1){
+  while (1) {
     if (updatingData) {
       float vADCvalue = readvADCValue();
       vADCBuffer[bufferIndex] = vADCvalue;
@@ -348,7 +347,8 @@ void vADCTask(void *pvParameters) {
       vTaskDelay(acquisitionRate / portTICK_PERIOD_MS);
     } else {
       vTaskDelay(100 / portTICK_PERIOD_MS);  // Aguarda 100ms antes de verificar novamente
-    }}
+    }
+  }
 }
 
 void startAcquisition() {
