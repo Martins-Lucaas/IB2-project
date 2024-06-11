@@ -75,7 +75,7 @@ class ChartWidget extends StatelessWidget {
                   .entries
                   .map((e) => FlSpot(e.key.toDouble(), e.value))
                   .toList(),
-              isCurved: true,
+              isCurved: false,
               color: Colors.lightBlueAccent,
               barWidth: 2,
               dotData: const FlDotData(show: false),
