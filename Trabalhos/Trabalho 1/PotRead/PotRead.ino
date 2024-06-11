@@ -4,8 +4,8 @@
 #include "freertos/task.h"
 
 // Definição das credenciais de WiFi
-const char *ssid = "Net";
-const char *password = "12345678";
+const char *ssid = "Martins WiFi6";
+const char *password = "17031998";
 
 WebServer server(80);
 const int bufferSize = 100;  // Número máximo de pontos no gráfico
@@ -40,7 +40,7 @@ void vADCTask(void *pvParameters) {
       Serial.println(vADCvalue);
       vTaskDelay(acquisitionRate / portTICK_PERIOD_MS);
     } else {
-      vTaskDelay(2 / portTICK_PERIOD_MS);  // Aguarda 2 antes de verificar novamente
+      vTaskDelay(100 / portTICK_PERIOD_MS);  // Aguarda 100ms antes de verificar novamente
     }
   }
 }
