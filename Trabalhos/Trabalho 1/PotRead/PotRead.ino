@@ -19,6 +19,7 @@ TaskHandle_t vADCTaskHandle = NULL;
 
 // Função para ler o valor do sinal vADC
 float readvADCValue() {
+  digitalWrite(26, !digitalRead(26));
   int valorADC = analogRead(pinvADC);
   float tensao = ((valorADC * 3.3) / 4095); // Convertendo para volts
   return tensao;
@@ -36,9 +37,7 @@ void vADCTask(void *pvParameters) {
       float vADCvalue = readvADCValue();
       vADCBuffer[bufferIndex] = vADCvalue;
       bufferIndex = (bufferIndex + 1) % bufferSize;
-      Serial.print("Valor lido do ADC: ");
-      Serial.println(vADCvalue);
-      vTaskDelay(acquisitionRate / portTICK_PERIOD_MS);
+      vTaskDelay(acquisitionRate);
     } else {
       vTaskDelay(100 / portTICK_PERIOD_MS);  // Aguarda 100ms antes de verificar novamente
     }
@@ -62,6 +61,7 @@ void clearBuffer() {
 }
 
 void setup() {
+  pinMode(26, OUTPUT);
   pinMode(pinvADC, INPUT);
   Serial.begin(115200);
 
@@ -83,8 +83,6 @@ void setup() {
   server.on("/vADCvalue", HTTP_GET, []() {
     sendCORSHeaders();
     float value = readvADCValue();
-    Serial.print("Lendo valor ADC: ");
-    Serial.println(value);
     server.send(200, "text/plain", String(value, 4)); // Precisão de 4 casas decimais
   });
 
