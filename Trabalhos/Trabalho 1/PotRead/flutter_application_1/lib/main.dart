@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => DataAcquisitionState('192.168.3.41'), // Substitua pelo IP do seu ESP32
+      create: (context) => DataAcquisitionState('192.168.0.101'), // Substitua pelo IP do seu ESP32
       child: MaterialApp(
         title: 'Sistemas de aquisição de dados',
         theme: ThemeData(

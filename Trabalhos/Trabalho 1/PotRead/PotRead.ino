@@ -4,8 +4,8 @@
 #include "freertos/task.h"
 
 // Definição das credenciais de WiFi
-const char *ssid = "Martins WiFi6";
-const char *password = "17031998";
+const char *ssid = "WiFi-2";
+const char *password = "";
 
 WebServer server(80);
 const int bufferSize = 100;  // Número máximo de pontos no gráfico
