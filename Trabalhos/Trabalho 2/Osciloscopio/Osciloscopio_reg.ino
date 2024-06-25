@@ -10,11 +10,11 @@ volatile uint8_t ledState = 0;
 
 void setup() {
     // Configuração dos pinos dos LEDs como saída usando registradores
-    pinMode(LED1_PIN, OUTPUT);
-    pinMode(LED2_PIN, OUTPUT);
+    GPIO.enable_w1ts = (1 << LED1_PIN); // Define LED1_PIN como saída
+    GPIO.enable_w1ts = (1 << LED2_PIN); // Define LED2_PIN como saída
     
     // Configuração do pino do fotodiodo como entrada usando registradores
-    pinMode(PHOTODIODE_PIN, INPUT);
+    // No ESP32, os pinos de entrada são configurados automaticamente
 
     // Inicialização da comunicação serial para depuração
     Serial.begin(115200);
@@ -51,16 +51,15 @@ void toggleLEDs(void *parameter) {
 
         // Controle dos LEDs utilizando bitwise e registradores
         if (ledState == 0 || ledState == 3) {
-            digitalWrite(LED1_PIN, HIGH);
+            GPIO.out_w1ts = (1 << LED1_PIN); // Liga LED1
         } else {
-            digitalWrite(LED1_PIN, LOW);
+            GPIO.out_w1tc = (1 << LED1_PIN); // Desliga LED1
         }
 
-        if (ledState == 2 || ledState == 3)
-        {
-            digitalWrite(LED2_PIN, HIGH);
+        if (ledState == 2 || ledState == 3) {
+            GPIO.out_w1ts = (1 << LED2_PIN); // Liga LED2
         } else {
-            digitalWrite(LED2_PIN, LOW);
+            GPIO.out_w1tc = (1 << LED2_PIN); // Desliga LED2
         }
 
         // Pequena pausa para estabilizar o estado
