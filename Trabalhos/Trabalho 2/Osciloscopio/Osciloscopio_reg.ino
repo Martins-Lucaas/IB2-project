@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include "soc/gpio_reg.h" // Inclusão do cabeçalho dos registradores GPIO
 
 // Definição dos pinos dos LEDs e do fotodiodo
 #define LED1_PIN 14
@@ -8,11 +9,11 @@
 // Variáveis globais para manipulação dos LEDs
 volatile uint8_t ledState = 0;
 
-void setup(){
+void setup() {
     // Configuração dos pinos dos LEDs como saída usando registradores
-    GPIO.enable_w1ts = (1 << LED1_PIN); // Define LED1_PIN como saída
-    GPIO.enable_w1ts = (1 << LED2_PIN); // Define LED2_PIN como saída
-    
+    REG_WRITE(GPIO_ENABLE_W1TS_REG, (1 << LED1_PIN)); // Define LED1_PIN como saída
+    REG_WRITE(GPIO_ENABLE_W1TS_REG, (1 << LED2_PIN)); // Define LED2_PIN como saída
+
     // Configuração do pino do fotodiodo como entrada usando registradores
     // No ESP32, os pinos de entrada são configurados automaticamente
 
@@ -51,15 +52,15 @@ void toggleLEDs(void *parameter) {
 
         // Controle dos LEDs utilizando bitwise e registradores
         if (ledState == 0 || ledState == 3) {
-            GPIO.out_w1ts = (1 << LED1_PIN); // Liga LED1
+            REG_WRITE(GPIO_OUT_W1TS_REG, (1 << LED1_PIN)); // Liga LED1
         } else {
-            GPIO.out_w1tc = (1 << LED1_PIN); // Desliga LED1
+            REG_WRITE(GPIO_OUT_W1TC_REG, (1 << LED1_PIN)); // Desliga LED1
         }
 
         if (ledState == 2 || ledState == 3) {
-            GPIO.out_w1ts = (1 << LED2_PIN); // Liga LED2
+            REG_WRITE(GPIO_OUT_W1TS_REG, (1 << LED2_PIN)); // Liga LED2
         } else {
-            GPIO.out_w1tc = (1 << LED2_PIN); // Desliga LED2
+            REG_WRITE(GPIO_OUT_W1TC_REG, (1 << LED2_PIN)); // Desliga LED2
         }
 
         // Pequena pausa para estabilizar o estado
