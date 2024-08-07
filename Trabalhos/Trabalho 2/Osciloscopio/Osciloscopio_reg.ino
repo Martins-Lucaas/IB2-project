@@ -8,7 +8,7 @@
 // Variáveis globais para manipulação dos LEDs
 volatile uint8_t ledState = 0;
 
-void setup() {
+void setup(){
     // Configuração dos pinos dos LEDs como saída usando registradores
     GPIO.enable_w1ts = (1 << LED1_PIN); // Define LED1_PIN como saída
     GPIO.enable_w1ts = (1 << LED2_PIN); // Define LED2_PIN como saída
