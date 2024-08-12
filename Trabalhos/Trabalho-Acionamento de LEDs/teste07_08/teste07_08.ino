@@ -43,7 +43,7 @@ void toggleLEDs(void *parameter) {
     digitalWrite(LED1_PIN, (ledState == 0) ? HIGH : LOW);
     digitalWrite(LED2_PIN, (ledState == 2) ? LOW : HIGH);
 
-    vTaskDelay(1200 / portTICK_PERIOD_MS);
+    vTaskDelay(2 / portTICK_PERIOD_MS);
   }
 }
 
