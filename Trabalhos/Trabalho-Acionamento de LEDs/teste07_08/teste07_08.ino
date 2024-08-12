@@ -38,10 +38,10 @@ void loop() {
 
 void toggleLEDs(void *parameter) {
   while (true) {
-    ledState = (ledState + 1) % 4; 
+    ledState = (ledState + 1) % 3; 
 
     digitalWrite(LED1_PIN, (ledState == 0) ? HIGH : LOW);
-    digitalWrite(LED2_PIN, (ledState == 2) ? HIGH : LOW);
+    digitalWrite(LED2_PIN, (ledState == 2) ? LOW : HIGH);
 
     vTaskDelay(1200 / portTICK_PERIOD_MS);
   }
