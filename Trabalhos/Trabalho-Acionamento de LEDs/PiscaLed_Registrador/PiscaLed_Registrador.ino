@@ -64,7 +64,7 @@ void toggleLEDs(void *parameter) {
         }
 
         // Pequena pausa para estabilizar o estado
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
+        vTaskDelay(100 / portTICK_PERIOD_MS);
     }
 }
 
