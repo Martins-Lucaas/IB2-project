@@ -5,11 +5,13 @@
 #define PHOTODIODE_PIN 34
 
 volatile uint8_t ledState = 0;
+volatile int sensorValue = 1;
 
 void setup() {
+  Serial.begin(115200);
+  
   pinMode(LED1_PIN, OUTPUT);
   pinMode(LED2_PIN, OUTPUT);
-  
   pinMode(PHOTODIODE_PIN, INPUT);
 
   xTaskCreatePinnedToCore(
@@ -43,14 +45,16 @@ void toggleLEDs(void *parameter) {
     digitalWrite(LED1_PIN, (ledState == 0) ? HIGH : LOW);
     digitalWrite(LED2_PIN, (ledState == 2) ? LOW : HIGH);
 
-    vTaskDelay(2000 / portTICK_PERIOD_MS);
+    vTaskDelay(sensorValue / portTICK_PERIOD_MS);
   }
 }
 
 void readPhotodiode(void *parameter) {
   while (true) {
-    int sensorValue = analogRead(PHOTODIODE_PIN);
+    sensorValue = analogRead(PHOTODIODE_PIN);
     Serial.println(sensorValue);
-    
-    vTaskDelay(400 / portTICK_PERIOD_MS);}
+
+
+    vTaskDelay(100 / portTICK_PERIOD_MS);
+  }
 }
