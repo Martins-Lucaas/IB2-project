@@ -1,0 +1,72 @@
+{
+   "checksum": "111fcc97b3d6a5ff7e35dc724f59b3d7",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13369248054735447",
+            "date_last_used": "0",
+            "guid": "dbd1b345-1c4c-4da2-afcc-f15a57fe4511",
+            "id": "8",
+            "name": "Lenovo Support",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "https://support.lenovo.com/",
+            "visit_count": 0
+         }, {
+            "date_added": "13369248054735317",
+            "date_last_used": "0",
+            "guid": "ba09e4e1-d53f-4b92-9923-9740bf97d758",
+            "id": "7",
+            "name": "Lenovo",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "https://www.lenovo.com/",
+            "visit_count": 0
+         }, {
+            "date_added": "13369248054721583",
+            "date_last_used": "0",
+            "guid": "1586c440-0446-4fa0-942c-5f8a8bca209f",
+            "id": "6",
+            "name": "McAfee",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "https://www.mcafee.com/consumer/v/browserfav/lenovo.html",
+            "visit_count": 0
+         } ],
+         "date_added": "13369248054460041",
+         "date_last_used": "0",
+         "date_modified": "13369248054735447",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Barra de favoritos",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13369248054460044",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Outros favoritos",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13369248054460045",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Favoritos do celular",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}
