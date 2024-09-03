@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => DataAcquisitionState('192.168.3.8'), // Substitua pelo IP do seu ESP32
+      create: (context) => DataAcquisitionState('192.168.144.131'), // Substitua pelo IP do seu ESP32
       child: MaterialApp(
         title: 'GlicoApp',
         theme: ThemeData(
