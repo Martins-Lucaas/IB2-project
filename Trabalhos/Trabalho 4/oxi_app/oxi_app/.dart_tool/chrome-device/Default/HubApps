@@ -836,12 +836,11 @@
       "default_locale": "en",
       "description": "Create engaging visuals with ease",
       "disabled": true,
-      "disabled|device:managed": false,
       "icon": {
          "raster_icon": {
-            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_designer_color.png/1.0.24/asset",
-            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_designer_hc.png/1.0.24/asset",
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_designer_color.png/1.0.24/asset"
+            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_designer_color.png/1.0.26/asset",
+            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_designer_hc.png/1.0.26/asset",
+            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_designer_color.png/1.0.26/asset"
          }
       },
       "id": "2cb2db96-3bd0-403e-abe2-9269b3761041",
@@ -859,11 +858,11 @@
       "on_by_default|flight:msEdgeDesignerOnByDefault": true,
       "on_by_default|flight:msEdgeDesignerOnByDefault|device:managed": false,
       "surfaces": [ "in_browser_sidebar" ],
-      "tags": [ "no_auto_cleanup", "on_by_default_experimenting" ],
+      "tags": [ "on_by_default_experimenting" ],
       "target": {
          "url": "edge://designer/"
       },
-      "version": "1.0.24"
+      "version": "1.0.26"
    }, {
       "capabilities": {
          "show_domain_in_header": true
@@ -1498,9 +1497,9 @@
       "disabled|device:xbox": true,
       "icon": {
          "raster_icon": {
-            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_skype_dark.png/1.5.27/asset",
-            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_skype_hc.png/1.5.27/asset",
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_skype_light.png/1.5.27/asset"
+            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_skype_dark.png/1.5.28/asset",
+            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_skype_hc.png/1.5.28/asset",
+            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_skype_light.png/1.5.28/asset"
          }
       },
       "id": "439642fc-998d-4a64-8bb6-940ecaf6b60b",
@@ -1514,7 +1513,7 @@
       "on_by_default|flight:msEdgeHubAppSkypeDefaultOn|profile:pure_consumer_profile": true,
       "on_by_default|flight:msEdgeHubAppSkypeDefaultOn|profile:pure_consumer_profile|device:managed": false,
       "pin_by_default|flight:msEdgeHubAppSkypeDefaultPin": true,
-      "tags": [ "no_auto_cleanup", "on_by_default_experimenting" ],
+      "tags": [ "on_by_default_experimenting" ],
       "target": {
          "url": "https://web.skype.com/?browsername=edge_stable_shoreline",
          "url_resolver": {
@@ -1524,7 +1523,7 @@
          "url|flight:msEdgeHubAppSkypeCanary": "https://web.skype.com/?browsername=edge_canary_shoreline"
       },
       "trusted_domains": [ "live.com", "office.com", "microsoftonline.com", "microsoft.com", "office365.com", "sharepoint-df.com", "skype.com" ],
-      "version": "1.5.27"
+      "version": "1.5.28"
    }, {
       "default_locale": "en",
       "description": "Improve browser performance and save battery",
@@ -1880,9 +1879,9 @@
       "flights": [ "msEdgeHubAppStreamScreenRecorder" ],
       "icon": {
          "raster_icon": {
-            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_StreamCameraIcon_Dark.png/0.0.6/asset",
-            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_StreamCameraIcon_HC.png/0.0.6/asset",
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_StreamCameraIcon_Light.png/0.0.6/asset"
+            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_StreamCameraIcon_Dark.png/0.0.7/asset",
+            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_StreamCameraIcon_HC.png/0.0.7/asset",
+            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_StreamCameraIcon_Light.png/0.0.7/asset"
          }
       },
       "id": "c0229319-1937-4de2-b256-eccdd010f0dc",
@@ -1897,14 +1896,14 @@
       "on_by_default|flight:msEdgeHubAppStreamScreenRecorderOnByDefault": true,
       "pin_by_default": true,
       "preferred_side_pane_width": 376,
-      "tags": [ "no_auto_cleanup", "on_by_default_experimenting" ],
+      "tags": [ "on_by_default_experimenting" ],
       "target": {
          "url": "https://microsoft.sharepoint.com/_layouts/15/stream.aspx?action=create&captureMode=screenrecorder&referrer=Edge&referrerScenario=Shoreline-screenrecorder",
          "url_resolver": {
             "__global": "SharePointUrlResolver"
          }
       },
-      "version": "0.0.6"
+      "version": "0.0.7"
    }, {
       "default_locale": "en",
       "description": "Your online travel companion",

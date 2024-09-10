@@ -1,6 +1,6 @@
 // Configurações Globais
 #define verm_pin 19
-#define infra_pin 2
+#define infra_pin 18
 #define leitura_pin 33
 
 // Variáveis com o estado dos pinos, se estão ou não ativos

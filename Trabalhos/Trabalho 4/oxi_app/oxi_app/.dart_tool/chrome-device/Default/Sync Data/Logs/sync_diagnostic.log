@@ -68,3 +68,1340 @@
 2024-08-27T16:01:06.072Z P:26356 T:24928] SyncManagerImpl::ConfigureSyncer,Types to download: 
 2024-08-27T16:01:06.072Z P:26356 T:10040] DataTypeManagerImpl::ConfigurationCompleted,Remain to be configured size: 0
 2024-08-27T16:01:06.072Z P:26356 T:10040] SyncServiceImpl::OnConfigureDone,Configure DataTypeManager with: Ok
+2024-09-10T20:10:23.907Z P:6392 T:26912] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T20:10:24.452Z P:6392 T:26912] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:10:24.452Z P:6392 T:26912] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:10:24.466Z P:6392 T:26912] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:10:24.466Z P:6392 T:26912] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:10:26.292Z P:6392 T:26912] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:10:26.292Z P:6392 T:26912] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:10:29.885Z P:6392 T:26912] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:10:29.885Z P:6392 T:26912] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:10:34.057Z P:6392 T:26912] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T20:10:34.058Z P:6392 T:8220] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T20:10:34.070Z P:6392 T:26912] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:10:34.070Z P:6392 T:26912] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:10:34.070Z P:6392 T:26912] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:10:34.083Z P:6392 T:26912] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:10:34.083Z P:6392 T:26912] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:10:34.083Z P:6392 T:26912] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:10:35.915Z P:6392 T:26912] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:10:35.915Z P:6392 T:26912] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:10:35.915Z P:6392 T:26912] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:10:37.756Z P:6392 T:26912] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:10:37.756Z P:6392 T:26912] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:10:39.629Z P:6392 T:26912] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:10:39.629Z P:6392 T:26912] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:10:39.629Z P:6392 T:26912] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:10:46.194Z P:6392 T:26912] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:10:46.194Z P:6392 T:26912] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:10:46.195Z P:6392 T:26912] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:10:51.741Z P:6392 T:26912] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:10:51.741Z P:6392 T:26912] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:10:59.178Z P:6392 T:26912] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:10:59.178Z P:6392 T:26912] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:10:59.178Z P:6392 T:26912] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:14:25.657Z P:27908 T:27672] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T20:14:25.830Z P:27908 T:27672] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:14:25.830Z P:27908 T:27672] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:14:25.851Z P:27908 T:27672] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:14:25.851Z P:27908 T:27672] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:14:27.613Z P:27908 T:27672] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:14:27.614Z P:27908 T:27672] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:14:31.001Z P:27908 T:27672] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:14:31.001Z P:27908 T:27672] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:14:35.721Z P:27908 T:27672] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T20:14:35.721Z P:27908 T:24160] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T20:14:35.734Z P:27908 T:27672] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:14:35.734Z P:27908 T:27672] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:14:35.734Z P:27908 T:27672] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:14:35.747Z P:27908 T:27672] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:14:35.747Z P:27908 T:27672] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:14:35.747Z P:27908 T:27672] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:14:37.534Z P:27908 T:27672] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:14:37.534Z P:27908 T:27672] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:14:37.534Z P:27908 T:27672] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:14:38.677Z P:27908 T:27672] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:14:38.677Z P:27908 T:27672] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:14:41.502Z P:27908 T:27672] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:14:41.502Z P:27908 T:27672] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:14:41.502Z P:27908 T:27672] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:14:48.113Z P:27908 T:27672] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:14:48.113Z P:27908 T:27672] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:14:48.113Z P:27908 T:27672] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:14:52.343Z P:27908 T:27672] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:14:52.343Z P:27908 T:27672] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:15:03.629Z P:27908 T:27672] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:15:03.629Z P:27908 T:27672] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:15:03.629Z P:27908 T:27672] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:15:20.802Z P:27908 T:27672] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:15:20.802Z P:27908 T:27672] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:20:03.637Z P:25684 T:26152] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T20:20:03.798Z P:25684 T:26152] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:20:03.798Z P:25684 T:26152] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:20:03.821Z P:25684 T:26152] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:20:03.821Z P:25684 T:26152] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:20:05.458Z P:25684 T:26152] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:20:05.458Z P:25684 T:26152] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:20:08.709Z P:25684 T:26152] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:20:08.709Z P:25684 T:26152] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:20:13.707Z P:25684 T:26152] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T20:20:13.708Z P:25684 T:26844] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T20:20:13.719Z P:25684 T:26152] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:20:13.719Z P:25684 T:26152] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:20:13.719Z P:25684 T:26152] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:20:13.730Z P:25684 T:26152] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:20:13.730Z P:25684 T:26152] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:20:13.730Z P:25684 T:26152] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:20:15.720Z P:25684 T:26152] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:20:15.720Z P:25684 T:26152] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:20:15.720Z P:25684 T:26152] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:20:16.413Z P:25684 T:26152] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:20:16.413Z P:25684 T:26152] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:20:19.470Z P:25684 T:26152] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:20:19.470Z P:25684 T:26152] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:20:19.470Z P:25684 T:26152] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:20:27.327Z P:25684 T:26152] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:20:27.327Z P:25684 T:26152] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:20:27.327Z P:25684 T:26152] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:20:31.022Z P:25684 T:26152] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:20:31.022Z P:25684 T:26152] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:20:41.629Z P:25684 T:26152] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:20:41.629Z P:25684 T:26152] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:20:41.629Z P:25684 T:26152] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:28:12.596Z P:25812 T:28460] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T20:28:12.770Z P:25812 T:28460] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:28:12.770Z P:25812 T:28460] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:28:12.789Z P:25812 T:28460] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:28:12.789Z P:25812 T:28460] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:28:14.483Z P:25812 T:28460] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:28:14.483Z P:25812 T:28460] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:28:17.759Z P:25812 T:28460] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:28:17.759Z P:25812 T:28460] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:28:22.662Z P:25812 T:28460] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T20:28:22.663Z P:25812 T:2468] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T20:28:22.675Z P:25812 T:28460] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:28:22.675Z P:25812 T:28460] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:28:22.675Z P:25812 T:28460] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:28:22.688Z P:25812 T:28460] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:28:22.688Z P:25812 T:28460] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:28:22.688Z P:25812 T:28460] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:28:24.426Z P:25812 T:28460] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:28:24.426Z P:25812 T:28460] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:28:24.426Z P:25812 T:28460] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:28:25.066Z P:25812 T:28460] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:28:25.066Z P:25812 T:28460] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:28:28.201Z P:25812 T:28460] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:28:28.201Z P:25812 T:28460] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:28:28.201Z P:25812 T:28460] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:28:35.517Z P:25812 T:28460] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:28:35.517Z P:25812 T:28460] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:28:35.517Z P:25812 T:28460] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:28:40.866Z P:25812 T:28460] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:28:40.866Z P:25812 T:28460] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:28:50.093Z P:25812 T:28460] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:28:50.093Z P:25812 T:28460] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:28:50.093Z P:25812 T:28460] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:29:12.795Z P:25812 T:28460] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:29:12.795Z P:25812 T:28460] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:29:22.061Z P:25812 T:28460] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:29:22.061Z P:25812 T:28460] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:29:22.061Z P:25812 T:28460] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:30:14.225Z P:25812 T:28460] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:30:14.225Z P:25812 T:28460] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:30:21.698Z P:25812 T:28460] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:30:21.698Z P:25812 T:28460] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:30:21.698Z P:25812 T:28460] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:30:50.916Z P:27944 T:25148] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T20:30:51.083Z P:27944 T:25148] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:30:51.083Z P:27944 T:25148] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:30:51.104Z P:27944 T:25148] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:30:51.105Z P:27944 T:25148] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:30:52.980Z P:27944 T:25148] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:30:52.980Z P:27944 T:25148] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:30:56.316Z P:27944 T:25148] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:30:56.316Z P:27944 T:25148] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:31:00.981Z P:27944 T:25148] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T20:31:00.982Z P:27944 T:11496] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T20:31:00.994Z P:27944 T:25148] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:31:00.994Z P:27944 T:25148] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:31:00.994Z P:27944 T:25148] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:31:01.007Z P:27944 T:25148] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:31:01.007Z P:27944 T:25148] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:31:01.007Z P:27944 T:25148] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:31:02.743Z P:27944 T:25148] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:31:02.743Z P:27944 T:25148] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:31:02.743Z P:27944 T:25148] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:31:03.023Z P:27944 T:25148] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:31:03.023Z P:27944 T:25148] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:31:06.339Z P:27944 T:25148] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:31:06.339Z P:27944 T:25148] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:31:06.339Z P:27944 T:25148] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:31:13.253Z P:27944 T:25148] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:31:13.253Z P:27944 T:25148] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:31:13.253Z P:27944 T:25148] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:31:18.921Z P:27944 T:25148] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:31:18.921Z P:27944 T:25148] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:31:40.735Z P:12848 T:14116] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T20:31:40.907Z P:12848 T:14116] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:31:40.907Z P:12848 T:14116] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:31:40.933Z P:12848 T:14116] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:31:40.933Z P:12848 T:14116] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:31:42.592Z P:12848 T:14116] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:31:42.592Z P:12848 T:14116] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:31:46.594Z P:12848 T:14116] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:31:46.594Z P:12848 T:14116] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:31:50.812Z P:12848 T:14116] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T20:31:50.813Z P:12848 T:16168] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T20:31:50.825Z P:12848 T:14116] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:31:50.825Z P:12848 T:14116] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:31:50.825Z P:12848 T:14116] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:31:50.838Z P:12848 T:14116] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:31:50.838Z P:12848 T:14116] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:31:50.838Z P:12848 T:14116] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:31:52.848Z P:12848 T:14116] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:31:52.849Z P:12848 T:14116] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:31:52.849Z P:12848 T:14116] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:31:53.873Z P:12848 T:14116] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:31:53.873Z P:12848 T:14116] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:31:56.136Z P:12848 T:14116] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:31:56.136Z P:12848 T:14116] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:31:56.136Z P:12848 T:14116] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:32:03.806Z P:12848 T:14116] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:32:03.806Z P:12848 T:14116] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:32:03.806Z P:12848 T:14116] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:32:08.135Z P:12848 T:14116] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:32:08.135Z P:12848 T:14116] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:34:17.505Z P:28668 T:26404] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T20:34:17.675Z P:28668 T:26404] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:34:17.675Z P:28668 T:26404] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:34:17.697Z P:28668 T:26404] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:34:17.697Z P:28668 T:26404] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:34:19.494Z P:28668 T:26404] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:34:19.494Z P:28668 T:26404] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:34:23.133Z P:28668 T:26404] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:34:23.133Z P:28668 T:26404] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:34:27.566Z P:28668 T:26404] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T20:34:27.567Z P:28668 T:27984] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T20:34:27.579Z P:28668 T:26404] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:34:27.579Z P:28668 T:26404] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:34:27.579Z P:28668 T:26404] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:34:27.591Z P:28668 T:26404] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:34:27.591Z P:28668 T:26404] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:34:27.591Z P:28668 T:26404] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:34:29.496Z P:28668 T:26404] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:34:29.496Z P:28668 T:26404] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:34:29.496Z P:28668 T:26404] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:34:29.867Z P:28668 T:26404] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:34:29.867Z P:28668 T:26404] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:34:33.008Z P:28668 T:26404] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:34:33.008Z P:28668 T:26404] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:34:33.008Z P:28668 T:26404] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:34:39.637Z P:28668 T:26404] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:34:39.637Z P:28668 T:26404] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:34:39.637Z P:28668 T:26404] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:34:43.175Z P:28668 T:26404] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:34:43.175Z P:28668 T:26404] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:34:52.789Z P:28668 T:26404] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:34:52.789Z P:28668 T:26404] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:34:52.789Z P:28668 T:26404] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:35:11.183Z P:28668 T:26404] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:35:11.183Z P:28668 T:26404] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:35:20.183Z P:28668 T:26404] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:35:20.183Z P:28668 T:26404] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:35:20.183Z P:28668 T:26404] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:47:14.025Z P:29160 T:25196] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T20:47:14.205Z P:29160 T:25196] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:47:14.205Z P:29160 T:25196] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:47:14.226Z P:29160 T:25196] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:47:14.226Z P:29160 T:25196] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:47:15.969Z P:29160 T:25196] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:47:15.969Z P:29160 T:25196] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:47:19.701Z P:29160 T:25196] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:47:19.701Z P:29160 T:25196] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:47:24.089Z P:29160 T:25196] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T20:47:24.089Z P:29160 T:30648] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T20:47:24.102Z P:29160 T:25196] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:47:24.102Z P:29160 T:25196] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:47:24.102Z P:29160 T:25196] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:47:24.115Z P:29160 T:25196] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:47:24.115Z P:29160 T:25196] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:47:24.115Z P:29160 T:25196] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:47:26.016Z P:29160 T:25196] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:47:26.016Z P:29160 T:25196] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:47:26.016Z P:29160 T:25196] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:47:26.190Z P:29160 T:25196] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:47:26.190Z P:29160 T:25196] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:47:29.476Z P:29160 T:25196] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:47:29.476Z P:29160 T:25196] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:47:29.476Z P:29160 T:25196] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:47:37.299Z P:29160 T:25196] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:47:37.299Z P:29160 T:25196] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:47:37.299Z P:29160 T:25196] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:47:40.740Z P:29160 T:25196] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:47:40.740Z P:29160 T:25196] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:47:53.245Z P:29160 T:25196] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:47:53.245Z P:29160 T:25196] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:47:53.245Z P:29160 T:25196] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:48:11.232Z P:29160 T:25196] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:48:11.232Z P:29160 T:25196] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:56:20.708Z P:3404 T:19780] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T20:56:20.890Z P:3404 T:19780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:56:20.890Z P:3404 T:19780] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:56:20.910Z P:3404 T:19780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:56:20.910Z P:3404 T:19780] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:56:22.659Z P:3404 T:19780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:56:22.659Z P:3404 T:19780] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:56:25.984Z P:3404 T:19780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:56:25.984Z P:3404 T:19780] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:56:30.781Z P:3404 T:19780] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T20:56:30.782Z P:3404 T:14604] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T20:56:30.793Z P:3404 T:19780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:56:30.793Z P:3404 T:19780] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:56:30.793Z P:3404 T:19780] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:56:30.805Z P:3404 T:19780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:56:30.805Z P:3404 T:19780] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:56:30.805Z P:3404 T:19780] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:56:32.598Z P:3404 T:19780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:56:32.598Z P:3404 T:19780] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:56:32.598Z P:3404 T:19780] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:56:32.632Z P:3404 T:19780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:56:32.632Z P:3404 T:19780] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:56:36.531Z P:3404 T:19780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:56:36.531Z P:3404 T:19780] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:56:36.531Z P:3404 T:19780] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:56:43.152Z P:3404 T:19780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:56:43.152Z P:3404 T:19780] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:56:43.152Z P:3404 T:19780] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:56:46.085Z P:3404 T:19780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:56:46.085Z P:3404 T:19780] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:56:57.180Z P:3404 T:19780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:56:57.180Z P:3404 T:19780] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:56:57.180Z P:3404 T:19780] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:57:13.798Z P:3404 T:19780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:57:13.798Z P:3404 T:19780] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:57:25.487Z P:3404 T:19780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:57:25.487Z P:3404 T:19780] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:57:25.487Z P:3404 T:19780] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:58:04.115Z P:28660 T:3924] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T20:58:04.292Z P:28660 T:3924] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:58:04.292Z P:28660 T:3924] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:58:04.321Z P:28660 T:3924] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:58:04.321Z P:28660 T:3924] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:58:06.061Z P:28660 T:3924] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:58:06.061Z P:28660 T:3924] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:58:10.068Z P:28660 T:3924] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:58:10.068Z P:28660 T:3924] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:58:14.189Z P:28660 T:3924] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T20:58:14.190Z P:28660 T:25380] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T20:58:14.205Z P:28660 T:3924] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:58:14.205Z P:28660 T:3924] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:58:14.205Z P:28660 T:3924] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:58:14.219Z P:28660 T:3924] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:58:14.219Z P:28660 T:3924] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:58:14.219Z P:28660 T:3924] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:58:15.931Z P:28660 T:3924] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:58:15.931Z P:28660 T:3924] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:58:15.931Z P:28660 T:3924] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:58:16.957Z P:28660 T:3924] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:58:16.957Z P:28660 T:3924] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:58:19.378Z P:28660 T:3924] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:58:19.378Z P:28660 T:3924] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:58:19.378Z P:28660 T:3924] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:58:27.067Z P:28660 T:3924] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:58:27.067Z P:28660 T:3924] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:58:27.067Z P:28660 T:3924] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:58:30.372Z P:28660 T:3924] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:58:30.372Z P:28660 T:3924] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:59:32.247Z P:7140 T:26808] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T20:59:32.428Z P:7140 T:26808] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:59:32.428Z P:7140 T:26808] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:59:32.448Z P:7140 T:26808] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:59:32.448Z P:7140 T:26808] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:59:34.153Z P:7140 T:26808] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:59:34.153Z P:7140 T:26808] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:59:37.548Z P:7140 T:26808] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:59:37.548Z P:7140 T:26808] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T20:59:42.308Z P:7140 T:26808] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T20:59:42.309Z P:7140 T:28064] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T20:59:42.321Z P:7140 T:26808] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:59:42.321Z P:7140 T:26808] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:59:42.321Z P:7140 T:26808] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T20:59:42.333Z P:7140 T:26808] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T20:59:42.333Z P:7140 T:26808] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T20:59:42.333Z P:7140 T:26808] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:00:14.865Z P:27820 T:27708] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T21:00:15.048Z P:27820 T:27708] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:00:15.048Z P:27820 T:27708] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:00:15.079Z P:27820 T:27708] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:00:15.079Z P:27820 T:27708] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:00:16.986Z P:27820 T:27708] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:00:16.986Z P:27820 T:27708] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:00:20.922Z P:27820 T:27708] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:00:20.922Z P:27820 T:27708] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:00:24.929Z P:27820 T:27708] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T21:00:24.930Z P:27820 T:29792] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T21:00:24.941Z P:27820 T:27708] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:00:24.941Z P:27820 T:27708] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:00:24.941Z P:27820 T:27708] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:00:24.954Z P:27820 T:27708] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:00:24.954Z P:27820 T:27708] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:00:24.954Z P:27820 T:27708] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:00:26.841Z P:27820 T:27708] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:00:26.841Z P:27820 T:27708] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:00:26.841Z P:27820 T:27708] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:00:28.747Z P:27820 T:27708] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:00:28.747Z P:27820 T:27708] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:00:30.565Z P:27820 T:27708] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:00:30.565Z P:27820 T:27708] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:00:30.565Z P:27820 T:27708] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:00:37.569Z P:27820 T:27708] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:00:37.570Z P:27820 T:27708] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:00:37.570Z P:27820 T:27708] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:00:43.667Z P:27820 T:27708] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:00:43.667Z P:27820 T:27708] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:00:50.600Z P:27820 T:27708] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:00:50.600Z P:27820 T:27708] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:00:50.600Z P:27820 T:27708] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:01:10.577Z P:27820 T:27708] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:01:10.577Z P:27820 T:27708] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:01:17.490Z P:27820 T:27708] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:01:17.490Z P:27820 T:27708] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:01:17.490Z P:27820 T:27708] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:02:02.502Z P:27820 T:27708] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:02:02.502Z P:27820 T:27708] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:02:19.973Z P:27820 T:27708] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:02:19.973Z P:27820 T:27708] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:02:19.973Z P:27820 T:27708] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:04:27.755Z P:26496 T:28016] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T21:04:27.928Z P:26496 T:28016] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:04:27.928Z P:26496 T:28016] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:04:27.949Z P:26496 T:28016] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:04:27.949Z P:26496 T:28016] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:04:29.882Z P:26496 T:28016] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:04:29.882Z P:26496 T:28016] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:04:33.267Z P:26496 T:28016] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:04:33.267Z P:26496 T:28016] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:04:37.821Z P:26496 T:28016] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T21:04:37.822Z P:26496 T:29644] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T21:04:37.833Z P:26496 T:28016] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:04:37.833Z P:26496 T:28016] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:04:37.833Z P:26496 T:28016] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:04:37.846Z P:26496 T:28016] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:04:37.846Z P:26496 T:28016] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:04:37.846Z P:26496 T:28016] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:04:39.620Z P:26496 T:28016] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:04:39.620Z P:26496 T:28016] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:04:39.620Z P:26496 T:28016] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:04:40.757Z P:26496 T:28016] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:04:40.757Z P:26496 T:28016] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:04:42.953Z P:26496 T:28016] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:04:42.953Z P:26496 T:28016] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:04:42.953Z P:26496 T:28016] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:04:50.748Z P:26496 T:28016] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:04:50.748Z P:26496 T:28016] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:04:50.748Z P:26496 T:28016] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:04:56.071Z P:26496 T:28016] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:04:56.071Z P:26496 T:28016] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:05:06.430Z P:26496 T:28016] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:05:06.430Z P:26496 T:28016] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:05:06.430Z P:26496 T:28016] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:07:31.667Z P:23828 T:29120] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T21:07:31.852Z P:23828 T:29120] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:07:31.852Z P:23828 T:29120] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:07:31.871Z P:23828 T:29120] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:07:31.871Z P:23828 T:29120] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:07:33.708Z P:23828 T:29120] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:07:33.708Z P:23828 T:29120] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:07:37.600Z P:23828 T:29120] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:07:37.600Z P:23828 T:29120] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:07:41.738Z P:23828 T:29120] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T21:07:41.739Z P:23828 T:27144] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T21:07:41.750Z P:23828 T:29120] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:07:41.750Z P:23828 T:29120] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:07:41.750Z P:23828 T:29120] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:07:41.762Z P:23828 T:29120] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:07:41.762Z P:23828 T:29120] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:07:41.762Z P:23828 T:29120] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:07:43.524Z P:23828 T:29120] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:07:43.524Z P:23828 T:29120] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:07:43.524Z P:23828 T:29120] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:07:45.055Z P:23828 T:29120] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:07:45.055Z P:23828 T:29120] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:07:47.508Z P:23828 T:29120] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:07:47.508Z P:23828 T:29120] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:07:47.508Z P:23828 T:29120] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:07:54.550Z P:23828 T:29120] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:07:54.550Z P:23828 T:29120] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:07:54.550Z P:23828 T:29120] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:07:58.395Z P:23828 T:29120] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:07:58.395Z P:23828 T:29120] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:08:08.613Z P:23828 T:29120] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:08:08.613Z P:23828 T:29120] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:08:08.613Z P:23828 T:29120] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:08:28.550Z P:23828 T:29120] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:08:28.550Z P:23828 T:29120] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:08:39.321Z P:23828 T:29120] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:08:39.321Z P:23828 T:29120] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:08:39.321Z P:23828 T:29120] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:11:09.211Z P:17056 T:30108] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T21:11:09.398Z P:17056 T:30108] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:11:09.398Z P:17056 T:30108] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:11:09.421Z P:17056 T:30108] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:11:09.421Z P:17056 T:30108] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:11:11.343Z P:17056 T:30108] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:11:11.343Z P:17056 T:30108] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:11:14.705Z P:17056 T:30108] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:11:14.705Z P:17056 T:30108] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:11:19.271Z P:17056 T:30108] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T21:11:19.272Z P:17056 T:4284] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T21:11:19.285Z P:17056 T:30108] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:11:19.285Z P:17056 T:30108] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:11:19.285Z P:17056 T:30108] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:11:19.299Z P:17056 T:30108] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:11:19.299Z P:17056 T:30108] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:11:19.299Z P:17056 T:30108] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:11:21.052Z P:17056 T:30108] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:11:21.052Z P:17056 T:30108] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:11:21.052Z P:17056 T:30108] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:11:21.886Z P:17056 T:30108] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:11:21.886Z P:17056 T:30108] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:11:24.981Z P:17056 T:30108] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:11:24.981Z P:17056 T:30108] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:11:24.981Z P:17056 T:30108] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:11:31.575Z P:17056 T:30108] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:11:31.575Z P:17056 T:30108] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:11:31.575Z P:17056 T:30108] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:11:36.915Z P:17056 T:30108] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:11:36.915Z P:17056 T:30108] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:11:46.928Z P:17056 T:30108] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:11:46.928Z P:17056 T:30108] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:11:46.928Z P:17056 T:30108] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:12:02.804Z P:17056 T:30108] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:12:02.804Z P:17056 T:30108] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:12:18.294Z P:17056 T:30108] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:12:18.294Z P:17056 T:30108] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:12:18.294Z P:17056 T:30108] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:13:04.640Z P:17056 T:30108] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:13:04.640Z P:17056 T:30108] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:13:16.363Z P:17056 T:30108] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:13:16.363Z P:17056 T:30108] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:13:16.363Z P:17056 T:30108] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:13:54.118Z P:9416 T:12780] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T21:13:54.294Z P:9416 T:12780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:13:54.294Z P:9416 T:12780] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:13:54.316Z P:9416 T:12780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:13:54.316Z P:9416 T:12780] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:13:56.055Z P:9416 T:12780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:13:56.055Z P:9416 T:12780] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:13:59.557Z P:9416 T:12780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:13:59.557Z P:9416 T:12780] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:14:04.183Z P:9416 T:12780] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T21:14:04.184Z P:9416 T:3012] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T21:14:04.196Z P:9416 T:12780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:14:04.196Z P:9416 T:12780] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:14:04.196Z P:9416 T:12780] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:14:04.209Z P:9416 T:12780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:14:04.209Z P:9416 T:12780] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:14:04.209Z P:9416 T:12780] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:14:06.120Z P:9416 T:12780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:14:06.120Z P:9416 T:12780] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:14:06.120Z P:9416 T:12780] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:14:06.936Z P:9416 T:12780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:14:06.936Z P:9416 T:12780] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:14:09.521Z P:9416 T:12780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:14:09.521Z P:9416 T:12780] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:14:09.521Z P:9416 T:12780] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:14:17.051Z P:9416 T:12780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:14:17.051Z P:9416 T:12780] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:14:17.051Z P:9416 T:12780] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:14:19.891Z P:9416 T:12780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:14:19.891Z P:9416 T:12780] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:14:29.957Z P:9416 T:12780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:14:29.957Z P:9416 T:12780] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:14:29.957Z P:9416 T:12780] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:14:47.104Z P:9416 T:12780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:14:47.104Z P:9416 T:12780] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:15:00.910Z P:9416 T:12780] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:15:00.910Z P:9416 T:12780] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:15:00.910Z P:9416 T:12780] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:16:31.322Z P:29404 T:2436] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T21:16:31.493Z P:29404 T:2436] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:16:31.493Z P:29404 T:2436] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:16:31.515Z P:29404 T:2436] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:16:31.515Z P:29404 T:2436] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:16:33.426Z P:29404 T:2436] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:16:33.426Z P:29404 T:2436] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:16:36.764Z P:29404 T:2436] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:16:36.764Z P:29404 T:2436] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:16:41.379Z P:29404 T:2436] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T21:16:41.380Z P:29404 T:26684] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T21:16:41.392Z P:29404 T:2436] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:16:41.392Z P:29404 T:2436] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:16:41.392Z P:29404 T:2436] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:16:41.406Z P:29404 T:2436] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:16:41.406Z P:29404 T:2436] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:16:41.406Z P:29404 T:2436] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:16:43.135Z P:29404 T:2436] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:16:43.135Z P:29404 T:2436] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:16:43.135Z P:29404 T:2436] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:16:43.902Z P:29404 T:2436] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:16:43.902Z P:29404 T:2436] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:16:46.610Z P:29404 T:2436] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:16:46.610Z P:29404 T:2436] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:16:46.610Z P:29404 T:2436] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:16:54.036Z P:29404 T:2436] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:16:54.036Z P:29404 T:2436] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:16:54.036Z P:29404 T:2436] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:16:59.488Z P:29404 T:2436] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:16:59.488Z P:29404 T:2436] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:17:09.354Z P:29404 T:2436] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:17:09.354Z P:29404 T:2436] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:17:09.354Z P:29404 T:2436] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:17:28.402Z P:29404 T:2436] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:17:28.402Z P:29404 T:2436] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:17:35.935Z P:29404 T:2436] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:17:35.935Z P:29404 T:2436] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:17:35.935Z P:29404 T:2436] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:23:08.038Z P:13628 T:29676] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T21:23:08.202Z P:13628 T:29676] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:23:08.202Z P:13628 T:29676] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:23:08.227Z P:13628 T:29676] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:23:08.227Z P:13628 T:29676] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:23:10.212Z P:13628 T:29676] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:23:10.212Z P:13628 T:29676] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:23:13.475Z P:13628 T:29676] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:23:13.475Z P:13628 T:29676] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:23:18.111Z P:13628 T:29676] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T21:23:18.112Z P:13628 T:28576] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T21:23:18.124Z P:13628 T:29676] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:23:18.124Z P:13628 T:29676] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:23:18.124Z P:13628 T:29676] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:23:18.137Z P:13628 T:29676] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:23:18.137Z P:13628 T:29676] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:23:18.137Z P:13628 T:29676] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:23:19.955Z P:13628 T:29676] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:23:19.955Z P:13628 T:29676] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:23:19.955Z P:13628 T:29676] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:23:20.450Z P:13628 T:29676] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:23:20.450Z P:13628 T:29676] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:23:23.493Z P:13628 T:29676] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:23:23.493Z P:13628 T:29676] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:23:23.493Z P:13628 T:29676] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:23:30.686Z P:13628 T:29676] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:23:30.686Z P:13628 T:29676] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:23:30.686Z P:13628 T:29676] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:23:33.724Z P:13628 T:29676] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:23:33.724Z P:13628 T:29676] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:23:44.546Z P:13628 T:29676] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:23:44.546Z P:13628 T:29676] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:23:44.546Z P:13628 T:29676] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:24:01.099Z P:13628 T:29676] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:24:01.099Z P:13628 T:29676] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:24:15.958Z P:13628 T:29676] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:24:15.958Z P:13628 T:29676] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:24:15.958Z P:13628 T:29676] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:24:59.105Z P:13628 T:29676] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:24:59.105Z P:13628 T:29676] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:25:09.704Z P:13628 T:29676] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:25:09.704Z P:13628 T:29676] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:25:09.704Z P:13628 T:29676] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:26:53.502Z P:13628 T:29676] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:26:53.502Z P:13628 T:29676] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:27:13.117Z P:13628 T:29676] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:27:13.117Z P:13628 T:29676] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:27:13.117Z P:13628 T:29676] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:27:51.211Z P:2624 T:21660] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T21:27:51.381Z P:2624 T:21660] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:27:51.381Z P:2624 T:21660] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:27:51.403Z P:2624 T:21660] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:27:51.404Z P:2624 T:21660] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:27:53.023Z P:2624 T:21660] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:27:53.023Z P:2624 T:21660] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:27:56.432Z P:2624 T:21660] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:27:56.432Z P:2624 T:21660] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:28:01.275Z P:2624 T:21660] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T21:28:01.276Z P:2624 T:27496] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T21:28:01.289Z P:2624 T:21660] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:28:01.289Z P:2624 T:21660] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:28:01.289Z P:2624 T:21660] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:28:01.304Z P:2624 T:21660] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:28:01.304Z P:2624 T:21660] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:28:01.304Z P:2624 T:21660] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:28:03.056Z P:2624 T:21660] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:28:03.057Z P:2624 T:21660] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:28:03.057Z P:2624 T:21660] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:28:03.984Z P:2624 T:21660] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:28:03.984Z P:2624 T:21660] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:28:07.004Z P:2624 T:21660] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:28:07.004Z P:2624 T:21660] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:28:07.004Z P:2624 T:21660] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:28:14.930Z P:2624 T:21660] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:28:14.930Z P:2624 T:21660] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:28:14.930Z P:2624 T:21660] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:28:16.971Z P:2624 T:21660] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:28:16.971Z P:2624 T:21660] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:28:28.474Z P:2624 T:21660] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:28:28.474Z P:2624 T:21660] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:28:28.474Z P:2624 T:21660] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:28:44.676Z P:2624 T:21660] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:28:44.676Z P:2624 T:21660] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:28:59.198Z P:2624 T:21660] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:28:59.198Z P:2624 T:21660] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:28:59.198Z P:2624 T:21660] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:29:40.146Z P:2624 T:21660] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:29:40.146Z P:2624 T:21660] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:29:53.677Z P:2624 T:21660] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:29:53.677Z P:2624 T:21660] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:29:53.677Z P:2624 T:21660] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:33:33.191Z P:9312 T:7272] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T21:33:33.367Z P:9312 T:7272] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:33:33.367Z P:9312 T:7272] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:33:33.389Z P:9312 T:7272] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:33:33.389Z P:9312 T:7272] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:33:35.385Z P:9312 T:7272] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:33:35.385Z P:9312 T:7272] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:33:39.082Z P:9312 T:7272] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:33:39.082Z P:9312 T:7272] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:33:43.254Z P:9312 T:7272] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T21:33:43.254Z P:9312 T:26492] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T21:33:43.267Z P:9312 T:7272] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:33:43.267Z P:9312 T:7272] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:33:43.267Z P:9312 T:7272] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:33:43.281Z P:9312 T:7272] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:33:43.281Z P:9312 T:7272] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:33:43.281Z P:9312 T:7272] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:33:44.949Z P:9312 T:7272] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:33:44.949Z P:9312 T:7272] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:33:44.949Z P:9312 T:7272] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:33:46.852Z P:9312 T:7272] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:33:46.852Z P:9312 T:7272] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:33:48.365Z P:9312 T:7272] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:33:48.365Z P:9312 T:7272] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:33:48.365Z P:9312 T:7272] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:33:55.579Z P:9312 T:7272] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:33:55.579Z P:9312 T:7272] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:33:55.579Z P:9312 T:7272] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:34:02.412Z P:9312 T:7272] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:34:02.412Z P:9312 T:7272] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:34:11.355Z P:9312 T:7272] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:34:11.355Z P:9312 T:7272] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:34:11.355Z P:9312 T:7272] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:34:29.477Z P:9312 T:7272] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:34:29.477Z P:9312 T:7272] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:34:37.394Z P:9312 T:7272] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:34:37.394Z P:9312 T:7272] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:34:37.394Z P:9312 T:7272] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:35:27.537Z P:9312 T:7272] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:35:27.537Z P:9312 T:7272] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:35:29.976Z P:9312 T:7272] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:35:29.976Z P:9312 T:7272] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:35:29.976Z P:9312 T:7272] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:37:14.427Z P:9312 T:7272] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:37:14.427Z P:9312 T:7272] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:37:14.427Z P:9312 T:7272] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:37:25.038Z P:9312 T:7272] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:37:25.038Z P:9312 T:7272] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:38:26.978Z P:29400 T:27084] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T21:38:27.149Z P:29400 T:27084] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:38:27.149Z P:29400 T:27084] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:38:27.171Z P:29400 T:27084] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:38:27.171Z P:29400 T:27084] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:38:28.850Z P:29400 T:27084] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:38:28.850Z P:29400 T:27084] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:38:32.707Z P:29400 T:27084] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:38:32.707Z P:29400 T:27084] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:38:37.041Z P:29400 T:27084] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T21:38:37.041Z P:29400 T:24808] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T21:38:37.054Z P:29400 T:27084] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:38:37.054Z P:29400 T:27084] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:38:37.054Z P:29400 T:27084] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:38:37.068Z P:29400 T:27084] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:38:37.068Z P:29400 T:27084] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:38:37.068Z P:29400 T:27084] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:38:38.988Z P:29400 T:27084] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:38:38.988Z P:29400 T:27084] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:38:38.988Z P:29400 T:27084] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:38:39.751Z P:29400 T:27084] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:38:39.751Z P:29400 T:27084] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:38:42.466Z P:29400 T:27084] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:38:42.466Z P:29400 T:27084] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:38:42.466Z P:29400 T:27084] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:38:49.382Z P:29400 T:27084] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:38:49.382Z P:29400 T:27084] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:38:49.382Z P:29400 T:27084] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:38:52.786Z P:29400 T:27084] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:38:52.786Z P:29400 T:27084] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:39:02.829Z P:29400 T:27084] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:39:02.829Z P:29400 T:27084] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:39:02.829Z P:29400 T:27084] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:39:18.600Z P:29400 T:27084] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:39:18.600Z P:29400 T:27084] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:39:31.044Z P:29400 T:27084] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:39:31.044Z P:29400 T:27084] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:39:31.044Z P:29400 T:27084] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:40:18.928Z P:29400 T:27084] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:40:18.928Z P:29400 T:27084] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:40:29.562Z P:29400 T:27084] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:40:29.562Z P:29400 T:27084] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:40:29.562Z P:29400 T:27084] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:42:04.905Z P:29400 T:27084] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:42:04.905Z P:29400 T:27084] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:42:30.413Z P:29400 T:27084] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:42:30.413Z P:29400 T:27084] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:42:30.413Z P:29400 T:27084] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:44:40.812Z P:26864 T:31444] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T21:44:40.979Z P:26864 T:31444] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:44:40.979Z P:26864 T:31444] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:44:40.999Z P:26864 T:31444] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:44:40.999Z P:26864 T:31444] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:44:43.012Z P:26864 T:31444] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:44:43.012Z P:26864 T:31444] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:44:46.307Z P:26864 T:31444] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:44:46.307Z P:26864 T:31444] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:44:50.882Z P:26864 T:31444] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T21:44:50.883Z P:26864 T:16660] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T21:44:50.895Z P:26864 T:31444] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:44:50.895Z P:26864 T:31444] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:44:50.895Z P:26864 T:31444] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:44:50.908Z P:26864 T:31444] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:44:50.908Z P:26864 T:31444] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:44:50.908Z P:26864 T:31444] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:44:52.545Z P:26864 T:31444] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:44:52.545Z P:26864 T:31444] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:44:52.545Z P:26864 T:31444] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:44:53.441Z P:26864 T:31444] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:44:53.441Z P:26864 T:31444] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:44:56.556Z P:26864 T:31444] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:44:56.556Z P:26864 T:31444] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:44:56.556Z P:26864 T:31444] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:45:03.325Z P:26864 T:31444] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:45:03.325Z P:26864 T:31444] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:45:03.325Z P:26864 T:31444] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:45:08.956Z P:26864 T:31444] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:45:08.956Z P:26864 T:31444] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:45:18.716Z P:26864 T:31444] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:45:18.716Z P:26864 T:31444] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:45:18.716Z P:26864 T:31444] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:45:36.946Z P:26864 T:31444] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:45:36.946Z P:26864 T:31444] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:45:48.053Z P:26864 T:31444] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:45:48.053Z P:26864 T:31444] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:45:48.053Z P:26864 T:31444] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:50:40.959Z P:26208 T:2696] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T21:50:41.134Z P:26208 T:2696] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:50:41.134Z P:26208 T:2696] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:50:41.162Z P:26208 T:2696] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:50:41.162Z P:26208 T:2696] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:50:43.122Z P:26208 T:2696] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:50:43.122Z P:26208 T:2696] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:50:46.436Z P:26208 T:2696] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:50:46.436Z P:26208 T:2696] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:50:51.019Z P:26208 T:2696] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T21:50:51.020Z P:26208 T:28260] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T21:50:51.035Z P:26208 T:2696] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:50:51.035Z P:26208 T:2696] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:50:51.035Z P:26208 T:2696] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:50:51.052Z P:26208 T:2696] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:50:51.052Z P:26208 T:2696] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:50:51.052Z P:26208 T:2696] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:50:52.763Z P:26208 T:2696] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:50:52.763Z P:26208 T:2696] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:50:52.763Z P:26208 T:2696] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:50:53.741Z P:26208 T:2696] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:50:53.741Z P:26208 T:2696] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:50:56.678Z P:26208 T:2696] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:50:56.678Z P:26208 T:2696] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:50:56.678Z P:26208 T:2696] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:51:03.755Z P:26208 T:2696] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:51:03.755Z P:26208 T:2696] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:51:03.755Z P:26208 T:2696] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:51:09.513Z P:26208 T:2696] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:51:09.513Z P:26208 T:2696] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:51:19.431Z P:26208 T:2696] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:51:19.431Z P:26208 T:2696] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:51:19.431Z P:26208 T:2696] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:51:37.646Z P:26208 T:2696] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:51:37.646Z P:26208 T:2696] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:51:51.362Z P:26208 T:2696] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:51:51.362Z P:26208 T:2696] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:51:51.362Z P:26208 T:2696] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:52:31.305Z P:26208 T:2696] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:52:31.305Z P:26208 T:2696] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:52:49.580Z P:26208 T:2696] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:52:49.580Z P:26208 T:2696] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:52:49.580Z P:26208 T:2696] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:54:26.243Z P:26208 T:2696] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:54:26.243Z P:26208 T:2696] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:54:43.079Z P:26208 T:2696] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:54:43.079Z P:26208 T:2696] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:54:43.079Z P:26208 T:2696] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:56:47.425Z P:31016 T:25664] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T21:56:47.601Z P:31016 T:25664] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:56:47.601Z P:31016 T:25664] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:56:47.629Z P:31016 T:25664] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:56:47.629Z P:31016 T:25664] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:56:49.569Z P:31016 T:25664] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:56:49.569Z P:31016 T:25664] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:56:52.875Z P:31016 T:25664] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:56:52.875Z P:31016 T:25664] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:56:57.489Z P:31016 T:25664] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T21:56:57.490Z P:31016 T:23236] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T21:56:57.502Z P:31016 T:25664] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:56:57.502Z P:31016 T:25664] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:56:57.503Z P:31016 T:25664] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:56:57.516Z P:31016 T:25664] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:56:57.516Z P:31016 T:25664] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:56:57.516Z P:31016 T:25664] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:56:59.368Z P:31016 T:25664] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:56:59.368Z P:31016 T:25664] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:56:59.368Z P:31016 T:25664] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:57:00.244Z P:31016 T:25664] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:57:00.244Z P:31016 T:25664] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:57:03.348Z P:31016 T:25664] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:57:03.348Z P:31016 T:25664] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:57:03.348Z P:31016 T:25664] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:57:10.428Z P:31016 T:25664] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:57:10.428Z P:31016 T:25664] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:57:10.428Z P:31016 T:25664] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:57:13.870Z P:31016 T:25664] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:57:13.870Z P:31016 T:25664] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:57:24.806Z P:31016 T:25664] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:57:24.806Z P:31016 T:25664] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:57:24.806Z P:31016 T:25664] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:57:42.459Z P:31016 T:25664] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:57:42.459Z P:31016 T:25664] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:57:51.789Z P:31016 T:25664] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:57:51.789Z P:31016 T:25664] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:57:51.789Z P:31016 T:25664] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T21:58:36.755Z P:31016 T:25664] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:58:36.755Z P:31016 T:25664] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T21:58:44.635Z P:31016 T:25664] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T21:58:44.635Z P:31016 T:25664] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T21:58:44.635Z P:31016 T:25664] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:00:20.989Z P:31016 T:25664] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:00:20.989Z P:31016 T:25664] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:00:51.744Z P:31016 T:25664] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:00:51.744Z P:31016 T:25664] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:00:51.744Z P:31016 T:25664] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:01:30.111Z P:30576 T:31960] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T22:01:30.300Z P:30576 T:31960] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:01:30.300Z P:30576 T:31960] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:01:30.322Z P:30576 T:31960] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:01:30.322Z P:30576 T:31960] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:01:32.320Z P:30576 T:31960] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:01:32.320Z P:30576 T:31960] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:01:36.135Z P:30576 T:31960] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:01:36.135Z P:30576 T:31960] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:01:40.174Z P:30576 T:31960] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T22:01:40.175Z P:30576 T:1824] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T22:01:40.189Z P:30576 T:31960] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:01:40.189Z P:30576 T:31960] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:01:40.189Z P:30576 T:31960] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:01:40.204Z P:30576 T:31960] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:01:40.204Z P:30576 T:31960] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:01:40.204Z P:30576 T:31960] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:01:41.913Z P:30576 T:31960] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:01:41.913Z P:30576 T:31960] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:01:41.913Z P:30576 T:31960] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:01:43.146Z P:30576 T:31960] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:01:43.146Z P:30576 T:31960] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:01:45.826Z P:30576 T:31960] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:01:45.826Z P:30576 T:31960] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:01:45.826Z P:30576 T:31960] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:01:52.399Z P:30576 T:31960] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:01:52.399Z P:30576 T:31960] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:01:52.399Z P:30576 T:31960] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:01:57.352Z P:30576 T:31960] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:01:57.352Z P:30576 T:31960] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:02:06.064Z P:30576 T:31960] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:02:06.064Z P:30576 T:31960] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:02:06.064Z P:30576 T:31960] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:02:24.314Z P:30576 T:31960] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:02:24.314Z P:30576 T:31960] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:02:33.161Z P:30576 T:31960] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:02:33.161Z P:30576 T:31960] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:02:33.161Z P:30576 T:31960] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:03:19.540Z P:30576 T:31960] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:03:19.540Z P:30576 T:31960] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:03:29.552Z P:30576 T:31960] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:03:29.552Z P:30576 T:31960] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:03:29.552Z P:30576 T:31960] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:04:37.483Z P:24860 T:32008] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T22:04:37.683Z P:24860 T:32008] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:04:37.683Z P:24860 T:32008] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:04:37.711Z P:24860 T:32008] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:04:37.711Z P:24860 T:32008] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:04:39.569Z P:24860 T:32008] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:04:39.569Z P:24860 T:32008] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:04:42.837Z P:24860 T:32008] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:04:42.837Z P:24860 T:32008] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:04:47.553Z P:24860 T:32008] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T22:04:47.553Z P:24860 T:24908] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T22:04:47.566Z P:24860 T:32008] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:04:47.566Z P:24860 T:32008] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:04:47.566Z P:24860 T:32008] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:04:47.578Z P:24860 T:32008] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:04:47.578Z P:24860 T:32008] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:04:47.578Z P:24860 T:32008] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:04:49.226Z P:24860 T:32008] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:04:49.226Z P:24860 T:32008] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:04:49.226Z P:24860 T:32008] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:04:49.366Z P:24860 T:32008] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:04:49.366Z P:24860 T:32008] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:04:53.164Z P:24860 T:32008] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:04:53.164Z P:24860 T:32008] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:04:53.165Z P:24860 T:32008] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:04:59.715Z P:24860 T:32008] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:04:59.715Z P:24860 T:32008] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:04:59.715Z P:24860 T:32008] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:05:03.208Z P:24860 T:32008] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:05:03.208Z P:24860 T:32008] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:05:12.846Z P:24860 T:32008] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:05:12.846Z P:24860 T:32008] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:05:12.846Z P:24860 T:32008] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:05:34.192Z P:24860 T:32008] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:05:34.192Z P:24860 T:32008] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:05:39.131Z P:24860 T:32008] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:05:39.131Z P:24860 T:32008] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:05:39.131Z P:24860 T:32008] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:06:36.187Z P:24860 T:32008] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:06:36.187Z P:24860 T:32008] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:06:42.452Z P:24860 T:32008] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:06:42.452Z P:24860 T:32008] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:06:42.452Z P:24860 T:32008] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:07:35.619Z P:8380 T:30744] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T22:07:35.812Z P:8380 T:30744] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:07:35.812Z P:8380 T:30744] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:07:35.834Z P:8380 T:30744] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:07:35.834Z P:8380 T:30744] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:07:37.672Z P:8380 T:30744] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:07:37.672Z P:8380 T:30744] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:07:40.981Z P:8380 T:30744] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:07:40.981Z P:8380 T:30744] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:07:45.683Z P:8380 T:30744] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T22:07:45.684Z P:8380 T:27032] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T22:07:45.696Z P:8380 T:30744] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:07:45.696Z P:8380 T:30744] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:07:45.696Z P:8380 T:30744] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:07:45.710Z P:8380 T:30744] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:07:45.710Z P:8380 T:30744] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:07:45.710Z P:8380 T:30744] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:07:47.344Z P:8380 T:30744] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:07:47.344Z P:8380 T:30744] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:07:47.344Z P:8380 T:30744] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:07:48.432Z P:8380 T:30744] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:07:48.432Z P:8380 T:30744] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:07:51.097Z P:8380 T:30744] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:07:51.097Z P:8380 T:30744] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:07:51.097Z P:8380 T:30744] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:07:57.589Z P:8380 T:30744] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:07:57.589Z P:8380 T:30744] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:07:57.589Z P:8380 T:30744] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:08:03.046Z P:8380 T:30744] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:08:03.046Z P:8380 T:30744] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:08:11.431Z P:8380 T:30744] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:08:11.431Z P:8380 T:30744] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:08:11.431Z P:8380 T:30744] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:08:31.597Z P:8380 T:30744] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:08:31.597Z P:8380 T:30744] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:08:39.388Z P:8380 T:30744] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:08:39.388Z P:8380 T:30744] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:08:39.388Z P:8380 T:30744] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:09:31.531Z P:8380 T:30744] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:09:31.531Z P:8380 T:30744] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:09:31.531Z P:8380 T:30744] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:09:34.273Z P:8380 T:30744] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:09:34.273Z P:8380 T:30744] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:11:00.427Z P:32012 T:28560] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T22:11:00.623Z P:32012 T:28560] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:11:00.623Z P:32012 T:28560] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:11:00.647Z P:32012 T:28560] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:11:00.647Z P:32012 T:28560] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:11:02.400Z P:32012 T:28560] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:11:02.400Z P:32012 T:28560] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:11:05.766Z P:32012 T:28560] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:11:05.766Z P:32012 T:28560] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:11:10.503Z P:32012 T:28560] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T22:11:10.504Z P:32012 T:31768] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T22:11:10.516Z P:32012 T:28560] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:11:10.516Z P:32012 T:28560] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:11:10.516Z P:32012 T:28560] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:11:10.529Z P:32012 T:28560] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:11:10.529Z P:32012 T:28560] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:11:10.529Z P:32012 T:28560] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:11:12.162Z P:32012 T:28560] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:11:12.162Z P:32012 T:28560] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:11:12.162Z P:32012 T:28560] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:11:12.318Z P:32012 T:28560] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:11:12.318Z P:32012 T:28560] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:11:15.981Z P:32012 T:28560] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:11:15.981Z P:32012 T:28560] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:11:15.981Z P:32012 T:28560] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:11:23.227Z P:32012 T:28560] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:11:23.227Z P:32012 T:28560] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:11:23.227Z P:32012 T:28560] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:11:26.525Z P:32012 T:28560] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:11:26.525Z P:32012 T:28560] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:11:36.342Z P:32012 T:28560] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:11:36.342Z P:32012 T:28560] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:11:36.342Z P:32012 T:28560] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:11:53.319Z P:32012 T:28560] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:11:53.319Z P:32012 T:28560] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:12:04.450Z P:32012 T:28560] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:12:04.450Z P:32012 T:28560] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:12:04.450Z P:32012 T:28560] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:12:52.919Z P:32012 T:28560] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:12:52.919Z P:32012 T:28560] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:17:51.812Z P:26272 T:28040] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T22:17:51.995Z P:26272 T:28040] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:17:51.995Z P:26272 T:28040] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:17:52.017Z P:26272 T:28040] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:17:52.017Z P:26272 T:28040] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:17:53.785Z P:26272 T:28040] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:17:53.785Z P:26272 T:28040] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:17:57.659Z P:26272 T:28040] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:17:57.659Z P:26272 T:28040] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:18:01.881Z P:26272 T:28040] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T22:18:01.882Z P:26272 T:28972] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T22:18:01.893Z P:26272 T:28040] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:18:01.893Z P:26272 T:28040] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:18:01.893Z P:26272 T:28040] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:18:01.905Z P:26272 T:28040] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:18:01.905Z P:26272 T:28040] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:18:01.905Z P:26272 T:28040] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:18:03.865Z P:26272 T:28040] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:18:03.865Z P:26272 T:28040] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:18:03.865Z P:26272 T:28040] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:18:04.720Z P:26272 T:28040] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:18:04.720Z P:26272 T:28040] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:18:07.685Z P:26272 T:28040] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:18:07.685Z P:26272 T:28040] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:18:07.685Z P:26272 T:28040] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:18:15.173Z P:26272 T:28040] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:18:15.173Z P:26272 T:28040] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:18:15.173Z P:26272 T:28040] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:18:18.063Z P:26272 T:28040] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:18:18.063Z P:26272 T:28040] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:18:29.960Z P:26272 T:28040] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:18:29.960Z P:26272 T:28040] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:18:29.960Z P:26272 T:28040] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:18:48.161Z P:26272 T:28040] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:18:48.161Z P:26272 T:28040] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:19:01.320Z P:26272 T:28040] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:19:01.320Z P:26272 T:28040] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:19:01.320Z P:26272 T:28040] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:20:36.065Z P:27868 T:27492] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T22:20:36.250Z P:27868 T:27492] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:20:36.250Z P:27868 T:27492] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:20:36.272Z P:27868 T:27492] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:20:36.272Z P:27868 T:27492] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:20:38.292Z P:27868 T:27492] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:20:38.292Z P:27868 T:27492] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:20:41.603Z P:27868 T:27492] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:20:41.603Z P:27868 T:27492] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:20:46.132Z P:27868 T:27492] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T22:20:46.133Z P:27868 T:31456] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T22:20:46.145Z P:27868 T:27492] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:20:46.145Z P:27868 T:27492] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:20:46.145Z P:27868 T:27492] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:20:46.157Z P:27868 T:27492] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:20:46.157Z P:27868 T:27492] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:20:46.158Z P:27868 T:27492] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:20:47.856Z P:27868 T:27492] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:20:47.856Z P:27868 T:27492] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:20:47.856Z P:27868 T:27492] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:20:48.609Z P:27868 T:27492] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:20:48.609Z P:27868 T:27492] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:20:51.478Z P:27868 T:27492] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:20:51.478Z P:27868 T:27492] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:20:51.478Z P:27868 T:27492] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:20:58.301Z P:27868 T:27492] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:20:58.301Z P:27868 T:27492] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:20:58.301Z P:27868 T:27492] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:21:03.961Z P:27868 T:27492] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:21:03.961Z P:27868 T:27492] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:21:13.323Z P:27868 T:27492] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:21:13.323Z P:27868 T:27492] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:21:13.323Z P:27868 T:27492] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:21:30.222Z P:27868 T:27492] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:21:30.222Z P:27868 T:27492] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:24:47.313Z P:31424 T:32496] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T22:24:47.505Z P:31424 T:32496] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:24:47.505Z P:31424 T:32496] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:24:47.526Z P:31424 T:32496] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:24:47.526Z P:31424 T:32496] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:24:49.162Z P:31424 T:32496] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:24:49.162Z P:31424 T:32496] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:24:52.826Z P:31424 T:32496] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:24:52.826Z P:31424 T:32496] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:24:57.388Z P:31424 T:32496] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T22:24:57.389Z P:31424 T:8648] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T22:24:57.400Z P:31424 T:32496] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:24:57.400Z P:31424 T:32496] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:24:57.400Z P:31424 T:32496] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:24:57.414Z P:31424 T:32496] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:24:57.414Z P:31424 T:32496] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:24:57.414Z P:31424 T:32496] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:24:59.303Z P:31424 T:32496] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:24:59.303Z P:31424 T:32496] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:24:59.303Z P:31424 T:32496] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:24:59.520Z P:31424 T:32496] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:24:59.520Z P:31424 T:32496] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:25:02.629Z P:31424 T:32496] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:25:02.629Z P:31424 T:32496] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:25:02.629Z P:31424 T:32496] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:25:10.338Z P:31424 T:32496] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:25:10.338Z P:31424 T:32496] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:25:10.338Z P:31424 T:32496] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:25:14.137Z P:31424 T:32496] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:25:14.137Z P:31424 T:32496] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:25:24.204Z P:31424 T:32496] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:25:24.204Z P:31424 T:32496] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:25:24.204Z P:31424 T:32496] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:25:45.036Z P:31424 T:32496] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:25:45.036Z P:31424 T:32496] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:25:52.227Z P:31424 T:32496] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:25:52.227Z P:31424 T:32496] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:25:52.227Z P:31424 T:32496] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:26:41.761Z P:31424 T:32496] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:26:41.761Z P:31424 T:32496] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:26:50.226Z P:31424 T:32496] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:26:50.226Z P:31424 T:32496] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:26:50.226Z P:31424 T:32496] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:28:46.650Z P:11588 T:32148] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T22:28:46.839Z P:11588 T:32148] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:28:46.839Z P:11588 T:32148] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:28:46.861Z P:11588 T:32148] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:28:46.861Z P:11588 T:32148] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:28:48.625Z P:11588 T:32148] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:28:48.625Z P:11588 T:32148] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:28:52.464Z P:11588 T:32148] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:28:52.464Z P:11588 T:32148] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:28:56.715Z P:11588 T:32148] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T22:28:56.715Z P:11588 T:29704] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T22:28:56.726Z P:11588 T:32148] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:28:56.726Z P:11588 T:32148] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:28:56.726Z P:11588 T:32148] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:28:56.738Z P:11588 T:32148] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:28:56.738Z P:11588 T:32148] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:28:56.738Z P:11588 T:32148] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:28:58.682Z P:11588 T:32148] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:28:58.683Z P:11588 T:32148] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:28:58.683Z P:11588 T:32148] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:29:00.258Z P:11588 T:32148] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:29:00.258Z P:11588 T:32148] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:29:02.255Z P:11588 T:32148] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:29:02.255Z P:11588 T:32148] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:29:02.255Z P:11588 T:32148] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:29:09.817Z P:11588 T:32148] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:29:09.817Z P:11588 T:32148] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:29:09.817Z P:11588 T:32148] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:29:15.010Z P:11588 T:32148] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:29:15.010Z P:11588 T:32148] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:29:37.650Z P:11304 T:6972] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T22:29:37.834Z P:11304 T:6972] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:29:37.834Z P:11304 T:6972] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:29:37.855Z P:11304 T:6972] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:29:37.855Z P:11304 T:6972] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:29:39.819Z P:11304 T:6972] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:29:39.819Z P:11304 T:6972] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:29:43.296Z P:11304 T:6972] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:29:43.296Z P:11304 T:6972] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:29:47.719Z P:11304 T:6972] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T22:29:47.720Z P:11304 T:31128] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T22:29:47.731Z P:11304 T:6972] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:29:47.731Z P:11304 T:6972] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:29:47.731Z P:11304 T:6972] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:29:47.744Z P:11304 T:6972] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:29:47.744Z P:11304 T:6972] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:29:47.744Z P:11304 T:6972] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:29:49.401Z P:11304 T:6972] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:29:49.401Z P:11304 T:6972] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:29:49.401Z P:11304 T:6972] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:29:50.057Z P:11304 T:6972] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:29:50.057Z P:11304 T:6972] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:29:52.694Z P:11304 T:6972] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:29:52.694Z P:11304 T:6972] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:29:52.694Z P:11304 T:6972] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:30:00.683Z P:11304 T:6972] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:30:00.683Z P:11304 T:6972] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:30:00.683Z P:11304 T:6972] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:30:04.235Z P:11304 T:6972] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:30:04.235Z P:11304 T:6972] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:30:15.411Z P:11304 T:6972] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:30:15.411Z P:11304 T:6972] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:30:15.411Z P:11304 T:6972] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:30:34.299Z P:11304 T:6972] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:30:34.299Z P:11304 T:6972] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:30:46.751Z P:11304 T:6972] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:30:46.751Z P:11304 T:6972] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:30:46.751Z P:11304 T:6972] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:31:50.907Z P:19056 T:15312] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T22:31:51.077Z P:19056 T:15312] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:31:51.077Z P:19056 T:15312] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:31:51.099Z P:19056 T:15312] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:31:51.099Z P:19056 T:15312] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:31:52.846Z P:19056 T:15312] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:31:52.846Z P:19056 T:15312] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:31:56.352Z P:19056 T:15312] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:31:56.352Z P:19056 T:15312] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:32:00.981Z P:19056 T:15312] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T22:32:00.982Z P:19056 T:8992] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T22:32:00.995Z P:19056 T:15312] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:32:00.995Z P:19056 T:15312] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:32:00.995Z P:19056 T:15312] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:32:01.007Z P:19056 T:15312] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:32:01.007Z P:19056 T:15312] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:32:01.007Z P:19056 T:15312] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:32:02.804Z P:19056 T:15312] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:32:02.804Z P:19056 T:15312] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:32:02.804Z P:19056 T:15312] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:32:03.115Z P:19056 T:15312] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:32:03.115Z P:19056 T:15312] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:32:06.599Z P:19056 T:15312] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:32:06.599Z P:19056 T:15312] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:32:06.599Z P:19056 T:15312] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:32:13.467Z P:19056 T:15312] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:32:13.467Z P:19056 T:15312] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:32:13.467Z P:19056 T:15312] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:32:16.661Z P:19056 T:15312] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:32:16.661Z P:19056 T:15312] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:32:42.700Z P:32248 T:2100] SyncServiceImpl::Initialize,SyncState after authenticated was: FeatureNotRequested
+2024-09-10T22:32:42.874Z P:32248 T:2100] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:32:42.874Z P:32248 T:2100] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:32:42.895Z P:32248 T:2100] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:32:42.895Z P:32248 T:2100] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:32:44.751Z P:32248 T:2100] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:32:44.751Z P:32248 T:2100] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:32:48.100Z P:32248 T:2100] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:32:48.100Z P:32248 T:2100] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:32:52.763Z P:32248 T:2100] SyncServiceImpl::TryStartImpl,Try to start sync engine
+2024-09-10T22:32:52.764Z P:32248 T:26808] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-09-10T22:32:52.777Z P:32248 T:2100] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:32:52.777Z P:32248 T:2100] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:32:52.777Z P:32248 T:2100] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:32:52.791Z P:32248 T:2100] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:32:52.791Z P:32248 T:2100] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:32:52.791Z P:32248 T:2100] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:32:54.750Z P:32248 T:2100] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:32:54.750Z P:32248 T:2100] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:32:54.750Z P:32248 T:2100] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:32:56.096Z P:32248 T:2100] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:32:56.096Z P:32248 T:2100] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:32:58.042Z P:32248 T:2100] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:32:58.042Z P:32248 T:2100] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:32:58.042Z P:32248 T:2100] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:33:05.987Z P:32248 T:2100] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:33:05.987Z P:32248 T:2100] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:33:05.987Z P:32248 T:2100] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:33:10.681Z P:32248 T:2100] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:33:10.681Z P:32248 T:2100] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:33:19.775Z P:32248 T:2100] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:33:19.775Z P:32248 T:2100] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:33:19.775Z P:32248 T:2100] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
+2024-09-10T22:33:40.520Z P:32248 T:2100] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:33:40.520Z P:32248 T:2100] SyncServiceImpl::CredentialsChangedForKeyData,Credentials changed for: EdgeSyncKeyDataScope
+2024-09-10T22:33:47.146Z P:32248 T:2100] SyncAuthManager::EdgeLogTokenErrorState,Token error with: EDGE_AUTH_ERROR: 6, 2, 0 for account type: MSA
+2024-09-10T22:33:47.146Z P:32248 T:2100] SyncServiceImpl::CredentialsChanged,Credentials changed for: EdgeSyncScopeNew
+2024-09-10T22:33:47.146Z P:32248 T:2100] SyncServiceImpl::CredentialsChanged,Empty token for: EdgeSyncScopeNew
