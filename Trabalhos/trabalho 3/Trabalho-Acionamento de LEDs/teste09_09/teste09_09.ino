@@ -40,9 +40,9 @@ void loop() {
 }
 
 void handleDataRequest() {
-  // Simulação do valor de IR e Red (modifique para valores reais se necessário)
-  float ir_signal = 2048 + 300 * sin(2 * 3.1415 * millis() / 1000.0);
-  float red_signal = 2048 + 200 * sin(2 * 3.1415 * millis() / 1000.0 + 3.1415 / 4);
+  int x = analogRead(PHOTODIODE_PIN);
+  float ir_signal = 2048 + 300 * sin(2 * 3.1415 * millis() / 1000.0) + x ;
+  float red_signal = 2048 + 200 * sin(2 * 3.1415 * millis() / 1000.0 + 3.1415 / 4) + x;
 
   // Criar a string com os valores formatados (IR e Red separados por vírgula)
   String response = "IR:" + String(ir_signal) + ",Red:" + String(red_signal);

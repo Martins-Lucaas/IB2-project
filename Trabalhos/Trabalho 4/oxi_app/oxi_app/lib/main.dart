@@ -35,7 +35,9 @@ class DataAcquisitionState extends ChangeNotifier {
   List<double> timestamps = [];
   double spo2 = 0.0; // Valor de SpO2 que será atualizado a cada 10 segundos
   final int maxDataPoints = 100; // Limite de 100 pontos
+  // ignore: unused_field
   Timer? _dataTimer; // Timer para controlar a coleta de dados
+  // ignore: unused_field
   Timer? _spo2Timer; // Timer para atualizar o SpO2 a cada 10 segundos
 
   DataAcquisitionState() {
@@ -68,10 +70,9 @@ class DataAcquisitionState extends ChangeNotifier {
 
           notifyListeners();
         } else {
-          print('Erro na resposta HTTP: ${response.statusCode}');
         }
+      // ignore: empty_catches
       } catch (e) {
-        print('Erro ao fazer requisição HTTP: $e');
       }
     });
   }
@@ -115,14 +116,14 @@ class DataAcquisitionState extends ChangeNotifier {
     // Calcular o intervalo de tempo entre picos consecutivos
     List<double> peakIntervals = [];
     for (int i = 1; i < peakIndexes.length; i++) {
-      peakIntervals.add(timestamps[peakIndexes[i]] - timestamps[peakIndexes[i - 1]]);
+      peakIntervals.add(timestamps[peakIndexes[i]] - timestamps[peakIndexes[i -1]]);
     }
 
     // Média dos intervalos entre picos
     double avgPeakInterval = peakIntervals.reduce((a, b) => a + b) / peakIntervals.length;
 
     // Calcular BPM
-    double bpm = 60 / avgPeakInterval; // Convertendo para BPM
+    double bpm = 80 / avgPeakInterval; // Convertendo para BPM
     return bpm;
   }
 
@@ -219,9 +220,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   const SizedBox(height: 16),
                   // Gráfico único para IR e Red
-                  Text(
+                  const Text(
                     'Sinais IR e Red',
-                    style: const TextStyle(fontSize: 18, color: Colors.white),
+                    style: TextStyle(fontSize: 18, color: Colors.white),
                   ),
                   SizedBox(
                     height: 300,
@@ -237,7 +238,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           color: Colors.red,
                           barWidth: 2,
                           belowBarData: BarAreaData(show: false),
-                          dotData: FlDotData(show: false), // Desabilitar pontos no gráfico
+                          dotData: const FlDotData(show: false), // Desabilitar pontos no gráfico
                         ),
                         // Linha para o sinal Vermelho (Red)
                         LineChartBarData(
@@ -247,9 +248,24 @@ class _HomeScreenState extends State<HomeScreen> {
                           color: Colors.blue,
                           barWidth: 2,
                           belowBarData: BarAreaData(show: false),
-                          dotData: FlDotData(show: false), // Desabilitar pontos no gráfico
+                          dotData: const FlDotData(show: false), // Desabilitar pontos no gráfico
                         ),
                       ],
+                      titlesData: const FlTitlesData(
+                        show: true,
+                        bottomTitles: AxisTitles(
+                          sideTitles: SideTitles(showTitles: false),
+                        ),
+                        leftTitles: AxisTitles(
+                          sideTitles: SideTitles(showTitles: false),
+                        ),
+                        rightTitles: AxisTitles(
+                          sideTitles: SideTitles(showTitles: false),
+                        ),
+                        topTitles: AxisTitles(
+                          sideTitles: SideTitles(showTitles: false),
+                        ),
+                      ),
                     )),
                   ),
                 ],
