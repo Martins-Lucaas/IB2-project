@@ -1,59 +1,55 @@
-#define LED_RED_PIN 19
-#define LED_IR_PIN 18
+#define LED_RED_PIN 18
+#define LED_IR_PIN 19
+#define PHOTODIODE_PIN 33
 
+#include <WiFi.h>
+#include <WebServer.h>
+#include <math.h>  // Para calcular senóides
 
-#define PHOTODIODE_PIN 26
+volatile float spo2 = 0;
+volatile int bpm = 0;
 
-#include "LowPassFilter.hpp"
-volatile uint8_t ledState = 0;
+const char* ssid = "Martins Wifi6";  // Substitua pelo seu SSID
+const char* password = "17031998";   // Substitua pela sua senha
+
+WebServer server(80);  // Cria o servidor na porta 80
 
 void setup() {
   pinMode(LED_RED_PIN, OUTPUT);
   pinMode(LED_IR_PIN, OUTPUT);
+  pinMode(PHOTODIODE_PIN, INPUT);  // Configuramos a porta analógica como entrada
 
-  pinMode(PHOTODIODE_PIN, INPUT);
-  Serial.begin(9600);  // Inicialize a comunicação serial
-  delay(2000); // Espera para a inicialização da comunicação serial
-  
-  xTaskCreatePinnedToCore(toggleLEDs, "Toggle LEDs", 1024, NULL, 1, NULL, 1);
-  xTaskCreatePinnedToCore(readPhotodiode, "Read Photodiode", 1024, NULL, 1, NULL, 1);
+  Serial.begin(115200);  // Inicialize a comunicação serial
+
+  // Conecta ao WiFi
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1000);
+    Serial.println("Conectando ao WiFi...");
+  }
+  Serial.println("Conectado ao WiFi!");
+  Serial.println(WiFi.localIP());  // Exibe o IP do ESP32
+
+  // Define o manipulador para a requisição de dados
+  server.on("/dados", handleDataRequest);
+  server.begin();  // Inicia o servidor
 }
 
 void loop() {
+  server.handleClient();  // Atende às requisições do cliente
 }
 
-void toggleLEDs(void *parameter) {
-  while (true) {
-    switch (ledState) {
-      case 0:
-        digitalWrite(LED_RED_PIN, HIGH);
-        digitalWrite(LED_IR_PIN, LOW);
-        Serial.println("LED Vermelho Ligado");
-        break;
-      case 1:
-        digitalWrite(LED_RED_PIN, LOW);
-        digitalWrite(LED_IR_PIN, HIGH);
-        Serial.println("LED IV Ligado");
-        break;
-      case 2:
-        digitalWrite(LED_RED_PIN,LOW);
-        digitalWrite(LED_IR_PIN,LOW);
-        Serial.println("Ambos apagados");
-      
-     
-    
-    }
-    ledState = (ledState + 1) % 3; // Alterna entre 0, 1, 2 e 3
+void handleDataRequest() {
+  // Simulação do valor de IR e Red (modifique para valores reais se necessário)
+  float ir_signal = 2048 + 300 * sin(2 * 3.1415 * millis() / 1000.0);
+  float red_signal = 2048 + 200 * sin(2 * 3.1415 * millis() / 1000.0 + 3.1415 / 4);
 
-    vTaskDelay(20 / portTICK_PERIOD_MS);
-  }
-}
+  // Criar a string com os valores formatados (IR e Red separados por vírgula)
+  String response = "IR:" + String(ir_signal) + ",Red:" + String(red_signal);
 
-void readPhotodiode(void *parameter) {
-  while (true) {
-    int sensorValue = analogRead(PHOTODIODE_PIN);
-    Serial.println(sensorValue);
-    
-    vTaskDelay(2 / portTICK_PERIOD_MS);
-  }
+  // Adicionar o cabeçalho CORS
+  server.sendHeader("Access-Control-Allow-Origin", "*");
+
+  // Enviar a resposta HTTP para o aplicativo Flutter
+  server.send(200, "text/plain", response);
 }

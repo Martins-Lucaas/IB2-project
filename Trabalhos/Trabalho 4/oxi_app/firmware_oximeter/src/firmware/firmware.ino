@@ -26,7 +26,7 @@ void setup() {
   }
 
   // Configuração do sensor MAX30102
-  byte ledBrightness = 70;
+  byte ledBrightness = 255;
   byte sampleAverage = 1;
   byte ledMode = 2;
   int sampleRate = 400;

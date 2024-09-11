@@ -29,18 +29,21 @@ class MyApp extends StatelessWidget {
 }
 
 class DataAcquisitionState extends ChangeNotifier {
-  String ipAddress = '192.168.3.15'; // IP do ESP32
+  String ipAddress = '192.168.3.16'; // IP do ESP32
   List<double> irValues = [];
   List<double> redValues = [];
   List<double> timestamps = [];
+  double spo2 = 0.0; // Valor de SpO2 que será atualizado a cada 10 segundos
   final int maxDataPoints = 100; // Limite de 100 pontos
   Timer? _dataTimer; // Timer para controlar a coleta de dados
-  bool isFingerOnSensor = true; // Para verificar se o dedo está no sensor
+  Timer? _spo2Timer; // Timer para atualizar o SpO2 a cada 10 segundos
 
   DataAcquisitionState() {
     fetchData();
+    _startSpo2Timer();
   }
 
+  // Função para buscar dados continuamente
   void fetchData() {
     _dataTimer = Timer.periodic(const Duration(milliseconds: 50), (timer) async {
       try {
@@ -63,14 +66,6 @@ class DataAcquisitionState extends ChangeNotifier {
             timestamps.removeAt(0);
           }
 
-          // Verificar se o dedo está fora do sensor
-          if (irValue < 40000 && redValue < 40000) {
-            isFingerOnSensor = false;
-            stopSystem(); // Parar o sistema se o dedo não estiver no sensor
-          } else {
-            isFingerOnSensor = true;
-          }
-
           notifyListeners();
         } else {
           print('Erro na resposta HTTP: ${response.statusCode}');
@@ -81,13 +76,12 @@ class DataAcquisitionState extends ChangeNotifier {
     });
   }
 
-  // Função para parar o sistema
-  void stopSystem() {
-    if (_dataTimer != null) {
-      _dataTimer!.cancel();
-      _dataTimer = null;
-      print("Sistema desligado: dedo fora do sensor.");
-    }
+  // Timer para calcular SpO2 a cada 10 segundos
+  void _startSpo2Timer() {
+    _spo2Timer = Timer.periodic(const Duration(seconds: 10), (timer) {
+      spo2 = calculateSpO2();
+      notifyListeners(); // Atualizar o estado para refletir a mudança do SpO2
+    });
   }
 
   // Função para calcular SpO2
@@ -128,11 +122,11 @@ class DataAcquisitionState extends ChangeNotifier {
     double avgPeakInterval = peakIntervals.reduce((a, b) => a + b) / peakIntervals.length;
 
     // Calcular BPM
-    double bpm = 45 / avgPeakInterval;
+    double bpm = 60 / avgPeakInterval; // Convertendo para BPM
     return bpm;
   }
 
-  // Função para detectar picos e vales (melhorada)
+  // Função para detectar picos e vales
   List<int> _detectPeaksAndValleys(List<double> data) {
     List<int> peakIndexes = [];
     bool isRising = false;
@@ -180,7 +174,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     final dataState = Provider.of<DataAcquisitionState>(context);
 
-    double spo2 = dataState.calculateSpO2();
+    double spo2 = dataState.spo2; // Valor de SpO2 atualizado a cada 10 segundos
+    double bpm = dataState.calculateBPM();
 
     // Determinar a cor do SpO₂ com base no valor
     Color spo2Color;
@@ -219,44 +214,44 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   // Exibir BPM
                   Text(
-                    'BPM: ${dataState.calculateBPM().toStringAsFixed(2)}',
-                    style: const TextStyle(fontSize: 24),
+                    'BPM: ${bpm.toStringAsFixed(2)}',
+                    style: const TextStyle(fontSize: 24, color: Colors.white),
                   ),
                   const SizedBox(height: 16),
-                  // Exibir mensagem se o dedo não estiver no sensor
-                  if (!dataState.isFingerOnSensor)
-                    const Text(
-                      'Dedo fora do sensor! Sistema desligado.',
-                      style: TextStyle(fontSize: 18, color: Colors.red),
-                    ),
-                  if (dataState.isFingerOnSensor)
-                    SizedBox(
-                      height: 200,
-                      child: LineChart(LineChartData(
-                        minY: dataState.getMinY(), // Amplitude mínima dinâmica
-                        maxY: dataState.getMaxY(), // Amplitude máxima dinâmica
-                        lineBarsData: [
-                          LineChartBarData(
-                            spots: List.generate(dataState.irValues.length,
-                                (index) => FlSpot(dataState.timestamps[index], dataState.irValues[index])),
-                            isCurved: true,
-                            color: Colors.red,
-                            barWidth: 2,
-                            belowBarData: BarAreaData(show: false),
-                            dotData: FlDotData(show: false), // Desabilitar pontos no gráfico
-                          ),
-                          LineChartBarData(
-                            spots: List.generate(dataState.redValues.length,
-                                (index) => FlSpot(dataState.timestamps[index], dataState.redValues[index])),
-                            isCurved: true,
-                            color: Colors.blue,
-                            barWidth: 2,
-                            belowBarData: BarAreaData(show: false),
-                            dotData: FlDotData(show: false), // Desabilitar pontos no gráfico
-                          ),
-                        ],
-                      )),
-                    ),
+                  // Gráfico único para IR e Red
+                  Text(
+                    'Sinais IR e Red',
+                    style: const TextStyle(fontSize: 18, color: Colors.white),
+                  ),
+                  SizedBox(
+                    height: 300,
+                    child: LineChart(LineChartData(
+                      minY: dataState.getMinY(), // Amplitude mínima dinâmica
+                      maxY: dataState.getMaxY(), // Amplitude máxima dinâmica
+                      lineBarsData: [
+                        // Linha para o sinal de Infravermelho (IR)
+                        LineChartBarData(
+                          spots: List.generate(dataState.irValues.length,
+                              (index) => FlSpot(dataState.timestamps[index], dataState.irValues[index])),
+                          isCurved: true,
+                          color: Colors.red,
+                          barWidth: 2,
+                          belowBarData: BarAreaData(show: false),
+                          dotData: FlDotData(show: false), // Desabilitar pontos no gráfico
+                        ),
+                        // Linha para o sinal Vermelho (Red)
+                        LineChartBarData(
+                          spots: List.generate(dataState.redValues.length,
+                              (index) => FlSpot(dataState.timestamps[index], dataState.redValues[index])),
+                          isCurved: true,
+                          color: Colors.blue,
+                          barWidth: 2,
+                          belowBarData: BarAreaData(show: false),
+                          dotData: FlDotData(show: false), // Desabilitar pontos no gráfico
+                        ),
+                      ],
+                    )),
+                  ),
                 ],
               ),
           ],
