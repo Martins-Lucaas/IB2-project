@@ -233,13 +233,12 @@
       "appName": "darkmode",
       "data": {
          "androidBlocklist": [ "^(.*?\\:\\/{2,3})?([^/]*?\\.)?(www\\.msn\\.)(.*\\/news\\/other.*)$", "^https?:\\/\\/edge\\.microsoft\\.com\\/edgeedrop\\/continuity\\/index\\.html(?:\\?.*)?$", "^(.*?\\:\\/{2,3})?([^/]*?\\.)?(sponsor\\.microsoft\\.com)(\\/?.*?)$", "^(.*?\\:\\/{2,3})?([^/]*?\\.)?(wio\\.scania\\.com)(\\/?.*?)$", "^(.*?\\:\\/{2,3})?([^/]*?\\.)?([^/]*\\.)?(ixigua\\.com)(\\/?.*?)$" ],
-         "iOSBlocklist": [ "^(.*?\\:\\/{2,3})?([^/]*?\\.)?(www\\.msn\\.)(.*\\/news\\/other.*)$", "^https?:\\/\\/edge\\.microsoft\\.com\\/edgeedrop\\/continuity\\/index\\.html(?:\\?.*)?$", "^(.*?\\:\\/{2,3})?([^/]*?\\.)?(reddit\\.com)(\\/?.*?)$", "^(.*?\\:\\/{2,3})?([^/]*?\\.)?(amazon\\.com)(\\/?.*?)$", "^(.*?\\:\\/{2,3})?([^/]*?\\.)?(copilot\\.microsoft\\.com)(\\/?.*?)$", "msn.com", "reddit.com", "amazon.com", "m.youtube.com", "copilot.microsoft.com", "build.microsoft.com", "sponsor.microsoft.com" ],
-         "iOSBlocklistNew": [ "^(.*?\\:\\/{2,3})?([^/]*?\\.)?(www\\.msn\\.)(.*\\/news\\/other.*)$", "^https?:\\/\\/edge\\.microsoft\\.com\\/edgeedrop\\/continuity\\/index\\.html(?:\\?.*)?$", "^(.*?\\:\\/{2,3})?([^/]*?\\.)?(reddit\\.com)(\\/?.*?)$", "^(.*?\\:\\/{2,3})?([^/]*?\\.)?(amazon\\.com)(\\/?.*?)$", "^(.*?\\:\\/{2,3})?([^/]*?\\.)?(copilot\\.microsoft\\.com)(\\/?.*?)$", "msn.com", "reddit.com", "amazon.com", "m.youtube.com", "copilot.microsoft.com", "build.microsoft.com", "sponsor.microsoft.com", ".pdf", ".png", ".jpg", ".jpeg", ".gif", ".bmp", ".tiff", ".mp4", ".avi", ".mkv", ".mov", ".wmv", ".flv", ".webm" ]
+         "iOSBlocklist": [ "^(.*?\\:\\/{2,3})?([^/]*?\\.)?(www\\.msn\\.)(.*\\/news\\/other.*)$", "^https?:\\/\\/edge\\.microsoft\\.com\\/edgeedrop\\/continuity\\/index\\.html(?:\\?.*)?$", "^(.*?\\:\\/{2,3})?([^/]*?\\.)?(reddit\\.com)(\\/?.*?)$", "^(.*?\\:\\/{2,3})?([^/]*?\\.)?(amazon\\.com)(\\/?.*?)$", "^(.*?\\:\\/{2,3})?([^/]*?\\.)?(copilot\\.microsoft\\.com)(\\/?.*?)$", "msn.com", "reddit.com", "amazon.com", "m.youtube.com", "copilot.microsoft.com", "build.microsoft.com", "sponsor.microsoft.com", ".pdf", ".png", ".jpg", ".jpeg", ".gif", ".bmp", ".tiff", ".mp4", ".avi", ".mkv", ".mov", ".wmv", ".flv", ".webm" ]
       },
       "effectStrategy": "launch",
       "instanceId": "3e7a9c4b1f8d6e5c2a9b7e4d1c8f3e7a",
       "type": "builtin",
-      "version": "1005"
+      "version": "1006"
    }, {
       "appId": "12a18a00e3c9415cad6a2f88ad76d372",
       "appName": "growthEngine",
@@ -280,5 +279,5 @@
       "type": "normal",
       "version": "1001"
    } ],
-   "version": "202409100001"
+   "version": "202409120001"
 }

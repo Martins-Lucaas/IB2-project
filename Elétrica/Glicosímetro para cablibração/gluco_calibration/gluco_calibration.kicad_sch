@@ -2110,16 +2110,6 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 63.5) (xy 133.35 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "25ca6c18-f1b2-4fcd-9efa-a10c00919f90")
-	)
-	(wire
-		(pts
 			(xy 96.52 40.64) (xy 96.52 55.88)
 		)
 		(stroke
@@ -2200,7 +2190,7 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 63.5) (xy 146.05 62.23)
+			(xy 146.05 62.23) (xy 146.05 64.77)
 		)
 		(stroke
 			(width 0)
@@ -2227,6 +2217,16 @@
 			(type default)
 		)
 		(uuid "5327662c-6091-4294-9f78-a812d6dda4c7")
+	)
+	(wire
+		(pts
+			(xy 133.35 53.34) (xy 133.35 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "575f5246-e7a8-4aa2-b781-0ce3b3176e1c")
 	)
 	(wire
 		(pts
@@ -2347,26 +2347,6 @@
 			(type default)
 		)
 		(uuid "75e120b1-1abd-4d1b-a525-5cb15ae3a0b1")
-	)
-	(wire
-		(pts
-			(xy 133.35 53.34) (xy 133.35 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7ab110a6-e9d3-4218-9ba5-26c360b45178")
-	)
-	(wire
-		(pts
-			(xy 133.35 63.5) (xy 146.05 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "827361d1-86da-48d9-b881-5e3885af877c")
 	)
 	(wire
 		(pts
@@ -2507,6 +2487,16 @@
 			(type default)
 		)
 		(uuid "dd8cd552-d7fe-4ce9-b486-e16990fd0ec0")
+	)
+	(wire
+		(pts
+			(xy 146.05 64.77) (xy 133.35 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df5b31d5-133c-4f23-a6ee-2d5b62a7d5ba")
 	)
 	(wire
 		(pts
@@ -3851,7 +3841,7 @@
 	)
 	(global_label "Vref"
 		(shape input)
-		(at 139.7 63.5 270)
+		(at 139.7 64.77 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3861,7 +3851,7 @@
 		)
 		(uuid "b8c831d3-24ed-426f-b0ef-2bbd1e32a412")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 139.7 70.1743 90)
+			(at 139.7 71.4443 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6932,7 +6922,7 @@
 	)
 	(symbol
 		(lib_id "Sensor_Optical:BPW34")
-		(at 133.35 59.69 270)
+		(at 133.35 59.69 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6940,7 +6930,7 @@
 		(dnp no)
 		(uuid "f8c93e90-7add-46ba-9176-7a12e8e08417")
 		(property "Reference" "D4"
-			(at 127 57.658 90)
+			(at 139.7 61.722 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6949,7 +6939,7 @@
 			)
 		)
 		(property "Value" "BPW34"
-			(at 124.714 59.436 90)
+			(at 141.986 59.944 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6958,7 +6948,7 @@
 			)
 		)
 		(property "Footprint" "OptoDevice:Osram_DIL2_4.3x4.65mm_P5.08mm"
-			(at 137.795 59.69 0)
+			(at 128.905 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6967,7 +6957,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.vishay.com/docs/81521/bpw34.pdf"
-			(at 133.35 58.42 0)
+			(at 133.35 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)

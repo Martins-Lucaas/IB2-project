@@ -3,8 +3,8 @@
 #include <WiFi.h>
 #include <WebServer.h>
 
-const char* ssid = "Martins Wifi6";  // Substitua pelo seu SSID
-const char* password = "17031998";  // Substitua pela sua senha
+const char* ssid = "Net do lucas";  // Substitua pelo seu SSID
+const char* password = "12345678";  // Substitua pela sua senha
 
 MAX30105 particleSensor;
 WebServer server(80);  // Cria o servidor na porta 80

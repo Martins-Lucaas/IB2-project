@@ -350,36 +350,37 @@
       } ],
       "default_locale": "en",
       "description": "Jogue jogos populares gratuitamente",
+      "disabled|locale:vi": true,
       "icon": {
          "raster_icon": {
-            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_maximal_dark.png/1.7.16/asset",
-            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_hc.png/1.7.16/asset",
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_maximal_light.png/1.7.16/asset"
+            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_maximal_dark.png/1.7.17/asset",
+            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_hc.png/1.7.17/asset",
+            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_maximal_light.png/1.7.17/asset"
          },
          "raster_icon|flight:msEdgeHubAppGamesNewIconCard": {
-            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_maximal_dark_card.png/1.7.16/asset",
-            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_hc_card.png/1.7.16/asset",
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_maximal_light_card.png/1.7.16/asset"
+            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_maximal_dark_card.png/1.7.17/asset",
+            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_hc_card.png/1.7.17/asset",
+            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_maximal_light_card.png/1.7.17/asset"
          },
          "raster_icon|flight:msEdgeHubAppGamesNewIconController": {
-            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_maximal_dark_controller.png/1.7.16/asset",
-            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_hc_controller.png/1.7.16/asset",
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_maximal_light_controller.png/1.7.16/asset"
+            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_maximal_dark_controller.png/1.7.17/asset",
+            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_hc_controller.png/1.7.17/asset",
+            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_maximal_light_controller.png/1.7.17/asset"
          },
          "raster_icon|flight:msEdgeHubAppGamesNewIconJoystick": {
-            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_maximal_dark_joystick.png/1.7.16/asset",
-            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_hc_joystick.png/1.7.16/asset",
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_maximal_light_joystick.png/1.7.16/asset"
+            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_maximal_dark_joystick.png/1.7.17/asset",
+            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_hc_joystick.png/1.7.17/asset",
+            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_maximal_light_joystick.png/1.7.17/asset"
          },
          "raster_icon|flight:msEdgeHubAppGamesNewIconPuzzle": {
-            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_maximal_dark_puzzle.png/1.7.16/asset",
-            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_hc_puzzle.png/1.7.16/asset",
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_maximal_light_puzzle.png/1.7.16/asset"
+            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_maximal_dark_puzzle.png/1.7.17/asset",
+            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_hc_puzzle.png/1.7.17/asset",
+            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_games_maximal_light_puzzle.png/1.7.17/asset"
          }
       },
       "id": "96defd79-4015-4a32-bd09-794ff72183ef",
       "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyhZ1RwLSI4aEplpF6h28XAlLdOKZTDHs/hZrlCarhgS7Umty+81JzHSae2McS7vrETtULFYVdc0O5qSVOWtqABGMm16voA0OohGM2wuJXMxV4+jIgcUHz5BzGIYTBhQJ6eRFAXVRvG0R/TrG/iiOfwBKH5gbQW/J+ojGcGTBu41uSNThFuynZp9rt73y0llJWRNydgvBYOXnM+XAutaAmxm24VdikFY/57gVBDEb6btHG0icgkSUAcYTVi4vKWHomer76KzXmoJxlYKwZOOFmiAtjzZlN+c6RzE833sGGjFH73pvExJzjEELWGcN+3sSB17PRD8fS53dLni+7UFXkwIDAQAB",
-      "locales": [ "af", "am", "ar", "as", "az", "bg", "bn_IN", "bs", "ca", "ca_Es_VALENCIA", "cs", "cy", "da", "de", "el", "en", "en_GB", "es", "es_MX", "et", "eu", "fa", "fi", "fil", "fil", "fr", "fr_CA", "ga", "gd", "gl", "gu", "he", "hi", "hr", "hu", "hy", "id", "is", "it", "ja", "ka", "kk", "km", "kn", "ko", "kok", "kok", "lb", "lo", "lt", "lv", "mi", "mk", "ml", "mr", "ms", "mt", "nb", "ne", "nl", "nn", "or", "pa", "pl", "pt_BR", "pt_PT", "quz", "ro", "ru", "sk", "sl", "sq", "sr_Cyrl_BA", "sr_Cyrl_RS", "sr_Latn_RS", "sv", "ta", "te", "th", "tr", "tt", "ug", "uk", "ur", "uz", "vi", "zh_CN", "zh_TW" ],
+      "locales": [ "af", "am", "ar", "as", "az", "bg", "bn_IN", "bs", "ca", "ca_Es_VALENCIA", "cs", "cy", "da", "de", "el", "en", "en_GB", "es", "es_MX", "et", "eu", "fa", "fi", "fil", "fil", "fr", "fr_CA", "ga", "gd", "gl", "gu", "he", "hi", "hr", "hu", "hy", "id", "is", "it", "ja", "ka", "kk", "km", "kn", "ko", "kok", "kok", "lb", "lo", "lt", "lv", "mi", "mk", "ml", "mr", "ms", "mt", "nb", "ne", "nl", "nn", "or", "pa", "pl", "pt_BR", "pt_PT", "quz", "ro", "ru", "sk", "sl", "sq", "sr_Cyrl_BA", "sr_Cyrl_RS", "sr_Latn_RS", "sv", "ta", "te", "th", "tr", "tt", "ug", "uk", "ur", "uz", "zh_CN", "zh_TW" ],
       "manifest_version": 3,
       "microfeedback": {
          "area_path": "Features\\Sidebar\\Gaming",
@@ -440,7 +441,7 @@
          "url|locale:zh_CN|flight:msEdgeHubAppGamesNewIconPuzzle": "https://www.msn.cn/widgets/fullpage/cgSideBar/widget?experiences=CasualGamesHub&sharedHeader=1&ocid=iconPuzzle",
          "url|locale:zh_CN|flight:msEdgeHubAppUseCGSideBar": "https://www.msn.cn/widgets/fullpage/cgSideBar/widget?experiences=CasualGamesHub&sharedHeader=1"
       },
-      "version": "1.7.16"
+      "version": "1.7.17"
    }, {
       "custom_actions": [ {
          "action": {
@@ -1592,35 +1593,6 @@
          "url|locale:zh_CN": "https://cn.bing.com/theater?features=theater"
       },
       "version": "1.0.9"
-   }, {
-      "custom_actions": [ {
-         "action": {
-            "target": "new_tab",
-            "type": "url_action"
-         },
-         "icon": {
-            "builtin_icon": "OpenInNew"
-         },
-         "location": "header_button",
-         "name": "Open link in new tab"
-      } ],
-      "default_locale": "en",
-      "description": "Watch videos on the TikTok",
-      "icon": {
-         "raster_icon": {
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_tik_tok_light.png/1.0.5/asset"
-         }
-      },
-      "id": "add60331-bd63-40db-bd63-5d2125e0779b",
-      "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAujo1z7cnsItcOyq89WfsvL7tTHpN5kMSpSCSebOxSO1cdtxtO7aRkB0mqlx7e5qGXFPcFtPc1N/J2dTsDgHVPI0r5Glk/PRN3hIKrpMraNMYGi425+08/Y0PpQ3xS9kPDDmpzIDsQaHCFj7W4YYJGUNo4Ruew2+7xh+/x+60gHv02+vh/0YUDXo+jERNjjOysVffLjwVa6MeWWlKtbQEUxPiUKFOLb251R4Krep3GszOstgkcsYe9b4i9oEpY0AOvuEgm1+c/QtDYXcSUFgm3KZmdEPl6wBwA3uBcI24wduVRC0f0Mn3Vj67HPIP/+gPZDACc6wOV+hu8ebSXnbOaQIDAQAB",
-      "locales": [ "en" ],
-      "manifest_version": 3,
-      "name": "TikTok",
-      "tags": [ "third_party" ],
-      "target": {
-         "url": "https://www.tiktok.com/"
-      },
-      "version": "1.0.5"
    }, {
       "default_locale": "en",
       "description": "Ganhe recompensas do Microsoft Rewards apenas pesquisando, comprando e jogando com a Microsoft",

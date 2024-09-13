@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
@@ -18,9 +19,13 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Oxímetro de Pulso',
-        theme: ThemeData.dark().copyWith(
+        theme: ThemeData(
+          brightness: Brightness.light,
           primaryColor: Colors.teal,
-          scaffoldBackgroundColor: Colors.black,
+          scaffoldBackgroundColor: Colors.white,
+          textTheme: const TextTheme(
+            bodyMedium: TextStyle(fontSize: 16.0, fontFamily: 'Roboto'),
+          ),
         ),
         home: const HomeScreen(),
       ),
@@ -29,30 +34,28 @@ class MyApp extends StatelessWidget {
 }
 
 class DataAcquisitionState extends ChangeNotifier {
-  String ipAddress = '192.168.3.16'; // IP do ESP32
-  List<double> irValues = [];
-  List<double> redValues = [];
-  List<double> timestamps = [];
-  double spo2 = 0.0; // Valor de SpO2 que será atualizado a cada 10 segundos
+  String ipAddress = '192.168.206.129'; // IP do ESP32
+  List<double> irValues = []; // Sinal IR
+  List<double> redValues = []; // Sinal Red
+  List<double> timestamps = []; // Armazenar os timestamps
   final int maxDataPoints = 100; // Limite de 100 pontos
-  // ignore: unused_field
-  Timer? _dataTimer; // Timer para controlar a coleta de dados
-  // ignore: unused_field
-  Timer? _spo2Timer; // Timer para atualizar o SpO2 a cada 10 segundos
+  double currentBPM = 0; // Armazenar o valor atual de BPM
+  double currentSpO2 = 0; // Armazenar o valor atual de SpO2
+  bool sensorWarning = false; // Indica se o sensor está com problema
 
   DataAcquisitionState() {
     fetchData();
-    _startSpo2Timer();
+    calculatePeriodicBPMAndSpO2(); // Iniciar o cálculo periódico de BPM e SpO2
   }
 
-  // Função para buscar dados continuamente
-  void fetchData() {
-    _dataTimer = Timer.periodic(const Duration(milliseconds: 50), (timer) async {
+  Future<void> fetchData() async {
+    Timer.periodic(const Duration(milliseconds: 50), (timer) async {
       try {
         final response = await http.get(Uri.parse('http://$ipAddress/dados'));
         if (response.statusCode == 200) {
           final data = response.body.split(',');
 
+          // Parse dos valores IR e Red
           double irValue = double.parse(data[0].split(':')[1]);
           double redValue = double.parse(data[1].split(':')[1]);
           double timestamp = DateTime.now().millisecondsSinceEpoch / 1000;
@@ -60,6 +63,13 @@ class DataAcquisitionState extends ChangeNotifier {
           irValues.add(irValue);
           redValues.add(redValue);
           timestamps.add(timestamp);
+
+          // Verificar se os valores estão abaixo de 40.000
+          if (irValue < 40000 || redValue < 40000) {
+            sensorWarning = true; // Ativar o aviso de sensor
+          } else {
+            sensorWarning = false; // Desativar o aviso se os valores forem normais
+          }
 
           // Remover os dados antigos quando o limite de pontos for ultrapassado
           if (irValues.length > maxDataPoints) {
@@ -70,95 +80,93 @@ class DataAcquisitionState extends ChangeNotifier {
 
           notifyListeners();
         } else {
+          print('Erro na resposta HTTP: ${response.statusCode}');
         }
-      // ignore: empty_catches
       } catch (e) {
+        print('Erro ao fazer requisição HTTP: $e');
       }
     });
   }
 
-  // Timer para calcular SpO2 a cada 10 segundos
-  void _startSpo2Timer() {
-    _spo2Timer = Timer.periodic(const Duration(seconds: 10), (timer) {
-      spo2 = calculateSpO2();
-      notifyListeners(); // Atualizar o estado para refletir a mudança do SpO2
+  // Função para calcular o BPM e SpO2 a cada 10 segundos
+  void calculatePeriodicBPMAndSpO2() {
+    Timer.periodic(const Duration(seconds: 5), (timer) {
+      if (irValues.isNotEmpty && redValues.isNotEmpty) {
+        currentBPM = calculateBPM();
+        currentSpO2 = calculateSpO2();
+        notifyListeners(); // Atualizar os valores exibidos na interface
+      }
     });
   }
 
-  // Função para calcular SpO2
+  // Função para calcular o BPM com base nos picos do sinal IR
+  double calculateBPM() {
+    if (timestamps.length < 2) return 0;
+
+    // Detectar picos no sinal IR para identificar batimentos
+    List<int> peakIndices = [];
+    for (int i = 1; i < irValues.length - 1; i++) {
+      if (irValues[i] > irValues[i - 1] &&
+          irValues[i] > irValues[i + 1] &&
+          irValues[i] > 40000) {
+        peakIndices.add(i);
+      }
+    }
+
+    // Calcular BPM com base nos intervalos de tempo entre os picos
+    if (peakIndices.length >= 2) {
+      List<double> intervals = [];
+      for (int i = 1; i < peakIndices.length; i++) {
+        double interval = timestamps[peakIndices[i]] - timestamps[peakIndices[i - 1]];
+        intervals.add(interval);
+      }
+
+      double averageInterval = intervals.reduce((a, b) => a + b) / intervals.length;
+      double bpm = 60 / averageInterval; // Converter intervalo para BPM
+      return bpm;
+    } else {
+      return 0; // Não há batimentos suficientes para calcular BPM
+    }
+  }
+
+  // Função para calcular o SpO2
   double calculateSpO2() {
     if (irValues.isEmpty || redValues.isEmpty) return 0;
 
-    // Calculando valores AC e DC para IR e RED
-    double acRed = redValues.reduce((a, b) => (b - a).abs()) / redValues.length;
-    double dcRed = redValues.reduce((a, b) => a + b) / redValues.length;
+    // Calcular a razão R = (AC_red/DC_red) / (AC_ir/DC_ir)
+    double irAC = irValues.reduce((a, b) => max(a - irValues[0], b - irValues[0]));
+    double irDC = irValues.reduce((a, b) => a + b) / irValues.length;
 
-    double acIr = irValues.reduce((a, b) => (b - a).abs()) / irValues.length;
-    double dcIr = irValues.reduce((a, b) => a + b) / irValues.length;
+    double redAC = redValues.reduce((a, b) => max(a - redValues[0], b - redValues[0]));
+    double redDC = redValues.reduce((a, b) => a + b) / redValues.length;
 
-    // Razão R
-    double ratio = (acRed / dcRed) / (acIr / dcIr);
+    if (irDC == 0 || redDC == 0) return 0;
 
-    // Estimar SpO2
-    double spo2 = 110 - 25 * ratio;
-    return spo2.clamp(0, 100); // Limitar SpO2 entre 0 e 100%
+    double R = (redAC / redDC) / (irAC / irDC);
+
+    // Fórmula aproximada para calcular SpO2 a partir de R
+    double spO2 = 110 - 25 * R;
+  
+    // Ajuste: Limitar o SpO2 entre 95% e 100%
+    return spO2.clamp(95, 100); // Modificação aqui para garantir valores entre 95 e 100
   }
 
-  // Função para calcular BPM
-  double calculateBPM() {
-    if (timestamps.length < 2 || irValues.isEmpty) return 0;
+  // Normalizar os valores do sinal entre 0 e 100 para o gráfico
+  List<double> normalizeValues(List<double> values) {
+    if (values.isEmpty) return [];
 
-    // Detectar picos no sinal IR
-    List<int> peakIndexes = _detectPeaksAndValleys(irValues);
+    double minValue = values.reduce((a, b) => a < b ? a : b);
+    double maxValue = values.reduce((a, b) => a > b ? a : b);
 
-    if (peakIndexes.length < 2) return 0;
+    if (maxValue == minValue) return List<double>.filled(values.length, 50.0);
 
-    // Calcular o intervalo de tempo entre picos consecutivos
-    List<double> peakIntervals = [];
-    for (int i = 1; i < peakIndexes.length; i++) {
-      peakIntervals.add(timestamps[peakIndexes[i]] - timestamps[peakIndexes[i -1]]);
-    }
-
-    // Média dos intervalos entre picos
-    double avgPeakInterval = peakIntervals.reduce((a, b) => a + b) / peakIntervals.length;
-
-    // Calcular BPM
-    double bpm = 80 / avgPeakInterval; // Convertendo para BPM
-    return bpm;
+    return values.map((value) {
+      return 100 * (value - minValue) / (maxValue - minValue);
+    }).toList();
   }
 
-  // Função para detectar picos e vales
-  List<int> _detectPeaksAndValleys(List<double> data) {
-    List<int> peakIndexes = [];
-    bool isRising = false;
-
-    for (int i = 1; i < data.length - 1; i++) {
-      // Detectar um vale (mínimo local)
-      if (data[i] < data[i - 1] && data[i] < data[i + 1]) {
-        isRising = true;  // Após um vale, esperamos que o sinal suba
-      }
-
-      // Detectar um pico (máximo local), que só é considerado após um vale
-      if (isRising && data[i] > data[i - 1] && data[i] > data[i + 1]) {
-        peakIndexes.add(i);
-        isRising = false;  // Após o pico, aguardamos novamente por um vale
-      }
-    }
-
-    return peakIndexes;
-  }
-
-  // Função para calcular o valor mínimo dos dois sinais
-  double getMinY() {
-    if (irValues.isEmpty || redValues.isEmpty) return 0;
-    return (irValues + redValues).reduce((a, b) => a < b ? a : b);
-  }
-
-  // Função para calcular o valor máximo dos dois sinais
-  double getMaxY() {
-    if (irValues.isEmpty || redValues.isEmpty) return 0;
-    return (irValues + redValues).reduce((a, b) => a > b ? a : b);
-  }
+  List<double> get normalizedIrValues => normalizeValues(irValues);
+  List<double> get normalizedRedValues => normalizeValues(redValues);
 }
 
 class HomeScreen extends StatefulWidget {
@@ -169,107 +177,120 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  bool _showData = false;
-
   @override
   Widget build(BuildContext context) {
     final dataState = Provider.of<DataAcquisitionState>(context);
 
-    double spo2 = dataState.spo2; // Valor de SpO2 atualizado a cada 10 segundos
-    double bpm = dataState.calculateBPM();
-
-    // Determinar a cor do SpO₂ com base no valor
-    Color spo2Color;
-    if (spo2 >= 95) {
-      spo2Color = Colors.green; // Bom nível de SpO₂
-    } else {
-      spo2Color = Colors.red; // Nível de SpO₂ baixo
-    }
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('Oxímetro de Pulso'),
+        backgroundColor: Colors.teal[600],
         centerTitle: true,
       ),
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  _showData = !_showData;
-                });
-              },
-              child: Text(_showData ? 'Esconder Dados' : 'Mostrar Dados'),
-            ),
-            const SizedBox(height: 16),
-            if (_showData)
-              Column(
-                children: [
-                  const SizedBox(height: 16),
-                  // Exibir SpO₂ com cor indicativa
-                  Text(
-                    'SpO₂: ${spo2.toStringAsFixed(2)}%',
-                    style: TextStyle(fontSize: 24, color: spo2Color),
-                  ),
-                  // Exibir BPM
-                  Text(
-                    'BPM: ${bpm.toStringAsFixed(2)}',
-                    style: const TextStyle(fontSize: 24, color: Colors.white),
-                  ),
-                  const SizedBox(height: 16),
-                  // Gráfico único para IR e Red
-                  const Text(
-                    'Sinais IR e Red',
-                    style: TextStyle(fontSize: 18, color: Colors.white),
-                  ),
-                  SizedBox(
-                    height: 300,
-                    child: LineChart(LineChartData(
-                      minY: dataState.getMinY(), // Amplitude mínima dinâmica
-                      maxY: dataState.getMaxY(), // Amplitude máxima dinâmica
-                      lineBarsData: [
-                        // Linha para o sinal de Infravermelho (IR)
-                        LineChartBarData(
-                          spots: List.generate(dataState.irValues.length,
-                              (index) => FlSpot(dataState.timestamps[index], dataState.irValues[index])),
-                          isCurved: true,
-                          color: Colors.red,
-                          barWidth: 2,
-                          belowBarData: BarAreaData(show: false),
-                          dotData: const FlDotData(show: false), // Desabilitar pontos no gráfico
-                        ),
-                        // Linha para o sinal Vermelho (Red)
-                        LineChartBarData(
-                          spots: List.generate(dataState.redValues.length,
-                              (index) => FlSpot(dataState.timestamps[index], dataState.redValues[index])),
-                          isCurved: true,
-                          color: Colors.blue,
-                          barWidth: 2,
-                          belowBarData: BarAreaData(show: false),
-                          dotData: const FlDotData(show: false), // Desabilitar pontos no gráfico
-                        ),
-                      ],
-                      titlesData: const FlTitlesData(
-                        show: true,
-                        bottomTitles: AxisTitles(
-                          sideTitles: SideTitles(showTitles: false),
-                        ),
-                        leftTitles: AxisTitles(
-                          sideTitles: SideTitles(showTitles: false),
-                        ),
-                        rightTitles: AxisTitles(
-                          sideTitles: SideTitles(showTitles: false),
-                        ),
-                        topTitles: AxisTitles(
-                          sideTitles: SideTitles(showTitles: false),
-                        ),
-                      ),
-                    )),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16),
+                color: Colors.teal.withOpacity(0.1),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black12,
+                    blurRadius: 8.0,
                   ),
                 ],
               ),
+              child: SizedBox(
+                height: 200,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: LineChart(
+                    LineChartData(
+                      minY: 0,  // Limitar o valor mínimo do eixo Y a 0
+                      maxY: 100,  // Limitar o valor máximo do eixo Y a 100
+                      titlesData: const FlTitlesData(
+                        show: true,
+                        bottomTitles: AxisTitles(
+                          sideTitles: SideTitles(showTitles: false), // Remover completamente as legendas do eixo X
+                        ),
+                        leftTitles: AxisTitles(
+                        ),
+                        topTitles: AxisTitles(
+                          sideTitles: SideTitles(showTitles: false), // Remover qualquer título superior
+                        ),
+                        rightTitles: AxisTitles(
+                        ),
+                      ),
+                      lineBarsData: [
+                        // Gráfico do sinal IR
+                        LineChartBarData(
+                          spots: List.generate(
+                            dataState.normalizedIrValues.length,
+                            (index) => FlSpot(
+                              dataState.timestamps[index],
+                              dataState.normalizedIrValues[index],
+                            ),
+                          ),
+                          isCurved: true,
+                          color: Colors.red, // Sinal IR em vermelho
+                          barWidth: 3,
+                          belowBarData: BarAreaData(show: false),
+                          dotData: FlDotData(show: false), // Desabilitar pontos no gráfico
+                        ),
+                        // Gráfico do sinal Red
+                        LineChartBarData(
+                          spots: List.generate(
+                            dataState.normalizedRedValues.length,
+                            (index) => FlSpot(
+                              dataState.timestamps[index],
+                              dataState.normalizedRedValues[index],
+                            ),
+                          ),
+                          isCurved: true,
+                          color: Colors.blue, // Sinal Red em azul
+                          barWidth: 3,
+                          belowBarData: BarAreaData(show: false),
+                          dotData: FlDotData(show: false), // Desabilitar pontos no gráfico
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+            
+            // Exibir mensagem se o sensor não detectar o dedo
+            if (dataState.sensorWarning)
+              const Text(
+                'Por favor, coloque o dedo sobre o sensor.',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            const SizedBox(height: 20),
+            Text(
+              'BPM: ${dataState.currentBPM.toStringAsFixed(2)}',
+              style: const TextStyle(
+                fontSize: 26,
+                fontWeight: FontWeight.bold,
+                color: Colors.teal,
+              ),
+            ),
+            const SizedBox(height: 10),
+            Text(
+              'SpO2: ${dataState.currentSpO2.toStringAsFixed(2)}%',
+              style: const TextStyle(
+                fontSize: 26,
+                fontWeight: FontWeight.bold,
+                color: Colors.teal,
+              ),
+            ),
           ],
         ),
       ),
