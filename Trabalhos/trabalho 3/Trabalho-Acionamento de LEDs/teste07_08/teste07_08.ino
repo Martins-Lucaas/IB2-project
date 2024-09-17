@@ -10,7 +10,7 @@ bool infra_estado = false;
 enum LedEstado { DESLIGADO, VERMELHO, INFRAVERMELHO };
 LedEstado estado_atual = DESLIGADO;
 
-const int janela_media_movel = 10;
+const int janela_media_movel = 100;
 float soma_vermelho = 0;
 float soma_infravermelho = 0;
 float media_vermelho = 0;
@@ -24,10 +24,23 @@ float spo2 = 0;
 int buffer_vermelho[janela_media_movel];
 int buffer_infravermelho[janela_media_movel];
 int indice = 0;
+int leitura = 0;
 
 void piscarLEDs(void *parameter);
 void lerAnalogico(void *parameter);
 void calcularSpO2();
+void batimento();
+
+unsigned long tempoAtual=0;
+unsigned long  tempoAnterior=0;
+int valorAtual=0;
+int valorAnterior=0;
+float derivada = 0; 
+bool pico = false; 
+int t1 = 0;
+int t2 = 0;
+int bpm = 0;
+
 
 void setup() {
     Serial.begin(115200);
@@ -66,7 +79,8 @@ void piscarLEDs(void *parameter) {
 
 void lerAnalogico(void *parameter) {
     while (1) {
-        int leitura = analogRead(leitura_pin);
+        leitura = analogRead(leitura_pin);
+        tempoAtual= millis();
 
         if (estado_atual == VERMELHO) {
             soma_vermelho -= buffer_vermelho[indice];
@@ -86,13 +100,18 @@ void lerAnalogico(void *parameter) {
         }
 
         indice = (indice + 1) % janela_media_movel;
-
+        batimento();
         vTaskDelay(20 / portTICK_PERIOD_MS);
+        
+
+        
+
     }
 }
 
 void calcularSpO2() {
-    if (media_vermelho != 0 && media_infravermelho != 0) {
+  leitura = analogRead(leitura_pin);
+    if (media_vermelho != 0 && media_infravermelho != 0 && leitura>2500 ) {
         r = (ac_vermelho / media_vermelho) / (ac_infravermelho / media_infravermelho);
         spo2 = 110 - 25 * r;
         spo2 = constrain(spo2, 0, 100);
@@ -100,7 +119,59 @@ void calcularSpO2() {
         Serial.print(r);
         Serial.print(" | SpO2: ");
         Serial.println(spo2);
-    } else {
+        //Serial.println(leitura);
+    }
+    else if(leitura <= 2500){
+      Serial.println("Coloque o dedo para calcular a saturação.");
+    } 
+     else {
         Serial.println("Erro: Divisão por zero detectada ao calcular SpO2.");
     }
+}
+
+void batimento(){
+  tempoAtual= millis();
+  
+  int tempoAnterior = 0;
+  
+  int cont = 0;
+  int tempo = 0;
+  int t1 = 0;
+  int t2 = 0;
+  unsigned long deltaT = tempoAtual - tempoAnterior;
+          if(deltaT > 0 ){
+            valorAtual = leitura;
+            Serial.println(leitura);
+            Serial.println();
+            derivada = (valorAtual - valorAnterior )/ deltaT;
+            valorAnterior = valorAtual;
+            tempoAnterior = tempoAtual;
+            Serial.print("derivada: ");
+            Serial.println(derivada);
+
+            if (derivada <= 1){
+              cont+=1;
+              //tempo = tempo + tempoAtual;
+              t1 = tempoAtual; 
+              if (cont = 4){
+                
+                bpm = (2 * 60000)/tempo;
+                Serial.print("bpm :");
+                Serial.println(bpm);
+                Serial.println();
+                Serial.print("tempo :");
+                Serial.println(tempo);
+                Serial.println();
+
+                cont = 0;
+                tempoAtual = 0;
+                valorAnterior = valorAtual; 
+                tempo = 0;
+              }
+            
+
+
+            }
+          }
+
 }
