@@ -129,66 +129,17 @@ void calcularSpO2() {
     }
 }
 
-void batimento(){
-  //tempoAtual= millis();
+void batimento (){
+  valorAtual = analogRead(leitura_pin);
+  tempoAtual = millis();
+
+  derivada = (valorAtual - valorAnterior)/(tempoAtual - tempoAnterior);
   
-  int tempoAnterior = 0;
+
+  tempoAnterior = tempoAtual;
+  valorAnterior = valorAtual; 
   
-  int cont = 0;
-  //int tempo = 0;
-  int t1 = 0;
-  float derivadaAnterior=0; 
-  unsigned long deltaT = tempoAtual - tempoAnterior;
-  unsigned long tempoZeroAnterior=0;
-  unsigned long intervaloTempoZero=0;
-          if(deltaT > 0 ){
-            valorAtual = leitura;
-            Serial.println(leitura);
-            Serial.println();
-            derivada = (valorAtual - valorAnterior )/ deltaT;
-            if(abs(derivada)<0){
-              if (abs(derivadaAnterior) >= 0){
-                intervaloTempoZero = tempoAtual - tempoZeroAnterior; 
 
-              Serial.print("Interalo de tempo entre derivadas zero: ");
-              Serial.print(intervaloTempoZero);
-              Serial.println("ms");
-              }
-            }
-            valorAnterior = valorAtual;
-            tempoAnterior = tempoAtual;
-            Serial.print("derivada: ");
-            Serial.println(derivada);
 
-            // if (derivada <= 1){
-            //   cont+=1;
-            //   t1 = millis();
-            //   //tempo = tempo + tempoAtual;
-            //   if (cont = 2){
-            //     t2 = millis();
-            //     bpm = (0.5 * 60000)/(t2 - t1);
-            //     Serial.print("bpm :");
-            //     Serial.println(bpm);
-            //     Serial.println();
-                //Serial.print("tempo :");
-                //Serial.println(tempo);
-                //Serial.println();
-
-                // cont = 0;
-                // //tempoAtual = 0;
-                // valorAnterior = valorAtual; 
-                // //tempo = 0;
-              }
-              tempoZeroAnterior=tempoAtual;
 }
-        derivadaAnterior=derivada;
-        valorAnterior=valorAtual;
-        tempoAnterior=tempoAtual;
-
-        delay(100);
-    
-
-
-            
-          }
 
