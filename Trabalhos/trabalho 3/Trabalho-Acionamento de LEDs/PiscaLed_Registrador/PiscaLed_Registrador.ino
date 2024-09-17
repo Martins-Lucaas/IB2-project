@@ -2,8 +2,8 @@
 #include "soc/gpio_reg.h" // Inclusão do cabeçalho dos registradores GPIO
 
 // Definição dos pinos dos LEDs e do fotodiodo
-#define LED1_PIN 14
-#define LED2_PIN 12
+#define LED1_PIN 19
+#define LED2_PIN 18
 #define PHOTODIODE_PIN 34
 
 // Variáveis globais para manipulação dos LEDs
@@ -64,16 +64,41 @@ void toggleLEDs(void *parameter) {
         }
 
         // Pequena pausa para estabilizar o estado
-        vTaskDelay(100 / portTICK_PERIOD_MS);
+        vTaskDelay(10 / portTICK_PERIOD_MS);
     }
 }
 
 void readPhotodiode(void *parameter) {
+    int baseline = 0; // Valor inicial para detectar a mudança
+    int threshold = 50; // Limite para detectar a presença do dedo
+    bool fingerDetected = false;
+
+    // Calcular o valor médio inicial
+    for (int i = 0; i < 100; i++) {
+        baseline += analogRead(PHOTODIODE_PIN);
+        vTaskDelay(10 / portTICK_PERIOD_MS);
+    }
+    baseline /= 100; // Média das primeiras leituras
+
     while (true) {
         int sensorValue = analogRead(PHOTODIODE_PIN);
+        
+        // Detectar a mudança significativa
+        if (abs(sensorValue - baseline) > threshold) {
+            if (!fingerDetected) {
+                fingerDetected = true;
+            }
+        } else {
+            if (fingerDetected) {
+                fingerDetected = false;
+            }
+        }
+        
+        // Imprimir o valor lido para depuração
         Serial.println(sensorValue);
         
         // Pequena pausa para a próxima leitura
-        vTaskDelay(100 / portTICK_PERIOD_MS);
+        vTaskDelay(10 / portTICK_PERIOD_MS);
     }
 }
+

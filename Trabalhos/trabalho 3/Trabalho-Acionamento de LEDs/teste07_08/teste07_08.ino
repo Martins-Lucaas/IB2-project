@@ -1,198 +1,145 @@
-// Configurações Globais
-#define verm_pin 19
-#define infra_pin 18
-#define leitura_pin 33
+#include <Arduino.h>
 
-// Variáveis com o estado dos pinos, se estão ou não ativos
+// Configurações Globais
+#define verm_pin 18
+#define infra_pin 19
+#define leitura_pin 34
+
+// Variáveis para controle dos LEDs
 bool verm_estado = false;
 bool infra_estado = false;
 
-// Variáveis para os valores recebidos
-float infra_recebido, verm_recebido;
+// Variável para armazenar o estado atual do LED
+enum LedEstado { DESLIGADO, VERMELHO, INFRAVERMELHO };
+LedEstado estado_atual = DESLIGADO;
 
-// Índices para contagem e resultados
-float verm_soma, infra_soma; // Soma dos valores dos vetores
-float verm_media, infra_media;
-float R; // Relação entre os resultados das médias
-float spo2; // Saturação de oxigênio no sangue
+// Variáveis para cálculo das componentes AC e DC
+const int janela_media_movel = 10; // Janela para média móvel
+float soma_vermelho = 0;
+float soma_infravermelho = 0;
+float media_vermelho = 0;
+float media_infravermelho = 0;
 
-const int intervalo = 500; // Intervalo ajustado para quantidade de dados recebidos (ajuste conforme necessário)
+// Variáveis para cálculo da razão R e SpO2
+float ac_vermelho = 0;
+float ac_infravermelho = 0;
+float r = 0;
+float spo2 = 0;
 
-// Vetores para salvar as variáveis
-float verm_valores[intervalo], desl_valores[intervalo];
-float infra_valores[intervalo];
-float verm_subtracao[intervalo], infra_subtracao[intervalo];
-float verm_filtrado[intervalo], infra_filtrado[intervalo];
+// Vetores para armazenar os sinais
+int buffer_vermelho[janela_media_movel];
+int buffer_infravermelho[janela_media_movel];
+int indice = 0;
 
-// Variáveis para controle de tempo
-unsigned long tempo_anterior_leitura = 0; // Tempo da última leitura
-unsigned long tempo_anterior_calculo = 0; // Tempo do último cálculo de SpO2 e BPM
-const unsigned long intervalo_leitura = 20; // Intervalo em milissegundos entre leituras (20 ms)
-const unsigned long intervalo_calculo = 1000; // Intervalo em milissegundos para cálculo de SpO2 e BPM (1 segundo)
+// Funções das tarefas
+void piscarLEDs(void *parameter);
+void lerAnalogico(void *parameter);
+void calcularSpO2();
 
-// Variáveis para cálculo de BPM
-int contador_picos = 0;
-unsigned long tempo_ultimo_pico = 0;
-float bpm = 0;
-
-// Configuração inicial do microcontrolador e configuração dos pinos
 void setup() {
     Serial.begin(115200);
-    Serial.println("Iniciando sem BLE!");
 
-    // Configurando pinos do microcontrolador
+    // Configurando os pinos do microcontrolador
     pinMode(verm_pin, OUTPUT);
     pinMode(infra_pin, OUTPUT);
 
-    // Deixando a saída dos pinos no modo desligado (LOW)
-    configurarLEDs(false, false); // Ambos LEDs desligados
+    // Inicializando os LEDs no estado desligado
+    digitalWrite(verm_pin, LOW);
+    digitalWrite(infra_pin, LOW);
+
+    // Inicializando o buffer
+    for (int i = 0; i < janela_media_movel; i++) {
+        buffer_vermelho[i] = 0;
+        buffer_infravermelho[i] = 0;
+    }
+
+    // Criação das tarefas
+    xTaskCreate(piscarLEDs, "Piscar LEDs", 1024, NULL, 1, NULL);
+    xTaskCreate(lerAnalogico, "Ler Analógico", 1024, NULL, 1, NULL);
 }
 
-// Loop principal
 void loop() {
-    unsigned long tempo_atual = millis();
-
-    // Verifica se o tempo desde a última leitura é maior que o intervalo desejado
-    if (tempo_atual - tempo_anterior_leitura >= intervalo_leitura) {
-        tempo_anterior_leitura = tempo_atual; // Atualiza o tempo da última leitura
-
-        // Realizar leitura dos LEDs
-        realizar_leitura();
-        alternar_leds(); // Alterna o estado dos LEDs
-    }
-
-    // Verifica se é hora de realizar os cálculos de SpO2 e BPM
-    if (tempo_atual - tempo_anterior_calculo >= intervalo_calculo) {
-        tempo_anterior_calculo = tempo_atual; // Atualiza o tempo do último cálculo
-
-        // Chamada de funções para cálculo de SpO2 e BPM
-        filtro_modocomum();
-        calculo_media();
-        calculo_final();
-        calcular_bpm();
-
-        // Plotagem no serial monitor dos resultados finais
-        Serial.print("SpO2: ");
-        Serial.println(spo2);
-        Serial.print("BPM: ");
-        Serial.println(bpm);
-        Serial.println();
-    }
-
-    delay(1); // Pequeno delay para aliviar o processamento
+    // Não é necessário colocar nada no loop principal
 }
 
-// Função para realizar leitura, dependendo do estado dos LEDs
-void realizar_leitura() {
-    static int i = 0; // Índice estático para manter a posição entre chamadas
-
-    if (verm_estado) { // Quando o LED vermelho está ligado
-        verm_recebido = analogRead(leitura_pin);
-        verm_valores[i] = verm_recebido;
-        infra_valores[i] = 0;
-    } else if (infra_estado) { // Quando o LED infravermelho está ligado
-        infra_recebido = analogRead(leitura_pin);
-        infra_valores[i] = infra_recebido;
-        verm_valores[i] = 0;
-    } else { // Quando os dois LEDs estão desligados
-        desl_valores[i] = analogRead(leitura_pin);
-    }
-
-    i = (i + 1) % intervalo; // Incrementa o índice e reseta quando atinge o intervalo
-}
-
-// Função de filtro de modo comum com filtragem adicional de suavização
-void filtro_modocomum() {
-    for (int k = 0; k < intervalo; k++) {
-        verm_subtracao[k] = verm_valores[k] - desl_valores[k];
-        infra_subtracao[k] = infra_valores[k] - desl_valores[k];
-        
-        // Filtro passa-baixa simples para suavização
-        verm_filtrado[k] = 0.9 * abs(verm_subtracao[k]) + 0.1 * verm_filtrado[k];
-        infra_filtrado[k] = 0.9 * abs(infra_subtracao[k]) + 0.1 * infra_filtrado[k];
-    }
-}
-
-// Função para calcular a média dos vetores
-void calculo_media() {
-    verm_soma = 0;
-    infra_soma = 0;
-
-    for (int i = 0; i < intervalo; i++) {
-        verm_soma += verm_filtrado[i];
-        infra_soma += infra_filtrado[i];
-    }
-
-    verm_media = verm_soma / intervalo;
-    infra_media = infra_soma / intervalo;
-
-    // Verifica as médias calculadas
-    Serial.print("Vermelho Médio: ");
-    Serial.println(verm_media);
-    Serial.print("Infravermelho Médio: ");
-    Serial.println(infra_media);
-}
-
-// Função para fazer o cálculo final usando a relação de Beer-Lambert
-void calculo_final() {
-    if (infra_media != 0) { // Evitar divisão por zero
-        R = verm_media / infra_media;
-        spo2 = 110 - 25 * R; // Ajuste conforme necessário
-        if (spo2 < 70) spo2 = 70;
-        if (spo2 > 100) spo2 = 100;
-    } else {
-        spo2 = 0; // Caso infra_media seja zero, SpO2 é indefinido
-        Serial.println("Aviso: Média infravermelha zero, SpO2 indefinido.");
-    }
-}
-
-// Função para calcular BPM com base nos picos do sinal
-void calcular_bpm() {
-    int picos_detectados = 0;
-    unsigned long tempo_atual = millis();
-    unsigned long tempo_entre_picos = 0;
-
-    for (int j = 1; j < intervalo - 1; j++) {
-        // Ajuste dinâmico do limiar de pico
-        float limiar_pico = verm_media * 0.6; // Exemplo de ajuste baseado na média
-
-        if (verm_filtrado[j] > verm_filtrado[j - 1] && verm_filtrado[j] > verm_filtrado[j + 1] && verm_filtrado[j] > limiar_pico) {
-            tempo_entre_picos = tempo_atual - tempo_ultimo_pico;
-            if (tempo_entre_picos > 300) { // Apenas considere picos que estejam separados por mais de 300ms
-                picos_detectados++;
-                tempo_ultimo_pico = tempo_atual;
-            }
-        }
-    }
-
-    if (picos_detectados > 0) {
-        bpm = (picos_detectados * 983000.0) / (intervalo * intervalo_leitura);
-        picos_detectados = 0; // Reset do contador após cálculo
-    } else {
-        bpm = 0; // Caso não sejam detectados picos
-        Serial.println("Aviso: Nenhum pico detectado para BPM.");
-    }
-}
-
-// Função para configurar o estado dos LEDs
-void configurarLEDs(bool estadoVermelho, bool estadoInfra) {
-    digitalWrite(verm_pin, estadoVermelho ? HIGH : LOW);
-    digitalWrite(infra_pin, estadoInfra ? HIGH : LOW);
-    verm_estado = estadoVermelho;
-    infra_estado = estadoInfra;
-}
-
-// Função para alternar os estados de LEDs com intervalo mais longo para estabilidade
-void alternar_leds() {
-    static unsigned long ultimo_troca = 0;
-    if (millis() - ultimo_troca > 100) { // Alterna a cada 100ms para estabilidade
-        if (!verm_estado && !infra_estado) {
-            configurarLEDs(true, false); // Liga vermelho
-        } else if (verm_estado && !infra_estado) {
-            configurarLEDs(false, true); // Liga infravermelho
+// Tarefa para alternar o piscar dos LEDs
+void piscarLEDs(void *parameter) {
+    while (1) {
+        if (estado_atual == VERMELHO) {
+            digitalWrite(verm_pin, LOW);  // Desliga LED vermelho
+            digitalWrite(infra_pin, HIGH); // Liga LED infravermelho
+            estado_atual = INFRAVERMELHO;
         } else {
-            configurarLEDs(false, false); // Desliga ambos
+            digitalWrite(verm_pin, HIGH);  // Liga LED vermelho
+            digitalWrite(infra_pin, LOW); // Desliga LED infravermelho
+            estado_atual = VERMELHO;
         }
-        ultimo_troca = millis();
+        
+        // Aguarda 60 ms antes de alternar novamente
+        vTaskDelay(60 / portTICK_PERIOD_MS);
+    }
+}
+
+// Tarefa para ler a porta analógica
+void lerAnalogico(void *parameter) {
+    while (1) {
+        // Realizar leitura da porta analógica
+        int leitura = analogRead(leitura_pin);
+
+        // Processar o sinal para separar AC e DC
+        if (estado_atual == VERMELHO) {
+            // Atualizar a média móvel para componente DC
+            soma_vermelho -= buffer_vermelho[indice];
+            buffer_vermelho[indice] = leitura;
+            soma_vermelho += buffer_vermelho[indice];
+            media_vermelho = soma_vermelho / janela_media_movel;
+
+            // Componente AC é a diferença entre o sinal atual e a média móvel
+            ac_vermelho = leitura - media_vermelho;
+
+            // Imprimir as componentes AC e DC do vermelho
+        } else if (estado_atual == INFRAVERMELHO) {
+            // Atualizar a média móvel para componente DC
+            soma_infravermelho -= buffer_infravermelho[indice];
+            buffer_infravermelho[indice] = leitura;
+            soma_infravermelho += buffer_infravermelho[indice];
+            media_infravermelho = soma_infravermelho / janela_media_movel;
+
+            // Componente AC é a diferença entre o sinal atual e a média móvel
+            ac_infravermelho = leitura - media_infravermelho;
+
+            // Imprimir as componentes AC e DC do infravermelho
+            // Calcular a saturação de oxigênio no sangue
+            calcularSpO2();
+        }
+
+        // Atualizar o índice para a média móvel
+        indice = (indice + 1) % janela_media_movel;
+
+        // Aguarda 20 ms antes de fazer uma nova leitura
+        vTaskDelay(20 / portTICK_PERIOD_MS);
+    }
+}
+
+// Função para calcular SpO2
+void calcularSpO2() {
+    // Evitar divisão por zero
+    if (media_vermelho != 0 && media_infravermelho != 0) {
+        // Calcular a razão R
+        r = (ac_vermelho / media_vermelho) / (ac_infravermelho / media_infravermelho);
+        
+        // Estimar a SpO2 usando a fórmula empírica
+        spo2 = 110 - 25 * r;
+        
+        // Limitar os valores da SpO2 entre 0 e 100
+        spo2 = constrain(spo2, 0, 100);
+        
+        // Imprimir o valor de SpO2
+        Serial.print("Razão R: ");
+        Serial.print(r);
+        Serial.print(" | SpO2: ");
+        Serial.println(spo2);
+    } else {
+        Serial.println("Erro: Divisão por zero detectada ao calcular SpO2.");
     }
 }
