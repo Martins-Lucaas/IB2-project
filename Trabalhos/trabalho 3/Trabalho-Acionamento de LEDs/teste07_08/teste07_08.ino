@@ -130,48 +130,65 @@ void calcularSpO2() {
 }
 
 void batimento(){
-  tempoAtual= millis();
+  //tempoAtual= millis();
   
   int tempoAnterior = 0;
   
   int cont = 0;
-  int tempo = 0;
+  //int tempo = 0;
   int t1 = 0;
-  int t2 = 0;
+  float derivadaAnterior=0; 
   unsigned long deltaT = tempoAtual - tempoAnterior;
+  unsigned long tempoZeroAnterior=0;
+  unsigned long intervaloTempoZero=0;
           if(deltaT > 0 ){
             valorAtual = leitura;
             Serial.println(leitura);
             Serial.println();
             derivada = (valorAtual - valorAnterior )/ deltaT;
+            if(abs(derivada)<0){
+              if (abs(derivadaAnterior) >= 0){
+                intervaloTempoZero = tempoAtual - tempoZeroAnterior; 
+
+              Serial.print("Interalo de tempo entre derivadas zero: ");
+              Serial.print(intervaloTempoZero);
+              Serial.println("ms");
+              }
+            }
             valorAnterior = valorAtual;
             tempoAnterior = tempoAtual;
             Serial.print("derivada: ");
             Serial.println(derivada);
 
-            if (derivada <= 1){
-              cont+=1;
-              //tempo = tempo + tempoAtual;
-              t1 = tempoAtual; 
-              if (cont = 4){
-                
-                bpm = (2 * 60000)/tempo;
-                Serial.print("bpm :");
-                Serial.println(bpm);
-                Serial.println();
-                Serial.print("tempo :");
-                Serial.println(tempo);
-                Serial.println();
+            // if (derivada <= 1){
+            //   cont+=1;
+            //   t1 = millis();
+            //   //tempo = tempo + tempoAtual;
+            //   if (cont = 2){
+            //     t2 = millis();
+            //     bpm = (0.5 * 60000)/(t2 - t1);
+            //     Serial.print("bpm :");
+            //     Serial.println(bpm);
+            //     Serial.println();
+                //Serial.print("tempo :");
+                //Serial.println(tempo);
+                //Serial.println();
 
-                cont = 0;
-                tempoAtual = 0;
-                valorAnterior = valorAtual; 
-                tempo = 0;
+                // cont = 0;
+                // //tempoAtual = 0;
+                // valorAnterior = valorAtual; 
+                // //tempo = 0;
               }
+              tempoZeroAnterior=tempoAtual;
+}
+        derivadaAnterior=derivada;
+        valorAnterior=valorAtual;
+        tempoAnterior=tempoAtual;
+
+        delay(100);
+    
+
+
             
-
-
-            }
           }
 
-}
