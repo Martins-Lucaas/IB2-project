@@ -4,16 +4,16 @@
 #include "freertos/task.h"
 
 // Definição das credenciais de WiFi
-const char *ssid = "WiFi-2";
-const char *password = "";
+const char *ssid = "Net do lucas";
+const char *password = "12345678";
 
 WebServer server(80);
 const int bufferSize = 100;  // Número máximo de pontos no gráfico
 float vADCBuffer[bufferSize];
 int bufferIndex = 0;
 bool updatingData = false;
-unsigned long acquisitionRate = 500;
-const int pinvADC = 33;
+unsigned long acquisitionRate = 12; // Taxa de aquisição fixa
+const int pinvADC = 34;
 
 TaskHandle_t vADCTaskHandle = NULL;
 
@@ -39,7 +39,7 @@ void vADCTask(void *pvParameters) {
       bufferIndex = (bufferIndex + 1) % bufferSize;
       vTaskDelay(acquisitionRate);
     } else {
-      vTaskDelay(100 / portTICK_PERIOD_MS);  // Aguarda 100ms antes de verificar novamente
+      vTaskDelay(5 / portTICK_PERIOD_MS); 
     }
   }
 }
@@ -84,17 +84,6 @@ void setup() {
     sendCORSHeaders();
     float value = readvADCValue();
     server.send(200, "text/plain", String(value, 4)); // Precisão de 4 casas decimais
-  });
-
-  server.on("/updateAcquisitionRate", HTTP_GET, []() {
-    sendCORSHeaders();
-    if (server.hasArg("rate")) {
-      acquisitionRate = server.arg("rate").toInt();
-      clearBuffer();  // Limpa o buffer quando a taxa de aquisição é alterada
-      Serial.print("Taxa de aquisição atualizada para: ");
-      Serial.println(acquisitionRate);
-    }
-    server.send(200, "text/plain", "Taxa de aquisição atualizada e buffer limpo");
   });
 
   server.on("/startAcquisition", HTTP_GET, []() {

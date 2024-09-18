@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => DataAcquisitionState('192.168.0.101'), // Substitua pelo IP do seu ESP32
+      create: (context) => DataAcquisitionState('192.168.206.188'), // Substitua pelo IP do seu ESP32
       child: MaterialApp(
         title: 'Sistemas de aquisição de dados',
         theme: ThemeData(
@@ -55,29 +55,38 @@ class MyHomePage extends StatelessWidget {
               const SizedBox(height: 20),
               const ChartWidget(),
               const SizedBox(height: 20),
+              // Título para o Slider de escala de tempo
+              const Text(
+                'Ajuste da Escala de Tempo',
+                style: TextStyle(fontSize: 16),
+              ),
+              // Slider para ajustar a escala de tempo
               Slider(
-                value: state.acquisitionRate.toDouble(),
+                value: state.timeScale.toDouble(),
                 min: 1,
-                max: 2000,
-                divisions: 2000,
-                label: state.acquisitionRate.toString(),
+                max: 100, // Defina um valor máximo adequado para a escala de tempo
+                divisions: 100,
+                label: state.timeScale.toString(),
                 onChanged: (value) {
-                  state.updateAcquisitionRate(value.toInt());
+                  state.updateTimeScale(value.toInt());
                 },
               ),
               const SizedBox(height: 20),
-              // Container para mostrar a taxa de aquisição
-              Container(
-                padding: const EdgeInsets.all(16.0),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10.0),
-                  border: Border.all(color: Colors.black),
-                ),
-                child: Text(
-                  'Taxa de Aquisição: ${state.acquisitionRate} ms',
-                  style: const TextStyle(fontSize: 24, color: Colors.black),
-                ),
+              // Título para o Slider de velocidade de aquisição
+              const Text(
+                'Velocidade de Aquisição (ms)',
+                style: TextStyle(fontSize: 16),
+              ),
+              // Novo Slider para ajustar o atraso do fetchData
+              Slider(
+                value: state.fetchDelay.toDouble(),
+                min: 1,
+                max: 1000, // Ajuste conforme necessário para controlar a velocidade
+                divisions: 100,
+                label: state.fetchDelay.toString(),
+                onChanged: (value) {
+                  state.updateFetchDelay(value.toInt());
+                },
               ),
               const SizedBox(height: 20),
               Row(

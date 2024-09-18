@@ -5,7 +5,8 @@ class DataAcquisitionState with ChangeNotifier {
   final String esp32Ip;
   List<double> dataPoints = [];
   double currentValue = 0.0;
-  int acquisitionRate = 500;
+  int timeScale = 50; // Escala de tempo
+  int fetchDelay = 10; // Novo atributo para atraso do fetchData
   bool isAcquiring = false;
 
   DataAcquisitionState(this.esp32Ip);
@@ -47,19 +48,15 @@ class DataAcquisitionState with ChangeNotifier {
     }
   }
 
-  void updateAcquisitionRate(int rate) async {
-    acquisitionRate = rate;
-    debugPrint("Updating acquisition rate to $rate ms");
-    try {
-      final response = await http.get(Uri.parse('http://$esp32Ip/updateAcquisitionRate?rate=$rate'));
-      if (response.statusCode == 200) {
-        debugPrint("Acquisition rate updated successfully.");
-      } else {
-        debugPrint("Failed to update acquisition rate: ${response.statusCode}");
-      }
-    } catch (e) {
-      debugPrint("Error updating acquisition rate: $e");
-    }
+  // Atualiza a escala de tempo
+  void updateTimeScale(int scale) {
+    timeScale = scale;
+    notifyListeners();
+  }
+
+  // Atualiza o atraso do fetchData
+  void updateFetchDelay(int delay) {
+    fetchDelay = delay;
     notifyListeners();
   }
 
@@ -81,7 +78,7 @@ class DataAcquisitionState with ChangeNotifier {
       } catch (e) {
         debugPrint("Error fetching data: $e");
       }
-      await Future.delayed(Duration(milliseconds: acquisitionRate));
+      await Future.delayed(Duration(milliseconds: fetchDelay)); // Usando o novo atraso
     }
   }
 }
