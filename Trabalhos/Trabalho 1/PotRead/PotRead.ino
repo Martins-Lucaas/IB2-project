@@ -12,7 +12,7 @@ const int bufferSize = 100;  // Número máximo de pontos no gráfico
 float vADCBuffer[bufferSize];
 int bufferIndex = 0;
 bool updatingData = false;
-unsigned long acquisitionRate = 12; // Taxa de aquisição fixa
+unsigned long acquisitionRate = 50; // Taxa de aquisição fixa
 const int pinvADC = 34;
 
 TaskHandle_t vADCTaskHandle = NULL;
@@ -22,6 +22,7 @@ float readvADCValue() {
   digitalWrite(26, !digitalRead(26));
   int valorADC = analogRead(pinvADC);
   float tensao = ((valorADC * 3.3) / 4095); // Convertendo para volts
+  Serial.println(valorADC);
   return tensao;
 }
 
