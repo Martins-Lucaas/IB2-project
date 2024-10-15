@@ -26,7 +26,7 @@ void setup() {
   pcnt_config.lctrl_mode = PCNT_MODE_KEEP;
   pcnt_config.hctrl_mode = PCNT_MODE_KEEP;
   pcnt_config.counter_h_lim = 100000;
-  pcnt_config.counter_l_lim = 0;
+  pcnt_config.counter_l_lim = 0.1;
   
   pcnt_unit_config(&pcnt_config);
 
