@@ -73,7 +73,7 @@ void piscarLEDs(void *parameter) {
             estado_atual = VERMELHO;
         }
         
-        vTaskDelay(60 / portTICK_PERIOD_MS);
+        vTaskDelay(200 / portTICK_PERIOD_MS);
     }
 }
 
@@ -129,17 +129,37 @@ void calcularSpO2() {
     }
 }
 
-void batimento (){
+void batimento() {
   valorAtual = analogRead(leitura_pin);
   tempoAtual = millis();
 
-  derivada = (valorAtual - valorAnterior)/(tempoAtual - tempoAnterior);
-  
+  // Cálculo da derivada
+  derivada = (float)(valorAtual - valorAnterior) / (tempoAtual - tempoAnterior);
 
+  // Impressão da derivada
+  Serial.print("Derivada: ");
+  Serial.println(derivada);
+
+  // Detecção de pico (batimento)
+  if (!pico && derivada < 0 && valorAnterior > 3000) {  // Valor de threshold para detecção de batimento
+    pico = true;
+    t2 = tempoAtual;
+    int intervalo = t2 - t1;
+    if (intervalo > 0) {
+      bpm = 60000 / intervalo;  // Calcula BPM
+      Serial.print("BPM estimado: ");
+      Serial.println(bpm);
+    }
+    t1 = t2;  // Atualiza o tempo do último pico
+  }
+
+  // Redefine o estado do pico quando a derivada se estabilizar
+  if (derivada > 0) {
+    pico = false;
+  }
+
+  // Atualiza valores anteriores
   tempoAnterior = tempoAtual;
-  valorAnterior = valorAtual; 
-  
-
-
+  valorAnterior = valorAtual;
 }
 
