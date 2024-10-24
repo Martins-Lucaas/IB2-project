@@ -18,7 +18,7 @@ class ChartWidget extends StatelessWidget {
           minY: 0,
           maxY: 3.3,
           minX: 0,
-          maxX: 100, // Defina o limite máximo para o eixo X
+          maxX: state.timeScale.toDouble(), // Usando a escala de tempo
           titlesData: FlTitlesData(
             leftTitles: AxisTitles(
               sideTitles: SideTitles(

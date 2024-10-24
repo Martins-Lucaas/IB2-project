@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
 }
 
 class DataAcquisitionState extends ChangeNotifier {
-  String ipAddress = '192.168.206.129'; // IP do ESP32
+  String ipAddress = '192.168.3.20'; // IP do ESP32
   List<double> irValues = []; // Sinal IR
   List<double> redValues = []; // Sinal Red
   List<double> timestamps = []; // Armazenar os timestamps
