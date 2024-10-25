@@ -80,10 +80,9 @@ class DataAcquisitionState extends ChangeNotifier {
 
           notifyListeners();
         } else {
-          print('Erro na resposta HTTP: ${response.statusCode}');
         }
+      // ignore: empty_catches
       } catch (e) {
-        print('Erro ao fazer requisição HTTP: $e');
       }
     });
   }
@@ -196,7 +195,7 @@ class _HomeScreenState extends State<HomeScreen> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 color: Colors.teal.withOpacity(0.1),
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                     color: Colors.black12,
                     blurRadius: 8.0,
@@ -238,7 +237,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           color: Colors.red, // Sinal IR em vermelho
                           barWidth: 3,
                           belowBarData: BarAreaData(show: false),
-                          dotData: FlDotData(show: false), // Desabilitar pontos no gráfico
+                          dotData: const FlDotData(show: false), // Desabilitar pontos no gráfico
                         ),
                         // Gráfico do sinal Red
                         LineChartBarData(
@@ -253,7 +252,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           color: Colors.blue, // Sinal Red em azul
                           barWidth: 3,
                           belowBarData: BarAreaData(show: false),
-                          dotData: FlDotData(show: false), // Desabilitar pontos no gráfico
+                          dotData: const FlDotData(show: false), // Desabilitar pontos no gráfico
                         ),
                       ],
                     ),
