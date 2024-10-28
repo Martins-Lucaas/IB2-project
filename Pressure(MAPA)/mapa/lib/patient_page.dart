@@ -1,7 +1,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:fl_chart/fl_chart.dart';
+import 'package:http/http.dart' as http;
 
 class PatientPage extends StatefulWidget {
   const PatientPage({super.key});
@@ -14,12 +16,31 @@ class _PatientPageState extends State<PatientPage> {
   List<FlSpot> _dataPoints = [];
   Timer? _timer;
   bool _isAcquiring = false;
-  final String esp32Url = 'http://192.168.3.20'; // Substitua pelo IP do seu ESP32
+  final String esp32Url = 'http://192.168.3.20'; // URL do ESP32
+  final double _systolicPressure = 0.0;
+  final double _diastolicPressure = 0.0;
+  final int maxDataPoints = 1000; // Permite até 1000 pontos no gráfico
+
+  final DatabaseReference _databaseReference = FirebaseDatabase.instance.ref();
 
   @override
   void initState() {
     super.initState();
-    _startAcquisition();
+  }
+
+  Future<void> _toggleAcquisition() async {
+    if (_isAcquiring) {
+      await _sendCommand('stopMeasurement');
+      setState(() {
+        _isAcquiring = false;
+      });
+    } else {
+      await _sendCommand('startMeasurement');
+      _startAcquisition();
+      setState(() {
+        _isAcquiring = true;
+      });
+    }
   }
 
   Future<void> _startAcquisition() async {
@@ -28,42 +49,54 @@ class _PatientPageState extends State<PatientPage> {
       if (_isAcquiring) {
         final value = await _fetchVADCValue();
         setState(() {
-          if (_dataPoints.length > 100) _dataPoints.removeAt(0);
+          if (_dataPoints.length >= maxDataPoints) {
+            _dataPoints.removeAt(0);
+            _dataPoints = _dataPoints
+                .asMap()
+                .entries
+                .map((entry) => FlSpot(entry.key.toDouble(), entry.value.y))
+                .toList();
+          }
           _dataPoints.add(FlSpot(_dataPoints.length.toDouble(), value));
         });
       }
     });
-    _isAcquiring = true;
   }
 
   Future<double> _fetchVADCValue() async {
     final response = await http.get(Uri.parse('$esp32Url/vADCvalue'));
     if (response.statusCode == 200) {
-      return double.parse(response.body);
+      double valor = double.parse(response.body);
+      print("Valor recebido do ESP32: $valor");
+      return valor;
     } else {
-      throw Exception('Failed to fetch vADC value');
+      throw Exception('Falha ao buscar valor vADC');
     }
   }
 
   Future<void> _sendCommand(String endpoint) async {
     final response = await http.get(Uri.parse('$esp32Url/$endpoint'));
     if (response.statusCode != 200) {
-      throw Exception('Failed to execute $endpoint command');
+      throw Exception('Falha ao executar comando $endpoint');
     }
   }
 
-  void _onStartPressed() async {
-    await _sendCommand('startAcquisition');
-    setState(() {
-      _isAcquiring = true;
-    });
+  Future<void> _savePressureToFirebase() async {
+    User? user = FirebaseAuth.instance.currentUser;
+    if (user != null) {
+      await _databaseReference.child('users/pacientes').child(user.uid).update({
+        'systolicPressure': _systolicPressure,
+        'diastolicPressure': _diastolicPressure,
+      });
+    }
   }
 
-  void _onStopPressed() async {
-    await _sendCommand('stopAcquisition');
-    setState(() {
-      _isAcquiring = false;
-    });
+  void _onMotorOnPressed() async {
+    await _sendCommand('turnOnMotor');
+  }
+
+  void _onMotorOffPressed() async {
+    await _sendCommand('turnOffMotor');
   }
 
   void _onClearBufferPressed() async {
@@ -83,7 +116,7 @@ class _PatientPageState extends State<PatientPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Monitoramento de vADC'),
+        title: const Text('Monitoramento de Pressão Arterial'),
         backgroundColor: Colors.teal,
       ),
       body: Column(
@@ -101,34 +134,48 @@ class _PatientPageState extends State<PatientPage> {
                       spots: _dataPoints,
                       isCurved: true,
                       color: Colors.blueAccent,
-                      barWidth: 4,
+                      barWidth: 2,
                       dotData: FlDotData(show: false),
                     ),
                   ],
-                  minX: 0,
-                  maxX: 100,
+                  minX: _dataPoints.isNotEmpty ? _dataPoints.first.x : 0,
+                  maxX: _dataPoints.isNotEmpty ? _dataPoints.last.x : 1000,
                   minY: 0,
-                  maxY: 3.3,
+                  maxY: 4100,
                 ),
               ),
             ),
+          ),
+          const SizedBox(height: 10),
+          Text(
+            'Pressão Sistólica: $_systolicPressure mmHg',
+            style: Theme.of(context).textTheme.headlineSmall,
+          ),
+          Text(
+            'Pressão Diastólica: $_diastolicPressure mmHg',
+            style: Theme.of(context).textTheme.headlineSmall,
+          ),
+          const SizedBox(height: 10),
+          ElevatedButton(
+            onPressed: _savePressureToFirebase,
+            child: const Text('Salvar Pressão no Firebase'),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               ElevatedButton(
-                onPressed: _onStartPressed,
+                onPressed: _onMotorOnPressed,
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.green,
                 ),
-                child: const Text('Iniciar'),
+                child: const Text('Ligar Motor e Fechar Válvula'),
               ),
               ElevatedButton(
-                onPressed: _onStopPressed,
+                onPressed: _onMotorOffPressed,
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.red,
                 ),
-                child: const Text('Parar'),
+                child: const Text('Desligar Motor e Abrir Válvula'),
               ),
               ElevatedButton(
                 onPressed: _onClearBufferPressed,
@@ -138,6 +185,13 @@ class _PatientPageState extends State<PatientPage> {
                 child: const Text('Limpar Buffer'),
               ),
             ],
+          ),
+          ElevatedButton(
+            onPressed: _toggleAcquisition,
+            style: ElevatedButton.styleFrom(
+              backgroundColor: _isAcquiring ? Colors.red : Colors.blue,
+            ),
+            child: Text(_isAcquiring ? 'Parar Medição' : 'Iniciar Medição'),
           ),
         ],
       ),
