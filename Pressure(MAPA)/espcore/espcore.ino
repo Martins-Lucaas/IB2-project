@@ -8,21 +8,20 @@ const char *ssid = "Martins Wifi6";
 const char *password = "17031998";
 
 // Configuração do sensor de pressão arterial
-const int pino_sensor_pressao = 34;
+const int pino_sensor_pressao = 0;
 const int janela_media_movel = 10;
 const int janela_savitzky_golay = 7;
 const int ganho = 23;
 const float sensibilidade = 1.875;
 
 // Pinos para controle da bomba e válvula
-const int bomba_pos = 18;
-const int bomba_neg = 19;
-const int valvula_pos = 14;
-const int valvula_neg = 12;
+const int bomba_pos = 7;
+const int bomba_neg = 8;
+const int valvula_pos = 9;
+const int valvula_neg = 10;
 
 // Pressões de referência
 const float pressao_alvo = 240.0;
-const float pressao_minima = 80.0;
 
 // Variáveis para detecção de pressão sistólica e diastólica
 float linha_base = 0;
@@ -126,13 +125,10 @@ void detectar_pressao(float oscilacao, float linha_base) {
     Serial.print("Pressão Diastólica detectada: ");
     Serial.print(diastolica);
     Serial.println(" mmHg");
-  }
 
-  if (sistolica_detectada && diastolica_detectada) {
-    sistolica_detectada = false;
-    diastolica_detectada = false;
-    inflando = true;
-    Serial.println("Medição completa. Reiniciando...");
+    // Desativa o processo de desinflação e mantém valores
+    controlarValvula(false); // Fecha a válvula ao final da medição
+    Serial.println("Medição completa. Aguarde nova ativação manual.");
   }
 }
 
@@ -152,6 +148,7 @@ void vADCTask(void *pvParameters) {
 }
 
 void setup() {
+  Serial.println("Bomba desligada");
   pinMode(bomba_pos, OUTPUT);
   pinMode(bomba_neg, OUTPUT);
   pinMode(valvula_pos, OUTPUT);
@@ -237,11 +234,6 @@ void loop() {
       float sinal_oscilacao = pressao_atual - pressao_linha_base;
       float oscilacao_filtrada = filtroSavitzkyGolay(sinal_oscilacao);
       detectar_pressao(oscilacao_filtrada, pressao_linha_base);
-
-      if (pressao_atual <= pressao_minima) {
-        controlarValvula(false);
-        Serial.println("Pressão mínima alcançada - válvula fechada");
-      }
     }
   }
 }
