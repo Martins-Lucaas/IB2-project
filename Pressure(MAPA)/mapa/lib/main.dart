@@ -4,14 +4,17 @@ import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'login_page.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'patient_page.dart';
+import 'doctor_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp( // Inicializa o Firebase com as opções atuais da plataforma.
+  await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp()); // Executa o aplicativo.
+  runApp(const MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -22,7 +25,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const LoginPage(), // Define a página inicial como a página de login.
+      initialRoute: '/login', // Define a rota inicial como a página de login
+      routes: {
+        '/login': (context) => const LoginPage(), // Rota para a LoginPage
+        '/patient': (context) => const PatientPage(), // Rota para a PatientPage
+        '/doctor': (context) => const DoctorPage(), // Rota para a DoctorPage
+      },
     );
   }
 }

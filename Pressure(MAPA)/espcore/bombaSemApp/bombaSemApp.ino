@@ -1,174 +1,108 @@
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
+#include <WiFi.h>
+#include <WebServer.h>
+#include "esp_timer.h"
 
-// Configuração do sensor de pressão arterial
-const int pino_sensor_pressao = 0;
-const int janela_media_movel = 10;
-const int janela_savitzky_golay = 7;
+const int bomba_pos = 27;
+const int bomba_neg = 26;
+const int sole_pos = 14;
+const int sole_neg = 12;
+const int sensor = 34; 
 const int ganho = 23;
 const float sensibilidade = 1.875;
 
-// Pinos para controle da bomba e válvula
-const int bomba_pos = 7;
-const int bomba_neg = 8;
-const int valvula_pos = 9;
-const int valvula_neg = 10;
+bool medirAtivo = false; // Variável para verificar se a medição está ativa
+bool motorAtivo = false; // Variável para verificar se o motor deve estar ativo
+WebServer server(80); // Cria o servidor web na porta 80
+esp_timer_handle_t timer_handle; // Declaração da variável timer_handle
 
-// Pressões de referência
-const float pressao_alvo = 240.0;
+float pressao_kpa = 0.0; // Variável para armazenar o valor de pressão
 
-// Variáveis para detecção de pressão sistólica e diastólica
-float linha_base = 0;
-float sistolica = 0;
-float diastolica = 0;
-bool sistolica_detectada = false;
-bool diastolica_detectada = false;
-bool inflando = true;
-
-// Buffers e variáveis de aquisição de dados
-float mediaMovelBuffer[10] = {0};
-int mediaMovelIndex = 0;
-float savitzkyGolayBuffer[7] = {0};
-int savitzkyGolayIndex = 0;
-bool updatingData = false;
-unsigned long lastSampleTime = 0;
-unsigned long acquisitionRate = 50;
-
-// Tarefa FreeRTOS para aquisição de dados
-TaskHandle_t vADCTaskHandle = NULL;
-
-// Função para ler o valor do sensor de pressão
-float readPressureSensor() {
-  int valor_bruto = analogRead(pino_sensor_pressao);
-  float tensao = (valor_bruto / 4095.0) * 3.3;
-  float tensao_sensor = tensao / ganho;
-  float pressao_kpa = tensao_sensor / (sensibilidade / 1000.0);
-  return pressao_kpa * 7.50062; // Converte para mmHg
-}
-
-// Filtro de Média Móvel
-float filtroMediaMovel(float novo_valor) {
-  mediaMovelBuffer[mediaMovelIndex] = novo_valor;
-  mediaMovelIndex = (mediaMovelIndex + 1) % janela_media_movel;
-
-  float soma = 0;
-  for (int i = 0; i < janela_media_movel; i++) {
-    soma += mediaMovelBuffer[i];
-  }
-  return soma / janela_media_movel;
-}
-
-// Filtro Savitzky-Golay
-float filtroSavitzkyGolay(float novo_valor) {
-  savitzkyGolayBuffer[savitzkyGolayIndex] = novo_valor;
-  savitzkyGolayIndex = (savitzkyGolayIndex + 1) % janela_savitzky_golay;
-
-  const int coef[7] = {-3, 12, 17, 12, -3, -7, 2};
-  float resultado = 0;
-  for (int i = 0; i < janela_savitzky_golay; i++) {
-    resultado += coef[i] * savitzkyGolayBuffer[(savitzkyGolayIndex + i) % janela_savitzky_golay];
-  }
-  return resultado / 35.0;
-}
-
-// Função para controlar a bomba
-void controlarBomba(bool ligar) {
-  if (ligar) {
-    digitalWrite(bomba_pos, HIGH);
-    digitalWrite(bomba_neg, LOW);
-    Serial.println("Bomba ligada");
-  } else {
-    digitalWrite(bomba_pos, LOW);
-    digitalWrite(bomba_neg, LOW);
-    Serial.println("Bomba desligada");
+void timer_callback(void* arg) {
+  if (medirAtivo) { 
+    int valor = analogRead(sensor);
+    float tensao = (valor / 4095.0) * 3.3;
+    float tensao_sensor = tensao / ganho;
+    pressao_kpa = tensao_sensor / (sensibilidade / 1000.0); // Converte para pressão em kPa
   }
 }
 
-// Função para controlar a válvula
-void controlarValvula(bool abrir) {
-  if (abrir) {
-    digitalWrite(valvula_pos, HIGH);
-    digitalWrite(valvula_neg, LOW);
-    Serial.println("Válvula aberta");
-  } else {
-    digitalWrite(valvula_pos, LOW);
-    digitalWrite(valvula_neg, LOW);
-    Serial.println("Válvula fechada");
-  }
+// Função para iniciar a medição e ligar o motor e a válvula
+void iniciarMedicao() {
+  medirAtivo = true;
+  motorAtivo = true;
+  Serial.println("Chamando iniciar Medicao...");  // Debug inicial
+
+  // Ativa o motor e a válvula juntos
+  digitalWrite(bomba_pos, HIGH);
+  digitalWrite(bomba_neg, LOW);
+  digitalWrite(sole_pos, HIGH);
+  digitalWrite(sole_neg, LOW);
+
+  server.sendHeader("Access-Control-Allow-Origin", "*"); 
+  server.send(200, "text/plain", "Medição Iniciada");
+  Serial.println("Medição iniciada.");
 }
 
-// Função para detectar pressão sistólica e diastólica
-void detectar_pressao(float oscilacao, float linha_base) {
-  float limiar_sistolica = 0.25 * oscilacao;
-  float limiar_diastolica = 0.1 * oscilacao;
+// Função para parar a medição e desligar o motor e a válvula
+void pararMedicao() {
+  medirAtivo = false;
+  motorAtivo = false;
+  Serial.println("Chamando parar Medicao...");  // Debug inicial
 
-  if (!sistolica_detectada && oscilacao > limiar_sistolica) {
-    sistolica = linha_base;
-    sistolica_detectada = true;
-    Serial.print("Pressão Sistólica detectada: ");
-    Serial.print(sistolica);
-    Serial.println(" mmHg");
-  }
+  // Desliga o motor e a válvula
+  digitalWrite(bomba_pos, LOW);
+  digitalWrite(bomba_neg, LOW);
+  digitalWrite(sole_pos, LOW);
+  digitalWrite(sole_neg, LOW);
 
-  if (sistolica_detectada && !diastolica_detectada && oscilacao < limiar_diastolica) {
-    diastolica = linha_base;
-    diastolica_detectada = true;
-    Serial.print("Pressão Diastólica detectada: ");
-    Serial.print(diastolica);
-    Serial.println(" mmHg");
-
-    // Desativa o processo de desinflação e mantém valores
-    controlarValvula(false); // Fecha a válvula ao final da medição
-    Serial.println("Medição completa. Aguarde nova ativação manual.");
-    inflando = false;
-
-  }
+  server.sendHeader("Access-Control-Allow-Origin", "*");
+  server.send(200, "text/plain", "Medição Parada");
+  Serial.println("Medição parada.");
 }
 
-// Tarefa FreeRTOS para aquisição de dados do sensor de pressão arterial
-void vADCTask(void *pvParameters) {
-  while (1) {
-    if (updatingData) {
-      if (millis() - lastSampleTime >= acquisitionRate) {
-        lastSampleTime = millis();
-        float vADCvalue = readPressureSensor();
-        Serial.print("vADC valor lido: ");
-        Serial.println(vADCvalue);
-      }
-    }
-    vTaskDelay(10 / portTICK_PERIOD_MS);
-  }
+// Função para enviar o valor atual da pressão
+void enviarValorPressao() {
+  server.sendHeader("Access-Control-Allow-Origin", "*"); 
+  server.send(200, "text/plain", String(pressao_kpa));
 }
 
 void setup() {
   Serial.begin(115200);
+
+  // Configuração de pinos
   pinMode(bomba_pos, OUTPUT);
   pinMode(bomba_neg, OUTPUT);
-  pinMode(valvula_pos, OUTPUT);
-  pinMode(valvula_neg, OUTPUT);
-  pinMode(pino_sensor_pressao, INPUT);
+  pinMode(sole_pos, OUTPUT);
+  pinMode(sole_neg, OUTPUT);
+  pinMode(sensor, INPUT);
 
-  xTaskCreate(vADCTask, "vADCTask", 4096, NULL, 1, &vADCTaskHandle);
+  // Configuração do WiFi
+  WiFi.begin("Martins Wifi6", "17031998"); 
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1000);
+    Serial.println("Conectando ao WiFi...");
+  }
+  
+  // Exibe o IP do ESP32 quando conectado
+  Serial.println("Conectado ao WiFi");
+  Serial.print("Endereço IP do ESP32: ");
+  Serial.println(WiFi.localIP());
+
+  // Configuração do timer
+  const esp_timer_create_args_t timer_args = {
+    .callback = &timer_callback,
+    .name = "frequency_timer"
+  };
+  esp_timer_create(&timer_args, &timer_handle);
+  esp_timer_start_periodic(timer_handle, 400); // Dispara o callback a cada 400 ms
+
+  // Configuração dos endpoints
+  server.on("/startMeasurement", iniciarMedicao); // Endpoint para iniciar a medição
+  server.on("/stopMeasurement", pararMedicao); // Endpoint para parar a medição
+  server.on("/vADCvalue", enviarValorPressao); // Endpoint para enviar o valor de pressão
+  server.begin();
 }
 
 void loop() {
-  static unsigned long lastPressureSampleTime = 0;
-  if (millis() - lastPressureSampleTime >= 200) {
-    lastPressureSampleTime = millis();
-
-    float pressao_atual = readPressureSensor();
-    if (inflando) {
-      if (pressao_atual >= pressao_alvo) {
-        controlarBomba(false);
-        controlarValvula(true);
-        inflando = false;
-        Serial.println("Pressão alvo alcançada - iniciando deflação");
-      }
-    } else {
-      float pressao_linha_base = filtroMediaMovel(pressao_atual);
-      float sinal_oscilacao = pressao_atual - pressao_linha_base;
-      float oscilacao_filtrada = filtroSavitzkyGolay(sinal_oscilacao);
-      detectar_pressao(oscilacao_filtrada, pressao_linha_base);
-    }
-  }
+  server.handleClient(); // Escuta as solicitações do servidor
 }

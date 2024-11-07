@@ -45,6 +45,9 @@ dependencies:
 
   cupertino_icons: ^1.0.6
   xml: ^6.5.0
+  cloud_firestore: ^5.4.4
+  image_picker: ^1.1.2
+  firebase_storage: ^12.3.4
 
 dev_dependencies:
   flutter_test:
@@ -76,7 +79,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/logo.jpg
+    - assets/images/logo.png
     - assets/CID10.xml
 
   # To add assets to your application, add an assets section, like this:
