@@ -17,7 +17,7 @@ class PatientPage extends StatefulWidget {
 }
 
 class _PatientPageState extends State<PatientPage> {
-  List<FlSpot> _chartDataPoints = [];
+  final List<FlSpot> _chartDataPoints = [];
   Timer? _dataAcquisitionTimer;
   bool _isMonitoring = false;
   double _upperPressure = 0.0;
@@ -25,7 +25,7 @@ class _PatientPageState extends State<PatientPage> {
   bool _upperPressureDetected = false;
   bool _lowerPressureDetected = false;
   bool _isReducing = false;
-  final String deviceUrl = 'http://192.168.3.26';
+  final String deviceUrl = 'http://192.168.0.102';
   final int maxChartDataPoints = 1000;
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final DatabaseReference _database = FirebaseDatabase.instance.ref();
